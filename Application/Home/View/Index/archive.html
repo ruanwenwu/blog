@@ -1,0 +1,20 @@
+<extend name="Public:base" />
+<block name="body">
+<div class="post">
+  <div class="post-archive">
+    <!--Use lodash to classify posts. See https://lodash.com/docs#groupBy-->
+    <foreach name="groupList" key="k" item="vo">
+      <h2><{$k}></h2>
+      <ul class="listing">
+      	<foreach name="vo" item="cvo">
+        <li>
+          <span class="date"><{:date("Y/m/d",$cvo['ctime'])}></span>
+          <a href="/blog/<{$cvo['id']}>.html" title="<{$cvo['title']}>"><{$cvo['title']}></a>
+        </li>
+        </foreach>
+      </ul>
+      </foreach>
+    </div>
+  </div>
+  <{$show}>
+</block>

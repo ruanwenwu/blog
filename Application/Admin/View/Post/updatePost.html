@@ -1,0 +1,72 @@
+<extend name="Public:base" />
+<block name="css">
+ <link rel="stylesheet" href="http://validform.rjboy.cn/wp-content/themes/validform/style.css" type="text/css" media="all" />
+</block>
+<block name="body">
+<div class="row">
+        <div class="col-lg-12">
+        <section class="panel">
+
+            <div class="panel-body">
+                <form id="newpostform" class="form-horizontal adminex-form registerform" method="post" action="/admin.php/Ajax/addNewPost">
+                 	<div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">标题</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" value="<{$data['title']}>"  nullmsg="请输入id！" datatype="n1-8" errormsg="id为1-8个数字" type="text" name="title" placeholder="输入文章标题">
+                        </div>
+                    </div>
+                    <input type="hidden" name="id" value="<{$data['id']}>" />
+                     <div class="form-group">
+                        <label class="col-sm-2 control-label col-lg-2" for="inputSuccess">选择分类</label>
+                        <div class="col-sm-10" id="categoryContainer">
+                           	<foreach name="category" item="vo">
+                           	<a class="btn btn-default" style="margin-right:10px" type="button"><{$vo['name']}></a>
+                         	</foreach>
+                           	<input style="display:block;margin-top:10px;" type="text" class="form-control" value="<{$data['category']}>"  nullmsg="请输入id！" datatype="n1-8" errormsg="id为1-8个数字" type="text" name="category" placeholder="输入新分类">
+                        </div>
+                    </div>
+                     <div class="form-group">
+                        <label class="col-sm-2 control-label col-lg-2" for="inputSuccess">选择标签</label>
+                        <div class="col-sm-10" id="tagContainer">
+                           	<foreach name="tag" item="vo">
+                           	<a class="btn btn-default" style="margin-right:10px" type="button"><{$vo['name']}></a>
+                         	</foreach>
+                           	<input style="display:block;margin-top:10px;" type="text" class="form-control" value="<{$data['tag']}>"  nullmsg="请输入id！" datatype="n1-8" errormsg="id为1-8个数字"  name="tag" placeholder="输入新标签">
+                        </div>
+                    </div>
+					<div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">summary</label>
+                        <div class="col-sm-10">
+                            <textarea name="summary" class="form-control"><{$data['summary']}></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">正文</label>
+                        <div class="col-sm-10">
+                            <script id="container" name="content" type="text/plain">
+								<{$data['content']}>
+							</script>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-offset-2 col-lg-10">
+                    			<button id="fabiao" type="submit" class="btn btn-primary">发表</button>
+                        </div>
+                    </div>    		
+                </form>
+            </div>
+        </section>
+     </div>
+ </div>
+</block>
+<block name="js">
+
+<script type="text/javascript" src="__PUBLIC__/plugin/ueditor/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="__PUBLIC__/plugin/ueditor/ueditor.all.js"></script>
+<!-- 实例化编辑器 -->
+<script type="text/javascript">
+    var ue = UE.getEditor('container');
+</script>
+<script src="__PUBLIC__/admin/js/index.js"></script>
+</block>

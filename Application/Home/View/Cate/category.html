@@ -1,0 +1,13 @@
+<if condition="$data">
+ <div class="widget">
+   <div class="widget-title">
+     <i class="fa fa-folder-o">分类</i></div>
+   <ul class="category-list">
+     <foreach name="data" item="vo">
+     <li class="category-list-item">
+       <a class="category-list-link" href="/blog/category/<{$vo['name']}>/"><{$vo['name']}></a>
+      </li>
+      </foreach>
+   </ul>
+ </div>
+ </if>

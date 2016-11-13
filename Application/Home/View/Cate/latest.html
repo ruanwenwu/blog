@@ -1,0 +1,12 @@
+<div class="widget">
+  <div class="widget-title">
+    <i class="fa fa-file-o">最新文章</i></div>
+  <ul class="post-list">
+    <foreach name="data" item="vo">
+    <li class="post-list-item">
+      <a class="post-list-link" href="/blog/<{$vo['id']}>.html"><{$vo['title']}></a>
+    </li>
+    </foreach>
+   
+  </ul>
+</div>

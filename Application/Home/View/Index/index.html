@@ -1,0 +1,20 @@
+<extend name="Public:base" />
+<block name="body">
+<foreach name="post" item="vo">
+   <div class="post">
+     <h2 class="post-title">
+       <a href="/blog/<{$vo['id']}>.html"><{$vo['title']}></a></h2>
+     <div class="post-meta"><{:date("Y-m-d H:i:s",$vo['ctime'])}></div>
+     <a data-thread-key="" href="/blog/<{$vo['id']}>.html" class="ds-thread-count"><if condition="$vo['comment_num']"><{$vo['comment_num']}>条评论<else />暂无评论</if></a>
+     <div class="post-content">
+        <{$vo['summary']}>
+     </div>
+     <p class="readmore">
+       <a href="/blog/<{$vo['id']}>.html">阅读更多</a>
+     </p>
+   </div>
+</foreach>
+<if condition="$show">
+ <{$show}>
+</if>
+</block>
