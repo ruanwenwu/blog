@@ -1,0 +1,11 @@
+<div class="widget">
+  <div class="widget-title">
+    <i class="fa fa-comment-o">最新评论</i></div>
+  <ul class="post-list">
+    <foreach name="data" item="vo">
+    <li class="post-list-item">
+      <a class="post-list-link" href="/blog/<{$vo['postid']}>.html"><{$vo['content']}></a>
+    </li>
+    </foreach>
+  </ul>
+</div>

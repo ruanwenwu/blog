@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>阮文武-js大小和位置demo</title>
+<meta name="keywords" content="阮文武,js位置和大小,js位置,js大小" />
+<meta name="description" content="阮文武js位置和大小demo" />
+<style>
+*{padding:0;border:0;}
+#div1{padding:10px;border:10px solid red;width:100px;height:100px;position:absolute;right:30px;top:250px;}
+#tab1{border:1px solid #ededed;border-collapse:collapsed;width:800px;}
+#tab2{border:1px solid #ededed;border-collapse:collapsed;width:1000px;position:fixed;bottom:0;}
+td{border:1px solid #ededed;border-padding:10px;}
+body{height:3000px;background:gray}
+</style>
+</head> 
+<body>
+<h1>阮文武js位置和大小demo</h1>
+<pre>
+&lt;style&gt;       
+*{padding:0;border:0;}
+#div1{padding:10px;border:10px solid red;width:100px;height:100px;position:fixed;right:30px;top:250px;} 
+&lt;/style&gt;
+</pre>  
+<div id="div1">div1</div>
+<table id="tab1">
+<tr>
+	<th>元素</th>
+	<th>offsetWidth</th>
+	<th>offsetHeight</th>
+	<th>offsetTop</th>
+	<th>offsetLeft</th>
+	<th>clientWidth</th>
+	<th>clientHeight</th>
+</tr>
+<tr>
+	<td>div1</td>
+	<td id="ow"></td>
+	<td id="oh"></td>
+	<td id="ot"></td>
+	<td id="ol"></td>
+	<td id="cw"></td>
+	<td id="ch"></td>
+</tr>
+</table>
+<table id="tab2">
+	<tr>
+		<th>innerHeight</th>
+		<th>innerWidth</th>
+		<th>outerHeight</th>
+		<th>outerWidth</th>
+		<th>clientWidth</th>
+		<th>clientHeight</th>
+		<th>scrollTop</th>
+		<th>scrollLeft</th>
+		<th>scrollWidth</th>
+		<th>scrollHeight</th>
+		<th>offsetWidth</th>
+		<th>offsetHeight</th>
+	</tr>
+	<tr>
+		<td id="d1"></td>
+		<td id="d2"></td>
+		<td id="d3"></td>
+		<td id="d4"></td>
+		<td id="d5"></td>
+		<td id="d6"></td>
+		<td id="d7"></td>
+		<td id="d8"></td>
+		<td id="d9"></td>
+		<td id="d10"></td>
+		<td id="d11"></td>
+		<td id="d12"></td>
+	</tr>
+</table>
+
+<h2>
+	结论1：offsetWidth和offsetHeight比clientWidth和clientHeight多了个border的大小。
+</h2>
+</body>
+<script>
+	//得到偏移量和大小
+	function getSizeAndPos(){
+		var oOw = document.getElementById("ow");
+		var oOh = document.getElementById("oh");
+		var oOt = document.getElementById("ot");
+		var oOl = document.getElementById("ol");
+		var oCw = document.getElementById("cw");
+		var oCh = document.getElementById("ch");
+		var oDiv = document.getElementById("div1");
+		oOw.innerHTML = oDiv.offsetWidth;
+		oOh.innerHTML = oDiv.offsetHeight;
+		oOt.innerHTML = oDiv.offsetTop; 
+		oOl.innerHTML = oDiv.offsetLeft;
+		oCw.innerHTML = oDiv.clientWidth;
+		oCh.innerHTML = oDiv.clientHeight;
+	}
+	getSizeAndPos();
+
+	//得到滚动
+	function getGundong(){
+		var oD1 = document.getElementById("d1");
+		var oD2 = document.getElementById("d2");
+		var oD3 = document.getElementById("d3");
+		var oD4 = document.getElementById("d4");
+		var oD5 = document.getElementById("d5");
+		var oD6 = document.getElementById("d6");
+		var oD7 = document.getElementById("d7");
+		var oD8 = document.getElementById("d8");
+		var oD9 = document.getElementById("d9");
+		var oD10 = document.getElementById("d10");
+		var oD11 = document.getElementById("d11");
+		var oD12 = document.getElementById("d12");
+		oD1.innerHTML = window.innerHeight;
+		oD2.innerHTML = window.innerWidth;
+		oD3.innerHTML = window.outerHeight;
+		oD4.innerHTML = window.outerWidth;
+		oD5.innerHTML = document.documentElement.clientWidth;
+		oD6.innerHTML = document.documentElement.clientHeight;
+		oD7.innerHTML = document.body.scrollTop || document.documentElement.scrollTop;
+		oD8.innerHTML = document.body.scrollLeft || document.documentElement.scrollLeft;
+		oD9.innerHTML = document.body.scrollWidth || document.documentElement.scrollWidth;
+		oD10.innerHTML = document.body.scrollHeight || document.documentElement.scrollHeight;
+		oD11.innerHTML = document.body.offsetWidth || document.documentElement.offsetWidth;
+		oD12.innerHTML = document.body.offsetHeight || document.documentElement.offsetHeight;
+	}
+	getGundong(); 
+
+	window.onresize = window.onscroll = function(){
+		getSizeAndPos();
+		getGundong();
+	};
+</script>
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+	 	var hm = document.createElement("script");
+	  	hm.src = "https://hm.baidu.com/hm.js?77834ec9e0919b0d048ceba486388472";
+	  	var s = document.getElementsByTagName("script")[0]; 
+	  	s.parentNode.insertBefore(hm, s);
+	})();   
+
+	 (function(){
+    		var bp = document.createElement('script');
+    		var curProtocol = window.location.protocol.split(':')[0];
+    		if (curProtocol === 'https') {
+        		bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    		}
+    		else {
+        		bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    		}
+    		var s = document.getElementsByTagName("script")[0];
+    		s.parentNode.insertBefore(bp, s);
+	 })();
+</script> 
+</html>

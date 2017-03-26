@@ -11,4 +11,15 @@ class PostModel extends Model{
         $res = $this->where($where)->order("ctime desc")->limit($limit)->select();
         return $res;
     }
+
+    public function getSearchRes($ids){
+        if ($ids && is_array($ids)){
+           $idStr = rtrim(implode(",", $ids),",");
+           $where = "id in ($idStr)";
+           $res = $this->where($where)->order("ctime desc")->limit($limit)->select();
+           return $res;         
+        }
+        
+        return false;
+    }
 }

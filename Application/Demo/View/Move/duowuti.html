@@ -1,0 +1,38 @@
+<extend name="Public:base" />
+<block name="css">
+<style>
+	div{width:200px;height:200px;background:red;margin:10px;}
+</style>
+</block>
+<block name="content">
+<div></div>
+<div></div>
+<div></div>
+</block>
+<block name="script">
+<script>
+	var oDivs = document.getElementsByTagName("div");
+	for(var i = 0; i < oDivs.length; i++){
+		oDivs[i].timer = null;
+		oDivs[i].onmouseover = function(){
+			startMove(this,500);
+		}
+		oDivs[i].onmouseout = function(){
+			startMove(this,100);
+		}
+	}
+	
+	function startMove(obj,target){
+		clearInterval(obj.timer);
+		obj.timer = setInterval(function(){
+			var speed = (target - obj.offsetWidth)/10;
+			speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+			if(target == obj.offsetWidth){
+				clearInterval(obj.timer);
+			}else{
+				obj.style.width = obj.offsetWidth + speed + 'px';
+			}
+		},30);
+	}
+</script>
+</block>

@@ -1,0 +1,255 @@
+[ 2016-11-17T18:22:03+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004008s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001149s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001215s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0479s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0102s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000701s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000757s ]
+NOTIC: [8] Undefined variable: userInfo /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 371 行.
+NOTIC: [8] Undefined variable: hospitalInfo /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 434 行.
+NOTIC: [8] Undefined variable: hospitalInfo /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 448 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030116s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030168s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001137s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001265s ]
+
+[ 2016-11-17T18:22:06+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000514s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000268s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000328s ]
+NOTIC: [8] Undefined variable: userInfo /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 371 行.
+NOTIC: [8] Undefined variable: hospitalInfo /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 434 行.
+NOTIC: [8] Undefined variable: hospitalInfo /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 448 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011301s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011329s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000125s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000530s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000565s ]
+
+[ 2016-11-17T18:22:21+08:00 ] 127.0.0.1 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000644s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000703s ]
+NOTIC: [8] Undefined index: id /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Admin/Controller/AjaxController.class.php 第 53 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0025s ]
+SQL: INSERT INTO `z_post` (`title`,`category`,`tag`,`summary`,`pubtime`,`mtime`,`ctime`) VALUES ('好强烈的恋爱中的感觉','','','','1479378141','1479378141','1479378141') [ RunTime:0.0396s ]
+
+[ 2016-11-17T18:22:23+08:00 ] 127.0.0.1 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000461s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0073s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0037s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000220s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000273s ]
+NOTIC: [8] Undefined variable: userInfo /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 371 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011802s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011860s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000207s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000538s ]
+
+[ 2016-11-17T18:22:23+08:00 ] 127.0.0.1 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000504s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000546s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000312s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000395s ]
+NOTIC: [8] Undefined variable: userInfo /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 371 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010623s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010674s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000219s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000756s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000804s ]
+
+[ 2016-11-17T22:49:53+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001099s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002399s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000477s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000523s ]
+NOTIC: [8] Undefined variable: userInfo /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 371 行.
+NOTIC: [8] Undefined variable: hospitalInfo /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 434 行.
+NOTIC: [8] Undefined variable: hospitalInfo /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 448 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022321s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022347s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001101s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001171s ]
+
+[ 2016-11-17T22:49:54+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000667s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000203s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000243s ]
+NOTIC: [8] Undefined variable: userInfo /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 371 行.
+NOTIC: [8] Undefined variable: hospitalInfo /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 434 行.
+NOTIC: [8] Undefined variable: hospitalInfo /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 448 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011724s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011754s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000141s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000419s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000456s ]
+
+[ 2016-11-17T22:59:50+08:00 ] 127.0.0.1 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002202s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000809s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000863s ]
+NOTIC: [8] Undefined index: id /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Admin/Controller/AjaxController.class.php 第 53 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0047s ]
+SQL: INSERT INTO `z_post` (`title`,`category`,`tag`,`summary`,`content`,`pubtime`,`mtime`,`ctime`) VALUES ('瀑布流原理','js','瀑布流','瀑布流在图片网站的应用非常广泛。今天我就跟大家一起研究一下瀑布流的原理。','<h3>题记</h3><p>js是非常容易引起人们兴趣的一门语言。有一千种理由让你爱上他，瀑布流就是其中之一。</p><h3>demo</h3><p><a href=\"/demo/pubuliu/\" target=\"_blank\" title=\"瀑布流\">瀑布流演示</a><br/></p><h3>原理</h3><ol class=\" list-paddingleft-2\" style=\"list-style-type: decimal;\"><li><p>首先计算出屏幕大小。根据预设的图片的宽度，求出列数。</p></li><li><p>将通过php加载过来的数据依次，每次计算出最低的那一列，然后算出绝对top值和left值，放到容器中就好了。</p></li><li><p>当屏幕尺寸改变时，只需要从新按照这个思想走一遍就行了。</p><p></p></li></ol><h3>php代码</h3><p>js的代码，大家可以查看demo的源代码，php的我贴出来一下：</p><pre class=\"brush:php;toolbar:false\">&lt;?php
+/**
+&nbsp;*&nbsp;获取瀑布流图片数据
+&nbsp;*/
+$dataArr&nbsp;=&nbsp;array(&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&quot;status&quot;&nbsp;=&gt;&nbsp;true,
+);
+for&nbsp;($i&nbsp;=&nbsp;1;&nbsp;$i&nbsp;&lt;=&nbsp;30;&nbsp;$i++)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;$file&nbsp;=&nbsp;&quot;./img/$i.jpg&quot;;
+&nbsp;&nbsp;&nbsp;&nbsp;if(!file_exists($file)){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$file&nbsp;=&nbsp;&quot;./img/$i.jpeg&quot;;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$src&nbsp;&nbsp;=&nbsp;&nbsp;&quot;/demo/pubuliu/img/$i.jpeg&quot;;
+&nbsp;&nbsp;&nbsp;&nbsp;}else{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$src&nbsp;=&nbsp;&quot;/demo/pubuliu/img/$i.jpg&quot;;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;list($width,&nbsp;$height,&nbsp;$type,&nbsp;$attr)&nbsp;=&nbsp;getimagesize($file);
+&nbsp;&nbsp;&nbsp;&nbsp;$dataArr[&#39;data&#39;][]&nbsp;=&nbsp;array(
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;src&quot;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;$src,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;width&quot;&nbsp;=&gt;&nbsp;&nbsp;$width,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;height&quot;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;&nbsp;$height,
+&nbsp;&nbsp;&nbsp;&nbsp;);
+}
+echo&nbsp;json_encode($dataArr);
+?&gt;</pre><p><br/></p>','1479394790','1479394790','1479394790') [ RunTime:0.0388s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `z_category` WHERE `name` = 'js' LIMIT 1   [ RunTime:0.0006s ]
+SQL: INSERT INTO `z_category` (`name`) VALUES ('js') [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `z_tag` WHERE `name` = '瀑布流' LIMIT 1   [ RunTime:0.0004s ]
+SQL: INSERT INTO `z_tag` (`name`) VALUES ('瀑布流') [ RunTime:0.0074s ]
+
+[ 2016-11-17T22:59:52+08:00 ] 127.0.0.1 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000592s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0014s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000234s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000284s ]
+NOTIC: [8] Undefined variable: userInfo /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 371 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023490s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023538s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000387s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000415s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000870s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000919s ]
+
+[ 2016-11-17T22:59:52+08:00 ] 127.0.0.1 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000276s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000300s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0016s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000272s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000332s ]
+NOTIC: [8] Undefined variable: userInfo /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 371 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010496s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010531s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000171s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000198s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001708s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001841s ]
+

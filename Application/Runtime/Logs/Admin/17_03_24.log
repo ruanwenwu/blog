@@ -1,0 +1,1210 @@
+[ 2017-03-24T07:07:37+08:00 ] 203.130.43.155 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000392s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 361 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 424 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 438 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013918s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013956s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000378s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000417s ]
+
+[ 2017-03-24T07:07:41+08:00 ] 203.130.43.155 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000368s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013298s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013335s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000316s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000353s ]
+
+[ 2017-03-24T07:07:41+08:00 ] 203.130.43.155 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000394s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013521s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013564s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000335s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000378s ]
+
+[ 2017-03-24T07:07:53+08:00 ] 203.130.43.155 /admin.php/Post/updatePost/id/87
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 87 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b94d69ac1621e983387ec69783f12599.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013907s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013944s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000348s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000386s ]
+
+[ 2017-03-24T07:07:53+08:00 ] 203.130.43.155 /admin.php/Post/updatePost/id/87
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000389s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 87 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b94d69ac1621e983387ec69783f12599.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013313s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013349s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000310s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000387s ]
+
+[ 2017-03-24T07:10:38+08:00 ] 203.130.43.155 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000363s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: UPDATE `z_post` SET `title`='与客户端配合做数据写入（包括图片处理）',`category`='php',`tag`='base64',`summary`='客户端传输json数据到php，php入库操作。',`content`='<p>								</p><h3>客户端设计图</h3><p><img src=\"/ueditor/php/upload/image/20170322/1490187120560655.png\" title=\"1490187120560655.png\" alt=\"blob.png\"/></p><h3>php需要捕获这些数据，包括图片，入库。</h3><p>客户端最终传输的数据格式：</p><p><img src=\"/ueditor/php/upload/image/20170322/1490187208572030.png\" title=\"1490187208572030.png\" alt=\"blob.png\"/></p><p>注意：photo是去掉了图片类型和base64标志的base64数据格式：</p><p><img src=\"/ueditor/php/upload/image/20170322/1490187266302922.png\" title=\"1490187266302922.png\" alt=\"blob.png\"/>（完整格式）</p><p>客户端怎么传的我不懂，如果用Php模拟提交这部分数据的话是这样：</p><pre class=\"brush:as3;toolbar:false\">$url&nbsp;=&nbsp;&quot;http://ask.rww.com.cn/test2.php&quot;;
+$data&nbsp;=&nbsp;array(
+&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;&nbsp;3,
+&nbsp;&nbsp;&nbsp;&nbsp;&quot;photo&quot;&nbsp;=&gt;&nbsp;&nbsp;array(&quot;pic1&quot;,&quot;pic2&quot;,&quot;pic3&quot;),
+);
+$data&nbsp;=&nbsp;json_encode($data);#注意，这里转换成json格式了。
+$ch&nbsp;=&nbsp;curl_init();
+curl_setopt($ch,&nbsp;CURLOPT_POST,&nbsp;1);
+curl_setopt($ch,&nbsp;CURLOPT_URL,&nbsp;$url);
+curl_setopt($ch,&nbsp;CURLOPT_POSTFIELDS,&nbsp;$data);
+curl_setopt(&nbsp;$ch,&nbsp;CURLOPT_SSL_VERIFYPEER,&nbsp;false&nbsp;);
+curl_setopt(&nbsp;$ch,&nbsp;CURLOPT_SSL_VERIFYHOST,&nbsp;false&nbsp;);
+curl_setopt($ch,&nbsp;CURLOPT_HTTPHEADER,&nbsp;array(
+&nbsp;&nbsp;&nbsp;&nbsp;&#39;Content-Type:&nbsp;application/json;&nbsp;charset=gbk&#39;,#头上指定了格式
+&nbsp;&nbsp;&nbsp;&nbsp;&#39;Content-Length:&nbsp;&#39;.strlen($data))
+);
+$result&nbsp;=&nbsp;curl_exec($ch);</pre><h3>php收到数据后的处理：</h3><ol class=\" list-paddingleft-2\" style=\"list-style-type: decimal;\"><li><p>通过php://input或者$HTTP_RAW_POST_DATA接收原始数据。json_decode成对象以供使用。伪代码：</p><p>$data = json_decode($HTTP_RAW_POST_DATA)；</p></li><li><p>下载图片。</p></li></ol><pre class=\"brush:as3;toolbar:false\">$img&nbsp;=&nbsp;array();
+foreach&nbsp;($data-&gt;photo&nbsp;as&nbsp;$key=&gt;$val){
+	$str&nbsp;&nbsp;&nbsp;=&nbsp;&quot;data:image/png;base64,&quot;;&nbsp;&nbsp;&nbsp;&nbsp;//加上头信息，如果有就不需要了
+	$str&nbsp;&nbsp;.=&nbsp;$val;
+	$img1&nbsp;=&nbsp;down(array(
+		&#39;base64Str&#39;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;$str,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#base64的字符串
+	));
+	$img[]&nbsp;=&nbsp;$img1;
+}
+
+function&nbsp;down($paramArr){
+&nbsp;&nbsp;&nbsp;&nbsp;$options&nbsp;=&nbsp;array(
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;base64Str&#39;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;false,&nbsp;#base64的字符串&nbsp;格式为data:image/png;base64,
+&nbsp;&nbsp;&nbsp;&nbsp;);
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(is_array($paramArr))$options&nbsp;=&nbsp;array_merge($options,&nbsp;$paramArr);
+&nbsp;&nbsp;&nbsp;&nbsp;extract($options);
+&nbsp;&nbsp;&nbsp;&nbsp;if(!$base64Str)return&nbsp;false;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;$pos&nbsp;=&nbsp;strpos($base64Str,&nbsp;&#39;;base64,&#39;);
+&nbsp;&nbsp;&nbsp;&nbsp;if(!$pos)return&nbsp;false;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;$data&nbsp;=&nbsp;base64_decode(substr($base64Str,&nbsp;$pos+8));
+&nbsp;&nbsp;&nbsp;&nbsp;$ext&nbsp;&nbsp;=&nbsp;trim(str_replace(&quot;data:image/&quot;,&nbsp;&quot;&quot;,substr($base64Str,&nbsp;0,$pos)));
+&nbsp;&nbsp;&nbsp;&nbsp;$tmpFile&nbsp;=&nbsp;&quot;/tmp/&quot;.SYSTEM_TIME&nbsp;.&nbsp;rand(0,&nbsp;1000)&nbsp;.&nbsp;&quot;.&quot;.$ext;
+&nbsp;&nbsp;&nbsp;&nbsp;file_put_contents($tmpFile,&nbsp;$data);
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;$tmpFile;&nbsp;
+}</pre><p><br/></p><p>							</p>',`mtime`='1490310638' WHERE `id` = 87 [ RunTime:0.0148s ]
+NOTIC: [8] Undefined variable: id /data/wwwroot/blog/Application/Admin/Controller/AjaxController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category` WHERE `name` = 'php' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag` WHERE `name` = 'base64' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2017-03-24T07:10:39+08:00 ] 203.130.43.155 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000389s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013277s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013314s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000359s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000396s ]
+
+[ 2017-03-24T07:20:46+08:00 ] 203.130.43.155 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+NOTIC: [8] Undefined index: id /data/wwwroot/blog/Application/Admin/Controller/AjaxController.class.php 第 53 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: INSERT INTO `z_post` (`title`,`category`,`tag`,`summary`,`content`,`pubtime`,`mtime`,`ctime`) VALUES ('nginx访问日志（与不记录指定类型日志）','linux','日志','访问日志对于我们监听网站流量来自什么地方特别有用。','<h3>一、在nginx全局配置的http部分增加如下配置：</h3><p>vim /usr/local/nginx/conf/nginx.conf<br/></p><pre class=\"brush:as3;toolbar:false\">&nbsp;log_format&nbsp;ruanwenwu&nbsp;&#39;$remote_addr&nbsp;$http_x_forwarded_for&nbsp;[$time_local]&#39;
+&nbsp;&#39;&nbsp;$host&nbsp;&quot;$request_uri&quot;&nbsp;$status&nbsp;&#39;
+&nbsp;&#39;&quot;$http_referer&quot;&nbsp;&quot;$http_user_agent&quot;&#39;;</pre><p>注意，上面这三行连起来是一句，结尾用分号别忘了。简单解释：log_format是定义日志格式，ruanwenwu相当于是日志格式的变量名，后面的一长串代表记录的日志的内容。</p><p>$remote_addr 真实ip</p><p>$http_x_forwarded_for 代理ip</p><p>$time_local 时间 ,注意这两个[]只是格式化显示的作用，没有语法意义。这中间的双引号也是，只是为了显示的时候带上，下面是这条规则捉到的日志。没有代理ip好像用-（横杠）来代替了。</p><pre class=\"brush:as3;toolbar:false\">45.117.156.124&nbsp;-&nbsp;[23/Mar/2017:23:26:18&nbsp;+0800]www.ruanwenwu.cn&nbsp;&quot;/&quot;&nbsp;200&quot;http://www.ruanwenwu.cn&quot;&nbsp;&quot;Mozilla/5.0&nbsp;(Windows&nbsp;NT&nbsp;6.1;&nbsp;WOW64)&nbsp;AppleWebKit/537.36&nbsp;(KHTML,&nbsp;like&nbsp;Gecko)&nbsp;Chrome/39.0.2171.95&nbsp;Safari/537.36&quot;</pre><h3>二、然后在虚拟主机的server上增加配置</h3><p>vim /usr/local/nginx/conv/vhosts/111.conf</p><pre class=\"brush:as3;toolbar:false\">access_log&nbsp;/data/wwwlogs/access_log.ruanwenwu.cn.log&nbsp;ruanwenwu;#结尾的这个ruanwenwu就是我们在全局http配置中设置的日志变量。</pre><p>其实加上这一行，再重新加载我们的配置文件就好了。但是这样有一个问题，css和js或者图片的访问日志都会记录下来，这不是我们想要的。所以需要配置，让这些文件不作记录。配置部分如下：</p><pre class=\"brush:as3;toolbar:false\">&nbsp;location&nbsp;~&nbsp;.*\\.(gif|jpg|jpeg|png|bmp|swf|flv|ico)$&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expires&nbsp;30d;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;access_log&nbsp;off;
+&nbsp;}
+&nbsp;location&nbsp;~&nbsp;.*\\.(js|css)$&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expires&nbsp;7d;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;access_log&nbsp;off;
+&nbsp;}</pre><p>注：~表示区分大小写匹配，这个我在上一篇文章<a href=\"/blog/94.html\" target=\"_self\">nginx实现重定向</a>里总结过了。</p><p>上面这两句的意思是，如果访问地址匹配到图片（任意格式）或者css或者js,一律不记录日志。一句access_log off;就搞定了。expires 30d;代表30天过期的缓存。</p><p>最后附上相关配置：</p><p>虚拟主机（不包含php解析部分）：</p><pre class=\"brush:as3;toolbar:false\">server&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;listen&nbsp;80;
+&nbsp;&nbsp;&nbsp;&nbsp;server_name&nbsp;ruanwenwu.cn&nbsp;www.ruanwenwu.cn;
+&nbsp;&nbsp;&nbsp;&nbsp;access_log&nbsp;/xxx/xxx/access_log.ruanwenwu.cn.log&nbsp;ruanwenwu;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;root&nbsp;/data/xxx/blog;
+&nbsp;&nbsp;&nbsp;&nbsp;index&nbsp;index.html&nbsp;index.htm&nbsp;index.php;
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;location&nbsp;~&nbsp;.*\\.(gif|jpg|jpeg|png|bmp|swf|flv|ico)$&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expires&nbsp;30d;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;access_log&nbsp;off;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;location&nbsp;~&nbsp;.*\\.(js|css)?$&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expires&nbsp;7d;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;access_log&nbsp;off;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+}</pre><p><br/></p>','1490311246','1490311246','1490311246') [ RunTime:0.0166s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_category` WHERE `name` = 'linux' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag` WHERE `name` = '日志' LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `z_tag` (`name`) VALUES ('日志') [ RunTime:0.0002s ]
+
+[ 2017-03-24T07:20:48+08:00 ] 203.130.43.155 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012905s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012943s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000332s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000370s ]
+
+[ 2017-03-24T07:42:28+08:00 ] 203.130.43.155 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 361 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 424 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 438 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013245s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013282s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000304s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000341s ]
+
+[ 2017-03-24T08:14:09+08:00 ] 203.130.43.155 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+NOTIC: [8] Undefined index: id /data/wwwroot/blog/Application/Admin/Controller/AjaxController.class.php 第 53 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: INSERT INTO `z_post` (`title`,`category`,`tag`,`summary`,`content`,`pubtime`,`mtime`,`ctime`) VALUES ('nginx日志切割','linux','日志','但凡是有点流量的网站访问日志都会比较大。不做切割的话，时间久了就没法看了。跟我一起来看看nginx切割日志的方法吧。','<h3>一、不是废话的废话</h3><p>nginx不像apache一样自带切割日志的方法——此刻有没有觉得apache高大上？^_^——。说到apache，顺便贴一下apache切割日志的方法：</p><pre class=\"brush:as3;toolbar:false\">&lt;VirtualHost&nbsp;*:80&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;CustomLog&nbsp;&quot;|/usr/local/apache2/bin/rotatelogs&nbsp;-l&nbsp;/usr/local/apache2/logs/mydiscuz.com-access.com-access_%Y%m%d_log&nbsp;86400&quot;&nbsp;combined
+&lt;/VirtualHost&gt;</pre><p>意思是86400(每天）生成一份。/bin/rotatelogs -l 是命令，/usr/local/apache2/logs/mydiscuz.com-access_%Y%m%d_log是文件路径。combined跟nginx里的log_format规定的变量名称是一个意思。</p><p>言归正传。nginx的日志切割，必须要自己写个脚本来完成。思路是：每天0点跑个计划任务，把前一天的日志移到指定的目录，然后重新载入配置文件，最好是压缩一下就完美了。</p><h3>二、shell代码实现</h3><pre class=\"brush:as3;toolbar:false\">#!/bin/bash
+d=`date&nbsp;-d&nbsp;&quot;-1&nbsp;day&quot;&nbsp;+%F`
+[&nbsp;-d&nbsp;/data/wwwlogs/cutedlogs&nbsp;]&nbsp;||&nbsp;mkdir&nbsp;/data/wwwlogs/cutedlogs
+mv&nbsp;/data/wwwlogs/access_log.ruanwenwu.cn.log&nbsp;/data/wwwlogs/cutedlogs/$d.log
+/etc/init.d/nginx&nbsp;reload&nbsp;&gt;&nbsp;/dev/null
+cd&nbsp;/data/wwwlogs/cutedlogs
+gzip&nbsp;-f&nbsp;$d.log</pre><p>第一行建立d这个变量。第二行判断如果cutedlogs不存在就创建。第三行将现在的日志移到cutedlogs。第四行重载配置文件。第五行进入cuted目录。第六行进行压缩。</p><p>小知识：shell -x xx.sh是让直行过程可见。</p><p>实现截图：</p><p><img src=\"/ueditor/php/upload/image/20170324/1490314072745981.png\" title=\"1490314072745981.png\" alt=\"图片.png\"/></p><h3>三、添加计划任务，让每天0点执行</h3><p>crontab -e,添加：</p><p>#每天切割日志<br/></p><pre class=\"brush:as3;toolbar:false\">0&nbsp;0&nbsp;*&nbsp;*&nbsp;*&nbsp;/bin/sh&nbsp;/root/shellscripts/cutaccesslog.sh</pre><p><br/></p><p><img src=\"C:\\Users\\zol\\AppData\\Local\\YNote\\data\\qq0CD0D74E3B094D9F5129940458313BC0\\55642af0d3694d68b1d4077ce6523458\\clipboard.png\"/></p><p><br/></p>','1490314449','1490314449','1490314449') [ RunTime:0.0114s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category` WHERE `name` = 'linux' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag` WHERE `name` = '日志' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-03-24T08:14:10+08:00 ] 203.130.43.155 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000573s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000640s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013985s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014023s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000367s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000405s ]
+
+[ 2017-03-24T08:50:14+08:00 ] 203.130.43.155 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 361 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 424 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 438 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013406s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013444s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000151s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000198s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000327s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000367s ]
+
+[ 2017-03-24T08:55:20+08:00 ] 203.130.43.155 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000350s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000389s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+NOTIC: [8] Undefined index: id /data/wwwroot/blog/Application/Admin/Controller/AjaxController.class.php 第 53 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: INSERT INTO `z_post` (`title`,`category`,`tag`,`summary`,`content`,`pubtime`,`mtime`,`ctime`) VALUES ('简单实用的Nginx防盗链配置','linux','安全','nginx防盗链配置,简单粗暴，有图有真相。','<p>一、配置</p><pre class=\"brush:as3;toolbar:false\">&nbsp;location&nbsp;~&nbsp;.*\\.(gif|jpg|jpeg|png|bmp|swf|flv|ico)$&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expires&nbsp;30d;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;access_log&nbsp;off;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valid_referers&nbsp;none&nbsp;blocked&nbsp;*.ruanwenwu.cn;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;($invalid_referer)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;403;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}</pre><p>二、测试</p><ol style=\"list-style-type: decimal;\" class=\" list-paddingleft-2\"><li><p>用curl测试，发现当指定referer为百度时，返回403<br/></p><p><img src=\"/ueditor/php/upload/image/20170324/1490316692959324.png\" title=\"1490316692959324.png\" alt=\"图片.png\"/></p></li><li><p>用网站测试，将该图片发到网站www.111.com上：</p><p><img src=\"/ueditor/php/upload/image/20170324/1490316766254919.png\" title=\"1490316766254919.png\" alt=\"图片.png\"/>（不显示）。</p></li><li><p>将防盗链代码去掉再看：</p><p><img src=\"/ueditor/php/upload/image/20170324/1490316829284345.png\" title=\"1490316829284345.png\" alt=\"图片.png\"/></p></li></ol><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 111.com能看ruanwenwu.cn的图片了。说明防盗链失效了。<br/></p>','1490316920','1490316920','1490316920') [ RunTime:0.0212s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category` WHERE `name` = 'linux' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag` WHERE `name` = '安全' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-03-24T08:55:21+08:00 ] 203.130.43.155 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000376s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013347s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013384s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000370s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000409s ]
+
+[ 2017-03-24T09:17:44+08:00 ] 203.130.43.155 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000431s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+
+[ 2017-03-24T09:17:44+08:00 ] 203.130.43.155 /admin.php/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000357s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000070s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004668s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004706s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000375s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000409s ]
+
+[ 2017-03-24T09:17:49+08:00 ] 203.130.43.155 /admin.php/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000070s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004443s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004480s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000361s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000395s ]
+
+[ 2017-03-24T09:17:52+08:00 ] 203.130.43.155 /admin.php/Ajax/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000398s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+
+[ 2017-03-24T09:17:52+08:00 ] 203.130.43.155 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000380s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 361 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 424 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 438 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013195s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013231s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000319s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000396s ]
+
+[ 2017-03-24T09:17:53+08:00 ] 203.130.43.155 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000369s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 361 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 424 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 438 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013432s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013470s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000122s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000343s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000382s ]
+
+[ 2017-03-24T09:17:55+08:00 ] 203.130.43.155 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000631s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013561s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013598s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000381s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000419s ]
+
+[ 2017-03-24T09:17:55+08:00 ] 203.130.43.155 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000505s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013084s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013164s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000326s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000364s ]
+
+[ 2017-03-24T09:17:57+08:00 ] 203.130.43.155 /admin.php/Post/updatePost/id/97
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 97 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b94d69ac1621e983387ec69783f12599.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013285s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013323s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000367s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000406s ]
+
+[ 2017-03-24T09:17:57+08:00 ] 203.130.43.155 /admin.php/Post/updatePost/id/97
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 97 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b94d69ac1621e983387ec69783f12599.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013259s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013294s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000317s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000355s ]
+
+[ 2017-03-24T09:18:09+08:00 ] 203.130.43.155 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: UPDATE `z_post` SET `title`='简单实用的Nginx防盗链配置',`category`='linux',`tag`='安全',`summary`='nginx防盗链配置,简单粗暴，有图有真相。',`content`='<p>								</p><p>一、配置</p><pre class=\"brush:as3;toolbar:false\">&nbsp;location&nbsp;~&nbsp;.*\\.(gif|jpg|jpeg|png|bmp|swf|flv|ico)$&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expires&nbsp;30d;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;access_log&nbsp;off;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valid_referers&nbsp;none&nbsp;blocked&nbsp;*.ruanwenwu.cn;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;($invalid_referer)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;403;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}</pre><p>二、测试</p><ol style=\"list-style-type: decimal;\" class=\" list-paddingleft-2\"><li><p>用curl测试，发现当指定referer为百度时，返回403<br/></p><p><img src=\"/ueditor/php/upload/image/20170324/1490316692959324.png\" title=\"1490316692959324.png\" alt=\"图片.png\"/></p></li><li><p>用网站测试，将该图片发到网站www.111.com上：</p><p><img src=\"/ueditor/php/upload/image/20170324/1490316766254919.png\" title=\"1490316766254919.png\" alt=\"图片.png\"/>（不显示）。</p></li><li><p>将防盗链代码去掉再看：</p><p><img src=\"/ueditor/php/upload/image/20170324/1490316829284345.png\" title=\"1490316829284345.png\" alt=\"图片.png\"/></p></li></ol><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 111.com能看ruanwenwu.cn的图片了。说明防盗链失效了。<br/></p><p>							</p>',`mtime`='1490318289' WHERE `id` = 97 [ RunTime:0.0096s ]
+NOTIC: [8] Undefined variable: id /data/wwwroot/blog/Application/Admin/Controller/AjaxController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category` WHERE `name` = 'linux' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag` WHERE `name` = '安全' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2017-03-24T09:18:11+08:00 ] 203.130.43.155 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013242s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013281s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000315s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000353s ]
+
+[ 2017-03-24T09:18:11+08:00 ] 203.130.43.155 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014244s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014293s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000209s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000485s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000542s ]
+
+[ 2017-03-24T09:18:25+08:00 ] 203.130.43.155 /admin.php/Post/updatePost/id/96
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 96 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b94d69ac1621e983387ec69783f12599.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013957s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013995s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000336s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000376s ]
+
+[ 2017-03-24T09:18:26+08:00 ] 203.130.43.155 /admin.php/Post/updatePost/id/96
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 96 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b94d69ac1621e983387ec69783f12599.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013562s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013598s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000108s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000350s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000388s ]
+
+[ 2017-03-24T09:18:41+08:00 ] 203.130.43.155 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: UPDATE `z_post` SET `title`='nginx日志切割',`category`='linux',`tag`='日志',`summary`='但凡是有点流量的网站访问日志都会比较大。不做切割的话，时间久了就没法看了。跟我一起来看看nginx切割日志的方法吧。',`content`='<p>								</p><h3>一、不是废话的废话</h3><p>nginx不像apache一样自带切割日志的方法——此刻有没有觉得apache高大上？^_^——。说到apache，顺便贴一下apache切割日志的方法：</p><pre class=\"brush:as3;toolbar:false\">&lt;VirtualHost&nbsp;*:80&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;CustomLog&nbsp;&quot;|/usr/local/apache2/bin/rotatelogs&nbsp;-l&nbsp;/usr/local/apache2/logs/mydiscuz.com-access.com-access_%Y%m%d_log&nbsp;86400&quot;&nbsp;combined
+&lt;/VirtualHost&gt;</pre><p>意思是86400(每天）生成一份。/bin/rotatelogs -l 是命令，/usr/local/apache2/logs/mydiscuz.com-access_%Y%m%d_log是文件路径。combined跟nginx里的log_format规定的变量名称是一个意思。</p><p>言归正传。nginx的日志切割，必须要自己写个脚本来完成。思路是：每天0点跑个计划任务，把前一天的日志移到指定的目录，然后重新载入配置文件，最好是压缩一下就完美了。</p><h3>二、shell代码实现</h3><pre class=\"brush:as3;toolbar:false\">#!/bin/bash
+d=`date&nbsp;-d&nbsp;&quot;-1&nbsp;day&quot;&nbsp;+%F`
+[&nbsp;-d&nbsp;/data/wwwlogs/cutedlogs&nbsp;]&nbsp;||&nbsp;mkdir&nbsp;/data/wwwlogs/cutedlogs
+mv&nbsp;/data/wwwlogs/access_log.ruanwenwu.cn.log&nbsp;/data/wwwlogs/cutedlogs/$d.log
+/etc/init.d/nginx&nbsp;reload&nbsp;&gt;&nbsp;/dev/null
+cd&nbsp;/data/wwwlogs/cutedlogs
+gzip&nbsp;-f&nbsp;$d.log</pre><p>第一行建立d这个变量。第二行判断如果cutedlogs不存在就创建。第三行将现在的日志移到cutedlogs。第四行重载配置文件。第五行进入cuted目录。第六行进行压缩。</p><p>小知识：shell -x xx.sh是让直行过程可见。</p><p>实现截图：</p><p><img src=\"/ueditor/php/upload/image/20170324/1490314072745981.png\" title=\"1490314072745981.png\" alt=\"图片.png\"/></p><h3>三、添加计划任务，让每天0点执行</h3><p>crontab -e,添加：</p><p>#每天切割日志<br/></p><pre class=\"brush:as3;toolbar:false\">0&nbsp;0&nbsp;*&nbsp;*&nbsp;*&nbsp;/bin/sh&nbsp;/root/shellscripts/cutaccesslog.sh</pre><p>							</p>',`mtime`='1490318321' WHERE `id` = 96 [ RunTime:0.0021s ]
+NOTIC: [8] Undefined variable: id /data/wwwroot/blog/Application/Admin/Controller/AjaxController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_category` WHERE `name` = 'linux' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_tag` WHERE `name` = '日志' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2017-03-24T09:18:42+08:00 ] 203.130.43.155 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013218s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013258s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000330s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000369s ]
+
+[ 2017-03-24T09:18:43+08:00 ] 203.130.43.155 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000393s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013123s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013203s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000324s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000363s ]
+
+[ 2017-03-24T09:18:45+08:00 ] 203.130.43.155 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013471s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013516s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000314s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000353s ]
+
+[ 2017-03-24T09:18:45+08:00 ] 203.130.43.155 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000395s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012911s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012949s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000362s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000400s ]
+
+[ 2017-03-24T09:18:48+08:00 ] 203.130.43.155 /admin.php/Post/updatePost/id/95
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000389s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b94d69ac1621e983387ec69783f12599.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014679s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014717s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000171s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000404s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000444s ]
+
+[ 2017-03-24T09:18:49+08:00 ] 203.130.43.155 /admin.php/Post/updatePost/id/95
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 95 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b94d69ac1621e983387ec69783f12599.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013853s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013891s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000383s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000423s ]
+
+[ 2017-03-24T09:25:08+08:00 ] 203.130.43.155 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000413s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 361 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 424 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 438 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013231s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013266s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000357s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000394s ]
+
+[ 2017-03-24T09:25:27+08:00 ] 203.130.43.155 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+NOTIC: [8] Undefined index: id /data/wwwroot/blog/Application/Admin/Controller/AjaxController.class.php 第 53 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: INSERT INTO `z_post` (`title`,`category`,`tag`,`summary`,`content`,`pubtime`,`mtime`,`ctime`) VALUES ('苏打粉','linux','日志','成都市斯蒂芬似懂非懂是','<p>随碟附送的苏打粉<br/></p>','1490318727','1490318727','1490318727') [ RunTime:0.0166s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category` WHERE `name` = 'linux' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag` WHERE `name` = '日志' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2017-03-24T09:25:28+08:00 ] 203.130.43.155 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014419s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014460s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000133s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000166s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000355s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000394s ]
+
+[ 2017-03-24T09:27:19+08:00 ] 203.130.43.155 /admin.php/Post/updatePost/id/90
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 90 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b94d69ac1621e983387ec69783f12599.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016855s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016891s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000379s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000417s ]
+
+[ 2017-03-24T09:27:20+08:00 ] 203.130.43.155 /admin.php/Post/updatePost/id/90
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 90 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b94d69ac1621e983387ec69783f12599.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013786s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013822s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000319s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000357s ]
+
+[ 2017-03-24T09:28:37+08:00 ] 203.130.43.155 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000387s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: UPDATE `z_post` SET `title`='搜索服务安装了增量索引，索引合并，和重新索引',`category`='php',`tag`='coreseek',`summary`='这两天写的文章有点多。搜索服务没有做增量索引，也没有做每天的计划任务跑全部索引，新写的文章搜不到，所以中午抽一点时间把搜索功能完善一下。',`content`='<p>								</p><h3>一、问题<br/></h3><p>这两天写的文章有点多。搜索服务没有做增量索引，也没有做每天的计划任务跑全部索引，新写的文章搜不到，所以中午抽一点时间把搜索功能完善一下。</p><h3>二、几个概念</h3><p>索引（一般是所有数据的索引）：就是你的数据源的所有的数据源（source）的集合。</p><p>增量索引：索引生成后，文章还在继续增加中。这时候就用到增量索引了。php查询的时候，可以用到这一部分，这就保证新加入的数据能够被搜索到。</p><p>主索引：就是数据量多的那个。</p><h3>三、解决步骤</h3><ol class=\" list-paddingleft-2\" style=\"list-style-type: decimal;\"><li><p><strong>原来的索引记录到id为76的文章了。原本可以重新索引一下，但是这样每次重新索引的话，1来数据量大的话是很慢的，2来不及时。</strong></p><p>原来的main source的索引sql为：</p><p>SELECT id,title,summary,content,ctime,mtime,category from z_post</p><p>上面这个sql是生成全部数据的索引，如果考虑到增量索引就需要修改成这样：</p><p>SELECT id,title,summary,content,ctime,mtime,category from z_post WHERE id&lt;=( SELECT max_doc_id FROM sph_counter WHERE counter_id=1 )</p><p>对应的delta source（增量索引源）的sql需要进行配置（这是在没有增量索引的基础上增加的部分）：</p></li></ol><pre class=\"brush:as3;toolbar:false\">source&nbsp;delta&nbsp;:&nbsp;main
+{
+&nbsp;&nbsp;&nbsp;&nbsp;sql_query_pre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;SET&nbsp;NAMES&nbsp;utf8
+&nbsp;&nbsp;&nbsp;&nbsp;sql_query&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;SELECT&nbsp;*&nbsp;FROM&nbsp;z_post&nbsp;WHERE&nbsp;id&gt;(&nbsp;SELECT&nbsp;max_doc_id&nbsp;FROM&nbsp;sph_counter&nbsp;WHERE&nbsp;counter_id=1&nbsp;)
+&nbsp;&nbsp;&nbsp;&nbsp;#sql_query_post_index&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;REPLACE&nbsp;INTO&nbsp;sph_counter&nbsp;SELECT&nbsp;1,MAX(id)&nbsp;FROM&nbsp;z_post&nbsp;&nbsp;#这个貌似注释才行
+}</pre><p>&nbsp;&nbsp;&nbsp;&nbsp;除了配置数据源之外，delta源的index配置也需要增加：<br/></p><pre class=\"brush:as3;toolbar:false\">index&nbsp;delta&nbsp;:&nbsp;main
+{
+&nbsp;&nbsp;&nbsp;&nbsp;source&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;delta
+&nbsp;&nbsp;&nbsp;&nbsp;path&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;/usr/local/coreseek/var/data/delta/delta
+}</pre><p>最终的配置文件：<br/></p><pre class=\"brush:as3;toolbar:false\">#MySQL数据源配置，详情请查看：http://www.coreseek.cn/products-install/mysql/
+#请先将var/test/documents.sql导入数据库，并配置好以下的MySQL用户密码数据库
+#源定义
+source&nbsp;main
+{
+&nbsp;&nbsp;&nbsp;&nbsp;type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;mysql
+&nbsp;&nbsp;&nbsp;&nbsp;sql_host&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;localhost
+&nbsp;&nbsp;&nbsp;&nbsp;sql_user&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;root
+&nbsp;&nbsp;&nbsp;&nbsp;sql_pass&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;7DMKne22
+&nbsp;&nbsp;&nbsp;&nbsp;sql_db&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;blog
+&nbsp;&nbsp;&nbsp;&nbsp;sql_port&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;3306
+&nbsp;&nbsp;&nbsp;&nbsp;sql_query_pre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;SET&nbsp;NAMES&nbsp;utf8
+&nbsp;&nbsp;&nbsp;&nbsp;sql_query_pre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;REPLACE&nbsp;INTO&nbsp;sph_counter&nbsp;SELECT&nbsp;1,MAX(id)&nbsp;FROM&nbsp;z_post&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;sql_query&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;SELECT&nbsp;id,title,summary,content,ctime,mtime,category&nbsp;from&nbsp;z_post&nbsp;WHERE&nbsp;id&lt;=(&nbsp;SELECT&nbsp;max_doc_id&nbsp;FROM&nbsp;sph_counter&nbsp;WHERE&nbsp;counter_id=1&nbsp;)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#sql_query第一列id需为整数
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#title、content作为字符串/文本字段，被全文索引
+&nbsp;&nbsp;&nbsp;&nbsp;#sql_attr_uint&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;group_id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#从SQL读取到的值必须为整数
+&nbsp;&nbsp;&nbsp;&nbsp;sql_attr_timestamp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;ctime&nbsp;#从SQL读取到的值必须为整数，作为时间属性
+&nbsp;&nbsp;&nbsp;&nbsp;sql_attr_timestamp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;mtime&nbsp;#从SQL读取到的值必须为整数，作为时间属性
+&nbsp;&nbsp;&nbsp;&nbsp;sql_query_info_pre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;SET&nbsp;NAMES&nbsp;utf8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#命令行查询时，设置正确的字符集
+&nbsp;&nbsp;&nbsp;&nbsp;sql_query_info&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;SELECT&nbsp;*&nbsp;from&nbsp;z_post&nbsp;WHERE&nbsp;id=$id&nbsp;#命令行查询时，从数据库读取原始数据信息
+}
+source&nbsp;delta&nbsp;:&nbsp;main&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;sql_query_pre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;SET&nbsp;NAMES&nbsp;utf8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;sql_query&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;SELECT&nbsp;id,title,summary,content,ctime,mtime,category&nbsp;FROM&nbsp;z_post&nbsp;WHERE&nbsp;id&gt;(&nbsp;SELECT&nbsp;max_doc_id&nbsp;FROM&nbsp;sph_counter&nbsp;WHERE&nbsp;counter_id=1&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;sql_query_post_index&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;REPLACE&nbsp;INTO&nbsp;sph_counter&nbsp;SELECT&nbsp;1,MAX(id)&nbsp;FROM&nbsp;z_post&nbsp;
+}&nbsp;
+#index定义
+index&nbsp;main
+{
+&nbsp;&nbsp;&nbsp;&nbsp;source&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;main&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#对应的source名称
+&nbsp;&nbsp;&nbsp;&nbsp;path&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;/usr/local/coreseek/var/data/mysql/mysql&nbsp;#请修改为实际使用的绝对路径，例如：/usr/local/coreseek/var/...
+&nbsp;&nbsp;&nbsp;&nbsp;docinfo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;extern
+&nbsp;&nbsp;&nbsp;&nbsp;mlock&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;0
+&nbsp;&nbsp;&nbsp;&nbsp;morphology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;none
+&nbsp;&nbsp;&nbsp;&nbsp;min_word_len&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;1
+&nbsp;&nbsp;&nbsp;&nbsp;html_strip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;0
+&nbsp;&nbsp;&nbsp;&nbsp;#中文分词配置，详情请查看：http://www.coreseek.cn/products-install/coreseek_mmseg/
+&nbsp;&nbsp;&nbsp;&nbsp;charset_dictpath&nbsp;=&nbsp;/usr/local/mmseg/etc/&nbsp;#BSD、Linux环境下设置，/符号结尾
+&nbsp;&nbsp;&nbsp;&nbsp;#charset_dictpath&nbsp;=&nbsp;etc/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#Windows环境下设置，/符号结尾，最好给出绝对路径，例如：C:/usr/local/coreseek/etc/...
+&nbsp;&nbsp;&nbsp;&nbsp;charset_type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;zh_cn.utf-8
+}
+index&nbsp;delta&nbsp;:&nbsp;main&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;source&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;delta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;path&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;/usr/local/coreseek/var/data/delta/delta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}&nbsp;&nbsp;&nbsp;&nbsp;
+#全局index定义
+indexer
+{
+&nbsp;&nbsp;&nbsp;&nbsp;mem_limit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;128M
+}
+#searchd服务定义
+searchd
+{
+&nbsp;&nbsp;&nbsp;&nbsp;listen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;9312
+&nbsp;&nbsp;&nbsp;&nbsp;read_timeout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;5
+&nbsp;&nbsp;&nbsp;&nbsp;max_children&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;30
+&nbsp;&nbsp;&nbsp;&nbsp;max_matches&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;1000
+&nbsp;&nbsp;&nbsp;&nbsp;seamless_rotate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;0
+&nbsp;&nbsp;&nbsp;&nbsp;preopen_indexes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;0
+&nbsp;&nbsp;&nbsp;&nbsp;unlink_old&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;1
+&nbsp;&nbsp;&nbsp;&nbsp;pid_file&nbsp;=&nbsp;/usr/local/coreseek/var/log/searchd_mysql.pid&nbsp;&nbsp;#请修改为实际使用的绝对路径，例如：/usr/local/coreseek/var/...
+&nbsp;&nbsp;&nbsp;&nbsp;log&nbsp;=&nbsp;/usr/local/coreseek/var/log/searchd_mysql.log&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#请修改为实际使用的绝对路径，例如：/usr/local/coreseek/var/...
+&nbsp;&nbsp;&nbsp;&nbsp;query_log&nbsp;=&nbsp;/usr/local/coreseek/var/log/query_mysql.log&nbsp;#请修改为实际使用的绝对路径，例如：/usr/local/coreseek/var/...
+}</pre><p><strong>2.建计数表：sph_counter,就两个字段，值分别为1和当前索引到的位置</strong><br/></p><p>&nbsp; &nbsp;&nbsp;<img src=\"/ueditor/php/upload/image/20170323/1490247115156226.png\" title=\"1490247115156226.png\" alt=\"blob.png\"/></p><p><strong>3.生成delta索引：</strong></p><p><span style=\"margin: 0px; padding: 0px; border: none; color: black; background-color: inherit;\"><span style=\"margin: 0px; padding: 0px; border: none; background-color: inherit;\">/usr/local/coreseek/bin/indexer&nbsp;-c&nbsp;/usr/local/coreseek/etc/csft_mysql.conf&nbsp;delta&nbsp;--rotate &nbsp;</span></span></p><p><strong><span style=\"margin: 0px; padding: 0px; border: none; color: black; background-color: inherit;\"><span style=\"margin: 0px; padding: 0px; border: none; background-color: inherit;\">4.关掉当前正在运行的搜索服务</span></span></strong></p><p><span style=\"color: black; margin: 0px; padding: 0px; border: none; background-color: inherit;\">/usr/local/coreseek/bin/searchd&nbsp;-c&nbsp;/usr/local/coreseek/etc/csft_mysql.conf&nbsp;--stop</span></p><p><strong><span style=\"color: black; margin: 0px; padding: 0px; border: none; background-color: inherit;\">5.重新开启（开启前我新建了delta数据源的目录/usr/local/coreseek/var/data/delta/）</span></strong></p><p><span style=\"color: black; margin: 0px; padding: 0px; border: none; background-color: inherit;\">&nbsp;/usr/local/coreseek/bin/searchd&nbsp;-c&nbsp;/usr/local/coreseek/etc/csft_mysql.conf</span></p><p><span style=\"color: black; margin: 0px; padding: 0px; border: none; background-color: inherit;\">开启后，php部分在查询的时候，带上delta源发现已经有数据了，而且max_doc_id从75变成了89,这说明增量索引生成成功，并且服务正常。</span></p><p><strong><span style=\"color: black; margin: 0px; padding: 0px; border: none; background-color: inherit;\">6.将下面这些加入到计划任务</span></strong></p><p><br/></p><ol style=\"padding: 0px; border: none; list-style-position: initial; list-style-image: initial; background-color: rgb(255, 255, 255); color: rgb(92, 92, 92); font-family: Consolas, &quot;Courier New&quot;, Courier, mono, serif; font-size: 12px; white-space: normal; margin-bottom: 1px !important; margin-left: 45px !important;\" class=\" list-paddingleft-2\"><li><p><span style=\"color: black; margin: 0px; padding: 0px; border: none; background-color: inherit;\">*/1&nbsp;*&nbsp;*&nbsp;*&nbsp;* &nbsp;/usr/local/coreseek/bin/indexer&nbsp;-c&nbsp;/usr/local/coreseek/etc/csft_mysql.conf&nbsp;delta&nbsp;--rotate&nbsp;&nbsp;&nbsp;&nbsp;</span></p></li><li><p><span style=\"color: black; margin: 0px; padding: 0px; border: none; background-color: inherit;\">*/5&nbsp;*&nbsp;*&nbsp;*&nbsp;* &nbsp;/usr/local/coreseek/bin/indexer&nbsp;-c&nbsp;/usr/local/coreseek/etc/csft_mysql.conf&nbsp;--merge&nbsp;main&nbsp;delta&nbsp;--rotate&nbsp;--merge-dst-range&nbsp;deleted&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp; #这个开启了有问题，后台注释掉了<br/></span></p></li><li><p><span style=\"color: black; margin: 0px; padding: 0px; border: none; background-color: inherit;\">30&nbsp;1&nbsp;*&nbsp;*&nbsp;* &nbsp; /usr/local/coreseek/bin/indexer&nbsp;-c&nbsp;/usr/local/coreseek/etc/csft_mysql.conf&nbsp;--all&nbsp;--rotate &nbsp;</span></p></li></ol><p>它们代表，每分钟执行一次增量索引，每五分钟合并一次索引，每天1点30分执行一次全部索引。</p><p><br/></p><p><br/></p><p>							</p>',`mtime`='1490318917' WHERE `id` = 90 [ RunTime:0.0250s ]
+NOTIC: [8] Undefined variable: id /data/wwwroot/blog/Application/Admin/Controller/AjaxController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_category` WHERE `name` = 'php' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_tag` WHERE `name` = 'coreseek' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-03-24T09:28:38+08:00 ] 203.130.43.155 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012930s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012969s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000373s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000412s ]
+

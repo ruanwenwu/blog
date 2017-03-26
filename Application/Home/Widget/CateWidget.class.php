@@ -28,4 +28,10 @@ class CateWidget extends Controller{
         //echo 'category here';
         $this->display('Cate:friendlink');
     }
+    
+    public function newreply(){
+        $res = M("comment")->where(array("status"=>1))->order("id desc")->limit(5)->select();
+        $this->assign("data",$res);
+        $this->display('Cate:newreply');
+    }
 }

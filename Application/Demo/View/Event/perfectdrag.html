@@ -1,0 +1,65 @@
+<extend name="Public:base" />
+<block name="css">
+<style>
+	#div1{width:200px;height:200px;background:red;position:absolute;left:0;top:0;}
+</style>
+</block>
+<block name="content">
+	<p>this is a test paragraph</p>
+	<p>this is a test paragraph</p>
+	<p>this is a test paragraph</p>
+	<p>this is a test paragraph</p>
+	<div id="div1">
+		<p>inside paragrap</p>
+		<p>inside paragrap</p>
+		<p>inside paragrap</p>
+	</div>
+</block>
+<block name="script">
+<script>
+window.onload = function(){
+	var oDiv = document.getElementById("div1");
+	oDiv.onmousedown = function(){
+		var pos = getPos();
+		var diffX = pos.x - this.offsetLeft;
+		var diffY = pos.y - this.offsetTop;
+		var moveObj;
+		
+		if(oDiv.setCapture){
+			moveObj = oDiv;
+		}else{
+			moveObj = document;
+		}
+		
+		moveObj.onmousemove = mousemove;
+		
+		moveObj.onmouseup = function(){
+			this.onmousemove = null;
+			this.onmouseup   = null;
+			if(this.releaseCapture){
+				this.releaseCapture();
+			}
+		}
+		
+		if(this.setCapture){
+			this.setCapture();
+		}
+		
+		return false;
+		
+		function mousemove(){
+			var pos = getPos();
+			oDiv.style.left = pos.x - diffX + 'px';
+			oDiv.style.top  = pos.y - diffY + 'px';
+		}
+	}
+}
+
+function getPos(){
+	var sTop  = document.documentElement.scrollTop || document.body.scrollTop;
+	var sLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
+	var e=arguments.callee.caller.arguments[0] || window.event; 
+	return {x : sLeft + e.clientX, y : sTop + e.clientY};
+}
+</script>
+</block>

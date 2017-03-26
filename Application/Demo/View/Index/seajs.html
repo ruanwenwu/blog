@@ -1,0 +1,25 @@
+<extend name="Public:base" />
+<block name="css">
+	<style>
+		#div1{width:200px;height:200px;background:red;position:absolute;top:30;left:0;}
+	</style>
+</block>
+<block name="content">
+<h1>sea.js的实例</h1>
+<div id="div1">
+</div>
+</block>
+<block name="script">
+	<script src="/Public/sea/sea.js"></script>
+	<script>
+	 // Set configuration
+		  seajs.config({
+			base: "/Public/sea/modules/",
+			alias: {
+			  "jquery": "jquery/jquery/1.10.1/jquery.js"
+			}
+		  });
+
+		  seajs.use("/Public/sea/app/demo_index_sea_main");
+	 </script>
+</block>

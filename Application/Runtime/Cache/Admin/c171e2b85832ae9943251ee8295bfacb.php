@@ -85,16 +85,6 @@
                         <!--<li><a href="horizontal_menu.html"> Horizontal Menu</a></li>-->
                     </ul>
                 </li>
-                <li class="menu-list"><a href=""><i class="fa fa-book"></i> <span>医生信息</span></a>
-                    <ul class="sub-menu-list">
-                        <li><a href="general.html">医生列表</a></li>
-                        <!--<li><a href="buttons.html"> Buttons</a></li>
-                        <li><a href="tabs-accordions.html"> Tabs & Accordions</a></li>
-                        <li><a href="typography.html"> Typography</a></li>
-                        <li><a href="slider.html"> Slider</a></li>
-                        <li><a href="panels.html"> Panels</a></li>-->
-                    </ul>
-                </li>
                 <!--<li class="menu-list"><a href=""><i class="fa fa-cogs"></i> <span>Components</span></a>
                     <ul class="sub-menu-list">
                         <li><a href="grids.html"> Grids</a></li>

@@ -44,12 +44,39 @@ detail.prototype = {
 			}
 		},
 		
+		/**
+		 * 添加表单提交事件，验证验证码
+		 */
+		checkForm:function(){
+			var commentform = document.getElementById("commentform");
+			//得到验证码的值，如果验证码的值不为空判断验证码的值是否正确
+			
+				commentform.onsubmit = function(){
+					var codeValue = document.getElementById("vcode").value;
+					if(codeValue != ""){
+						var url = "/index.php?c=Index&a=checkVerifyCode";
+						$.ajax({
+							"url" 	: url,
+							"async" : false,
+							"data"	: "code="+codeValue,
+							"dataType":"string",
+							"success":function(data){
+								console.log(data);
+							}
+						});
+						return false;
+					}
+				}
+			
+		},
+		
 		/*
 		 * 绑定事件
 		 */
 		bindEvent:function(){
 			this.replyEvent();
 			this.cancelReplyEvent();
+			//this.checkForm();
 		},
 		
 		/*

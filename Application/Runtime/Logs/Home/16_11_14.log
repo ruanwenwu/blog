@@ -1,0 +1,216 @@
+[ 2016-11-14T00:50:13+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000697s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: pageObj /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Home/Controller/IndexController.class.php 第 25 行.
+NOTIC: [8] Trying to get property of non-object /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Home/Controller/IndexController.class.php 第 25 行.
+NOTIC: [8] Undefined variable: pageObj /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Home/Controller/IndexController.class.php 第 25 行.
+NOTIC: [8] Trying to get property of non-object /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Home/Controller/IndexController.class.php 第 25 行.
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+NOTIC: [8] Undefined variable: archive_current /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 34 行.
+NOTIC: [8] Undefined variable: about_current /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 36 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000012s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.004665s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001343s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001380s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000345s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000376s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.008804s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002082s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002199s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003969s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000013s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.011331s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001302s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.005296s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006265s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.013179s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001718s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006760s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.008137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001817s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006760s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000005s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.008220s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000993s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001027s ]
+
+[ 2016-11-14T00:50:22+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000429s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000561s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: pageObj /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Home/Controller/IndexController.class.php 第 25 行.
+NOTIC: [8] Trying to get property of non-object /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Home/Controller/IndexController.class.php 第 25 行.
+NOTIC: [8] Undefined variable: pageObj /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Home/Controller/IndexController.class.php 第 25 行.
+NOTIC: [8] Trying to get property of non-object /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Home/Controller/IndexController.class.php 第 25 行.
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+NOTIC: [8] Undefined variable: archive_current /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 34 行.
+NOTIC: [8] Undefined variable: about_current /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 36 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000020s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005704s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002414s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002488s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000197s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000231s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000022s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.011563s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002321s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.003158s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.005302s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000017s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.018958s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008923s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006885s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.015637s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000021s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.023750s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001469s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.016006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.017296s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001673s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.016006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000014s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.017466s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000631s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000677s ]
+
+[ 2016-11-14T00:50:32+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000910s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001130s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: pageObj /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Home/Controller/IndexController.class.php 第 25 行.
+NOTIC: [8] Trying to get property of non-object /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Home/Controller/IndexController.class.php 第 25 行.
+NOTIC: [8] Undefined variable: pageObj /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Home/Controller/IndexController.class.php 第 25 行.
+NOTIC: [8] Trying to get property of non-object /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Home/Controller/IndexController.class.php 第 25 行.
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+NOTIC: [8] Undefined variable: archive_current /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 34 行.
+NOTIC: [8] Undefined variable: about_current /Applications/XAMPP/xamppfiles/htdocs/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 36 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000025s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.006201s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003746s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003802s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001466s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001534s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.015118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002763s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.005450s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006745s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000022s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.018518s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001716s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.009398s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.009629s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000022s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.019985s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001650s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.011299s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.011455s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001769s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.011299s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000014s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.013895s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001047s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001091s ]
+

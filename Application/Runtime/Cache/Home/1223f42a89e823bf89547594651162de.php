@@ -1,19 +1,21 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="zh-CN">
-  
-  <head>
+  <head> 
+    <meta name="baidu-site-verification" content="J8ew7HWRsH" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
     <meta content="telephone=no" name="format-detection">
     <meta charset="utf-8" />
-    <meta name="description">
-    <title><?php echo ($title); ?></title>
+    <title><?php echo ($title); ?> - 阮文武的网络日志</title>
+    <meta name="description" content="<?php if($detail): echo ($detail["summary"]); else: ?>阮文武的博客，记录生活，分享感动<?php endif; ?>" />
+    <meta name="keywords" conent="<?php if($detail): ?>阮文武,阮文武的博客,阮文武的blog,<?php echo ($detail["tag"]); else: ?>阮文武,阮文武的博客,php博客<?php endif; ?>,<?php echo ($title); ?>" />
     <link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/4.2.0/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css">
     <link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css">
-    <link rel="stylesheet" type="text/css" href="/Public/css/style.css?v=0.0.0">
+    <link href="http://www.js-css.cn/jscode/highlight/highlight1/prettify.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="/Public/css/style.css?v=0.0.2"> 
     
 <style>
 .respond_title{margin-top:0;}
@@ -59,18 +61,16 @@ form.mobile textarea{font-size:16px;}
 	 #commentform textarea{width:95%}
 }*/
 </style>
-
+ 
     <link rel="stylesheet" href="/Public/admin/fonts/css/font-awesome.min.css">
-    <script type="text/javascript" src="//cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
     <link rel="Shortcut Icon" type="image/x-icon" href="/Public/img/favicon.ico">
     <link rel="apple-touch-icon" href="/Public/img/apple-touch-icon.png">
     <link rel="apple-touch-icon-precomposed" href="/Public/img/apple-touch-icon.png"></head>
   
-  <body>
+  <body onload="prettyPrint()">
     <div class="body_container">
       <div id="header">
         <div class="site-name">
-          <h1 class="hidden">阮文武</h1>
           <a id="logo" href="/.">阮文武</a>
           <p class="description"><?php echo ($motto); ?></p></div>
         <div id="nav-menu">
@@ -97,27 +97,30 @@ form.mobile textarea{font-size:16px;}
     <div class="post-content">
         <?php echo ($detail['content']); ?> 
     </div>
-    <?php if($detail['content']): ?><div class="tags">
-        <a href="/tags/DNS/"><?php echo ($detail['tag']); ?></a>
+    <?php if($detail['tag']): ?><div class="tags">
+        <a href="/blog/tag/<?php echo ($detail['tag']); ?>/"><?php echo ($detail['tag']); ?></a>
     </div><?php endif; ?>
     <div class="post-nav">
     		<?php if($prevRes): ?><a href="/blog/<?php echo ($prevRes['id']); ?>.html" class="pre"><?php echo ($prevRes['title']); ?></a><?php endif; ?>
         <?php if($nextRes): ?><a href="/blog/<?php echo ($nextRes['id']); ?>.html" class="next"><?php echo ($nextRes['title']); ?></a><?php endif; ?>
     </div>
 </div>
-
+<!--<div>
+<a href="https://github.com/login/oauth/authorize?client_id=3d1ac5a564661c9e25ba&scope=user&state=jard&allow_signup=true">使用github登陆</a>
+</div>-->
 <!--评论开始-->
+
 <div id="respond">
-<h3 class="respond_title">发表评论（目前<?php echo ($commentNum); ?>条评论）</h3>
-<div id="cancel-comment-reply"> 
+<h3 class="respond_title fa fa-pencil"><a href="<?php if(empty($userinfo)): ?>https://github.com/login/oauth/authorize?client_id=3d1ac5a564661c9e25ba&scope=user&state=jard&allow_signup=true<?php else: ?>javascript:;<?php endif; ?>">发表评论</a>（目前<?php echo ($commentNum); ?>条评论）</h3>
+<?php if($userinfo): ?><div id="cancel-comment-reply"> 
 	<small><a rel="nofollow" id="cancel-comment-reply-link" href="javascript:;" style="display:none;">点击这里取消回复。</a></small>
 </div> 
 
 
-<form action="/index.php/Home/Index/add" method="post" id="commentform">
+<form onsubmit="<?php if(empty($userinfo)): ?>location.href='https://github.com/login/oauth/authorize?client_id=3d1ac5a564661c9e25ba&scope=user&state=jard&allow_signup=true';return false;<?php else: ?>return true;<?php endif; ?>" action="/index.php/Home/Index/add" method="post" id="commentform">
 
 
-<p><input name="name" id="author" value="" size="22" tabindex="1" aria-required="true" required="true" type="text">
+<p><input name="name" id="author" value="<?php echo ($userinfo['login']); ?>" readonly size="22" tabindex="1" aria-required="true" required="true" type="text">
 <label for="author"><small>名称 (必须)</small></label></p>
 
 <p><input name="email" id="email" value="" size="22" tabindex="2" aria-required="true" required="true" type="email">
@@ -130,32 +133,38 @@ form.mobile textarea{font-size:16px;}
 <!--<p><small><strong>XHTML：</strong>您可以使用这些标签：<code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>-->
 
 <p><textarea name="content" id="comment" required="true" cols="100%" rows="10" tabindex="4"></textarea></p>
+<p>
+<input name="vcode" required="true" id="vcode" type="text" style="width:80px;" />
+<img style="position:relative;top:12px;" src="/index.php?c=Index&a=showVerifyCode" onclick="this.src=this.src+'&t='+(new Date()).getTime()"/>
+<label for="vcode"><small>验证码 (必须)</small></label>
 
+</p>
 <p><input id="submit" tabindex="5" value="提交评论" type="submit"><span id="commRem" class="ml20" style="color:#cd0000;"></span>
 <input name="postid" value="<?php echo ($detail['id']); ?>" id="comment_post_ID" type="hidden">
 <input name="pid" id="comment_parent" value="0" type="hidden">
 <input type="hidden" name="depth" id="comment_depth" value="1" />
+<input type="hidden" name="csrf" value="<?php echo ($csrf); ?>" />
 </p>
-</form>
+</form><?php endif; ?>
 </div>
 
 <ol class="commentlist">
 <?php if(is_array($comments)): foreach($comments as $k=>$vo): ?><li class="comment <?php if($k%2 == 0): ?>even<?php else: ?>alt<?php endif; ?> thread-<?php if($k%2 == 0): ?>even<?php else: ?>alt<?php endif; ?> depth-1 parent" id="comment-<?php echo ($vo['id']); ?>">
 		<div id="div-comment-<?php echo ($vo['id']); ?>" class="comment-body">
 			<div class="comment-author vcard">
-				<!--<img src="https://secure.gravatar.com/avatar/dab45b161d4fee636fde17c7997ccaff?s=32" class="avatar avatar-32" height="32" width="32">-->
+				<img src="<?php echo ($vo['userinfo']['avatar']); ?>" class="avatar avatar-32" height="32" width="32">
 				<cite class="fn"><?php echo ($vo['name']); ?></cite><span class="says">说道：</span>
 			</div>
 		
 			<div class="comment-meta commentmetadata">
 				<a href="javascript:;">
-			<?php echo date("Y年m月d日 H:i");?></a>		
+			<?php echo date("Y年m月d日 H:i",$vo['ctime']);?></a>		
 			</div>
 
 			<p><?php echo ($vo['content']); ?></p>
 
 			<div class="reply">
-				<a class="comment-reply-link" cid="<?php echo ($vo['id']); ?>" depth="<?php echo ($vo['depth']); ?>" href="javascript:;" aria-label="回复给dont">回复</a>
+				<a  class="comment-reply-link" cid="<?php echo ($vo['id']); ?>" depth="<?php echo ($vo['depth']); ?>" href="<?php if(empty($userinfo)): ?>https://github.com/login/oauth/authorize?client_id=3d1ac5a564661c9e25ba&scope=user&state=jard&allow_signup=true<?php else: ?>javascript:;<?php endif; ?>" aria-label="回复给dont">回复</a>
 			</div>
 		</div>
 		
@@ -164,7 +173,7 @@ form.mobile textarea{font-size:16px;}
 			<?php if(is_array($vo['child'])): foreach($vo['child'] as $key=>$cvo): ?><li class="comment byuser comment-author-admin bypostauthor even depth-2 parent" id="comment-<?php echo ($cvo['id']); ?>">
 				<div id="div-comment-<?php echo ($cvo['id']); ?>" class="comment-body">
 					<div class="comment-author vcard">
-						<!--<img src="https://secure.gravatar.com/avatar/3e58242902fa8f33162f3f10df892c68?s=32" class="avatar avatar-32" height="32" width="32">-->
+						<img src="<?php echo ($cvo['userinfo']['avatar']); ?>" class="avatar avatar-32" height="32" width="32">
 						<cite class="fn">
 							<a href="<?php echo ($cvo['website']); ?>" rel="external nofollow" class="url"><?php echo ($cvo['name']); ?></a>
 						</cite>
@@ -178,7 +187,7 @@ form.mobile textarea{font-size:16px;}
 					<p><?php echo ($cvo['content']); ?></p>
 	
 					<div class="reply">
-						<a class="comment-reply-link" cid="<?php echo ($cvo['id']); ?>" depth="<?php echo ($cvo['depth']); ?>" href="javascript:;" aria-label="回复给张 鑫旭">回复</a>
+						<a class="comment-reply-link" cid="<?php echo ($cvo['id']); ?>" depth="<?php echo ($cvo['depth']); ?>" href="<?php if(empty($userinfo)): ?>https://github.com/login/oauth/authorize?client_id=3d1ac5a564661c9e25ba&scope=user&state=jard&allow_signup=true<?php else: ?>javascript:;<?php endif; ?>" aria-label="回复给张 鑫旭">回复</a>
 					</div>
 				</div>
 
@@ -186,7 +195,7 @@ form.mobile textarea{font-size:16px;}
 					<?php if(is_array($cvo['child'])): foreach($cvo['child'] as $key=>$ccvo): ?><li class="comment odd alt depth-3 parent" id="comment-<?php echo ($ccvo['id']); ?>">
 						<div id="div-comment-<?php echo ($ccvo['id']); ?>" class="comment-body">
 							<div class="comment-author vcard">
-								<!--<img src="https://secure.gravatar.com/avatar/b7e68415a744c02892e2bcfa01157cd1?s=32" class="avatar avatar-32" height="32" width="32">-->
+								<img src="<?php echo ($ccvo['userinfo']['avatar']); ?>" class="avatar avatar-32" height="32" width="32">
 								<cite class="fn"><?php echo ($ccvo['name']); ?></cite><span class="says">说道：</span>
 							</div>
 		
@@ -198,7 +207,7 @@ form.mobile textarea{font-size:16px;}
 							<p><?php echo ($ccvo['content']); ?></p>
 
 							<div class="reply">
-								<a class="comment-reply-link" href="javascript:;" cid="<?php echo ($ccvo['id']); ?>" depth="<?php echo ($ccvo['depth']); ?>" aria-label="回复给城市精灵">回复</a>
+								<a class="comment-reply-link" href="<?php if(empty($userinfo)): ?>https://github.com/login/oauth/authorize?client_id=3d1ac5a564661c9e25ba&scope=user&state=jard&allow_signup=true<?php else: ?>javascript:;<?php endif; ?>" cid="<?php echo ($ccvo['id']); ?>" depth="<?php echo ($ccvo['depth']); ?>" aria-label="回复给城市精灵">回复</a>
 							</div>
 						</div>
 						
@@ -235,16 +244,18 @@ form.mobile textarea{font-size:16px;}
         </div>
         <div class="pure-u-1-4 hidden_mid_and_down">
           <div id="sidebar">
-            <!--<div class="widget">
+            <div class="widget">
               <div class="search-form">
-                <input id="local-search-input" placeholder="Search" type="text" name="q" results="0" />
+                <input id="local-search-input" style="outline:none;" placeholder="Search" type="text" name="q" results="0" />
                 <div id="local-search-result"></div>
               </div>
-            </div>-->
+            </div>
             <?php echo W('Cate/Category');?>
             <?php echo W('Cate/Tag');?>
             <?php echo W('Cate/Latest');?>
+             <?php echo W('Cate/Newreply');?>
             <?php echo W('Cate/Friendlink');?>
+           
         </div>
         <div class="pure-u-1 pure-u-md-3-4">
           <div id="footer">©
@@ -255,13 +266,52 @@ form.mobile textarea{font-size:16px;}
         </div>
       </div>
       <a id="rocket" href="#top" class="show"></a>
-      <script type="text/javascript" src="/Public/js/totop.js?v=0.0.0" async></script>
-      <script type="text/javascript" src="/Public/js/codeblock-resizer.js?v=0.0.0"></script>
-      <script type="text/javascript" src="/Public/js/smartresize.js?v=0.0.0"></script>
-      
-<script src="/Public/js/detail.js"></script>
-
     </div>
   </body>
+  	  <script type="text/javascript" src="//cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+      <script type="text/javascript" src="/Public/js/totop.js?v=0.0.0" async></script>
+      <script type="text/javascript" src="/Public/js/codeblock-resizer.js?v=0.0.0"></script>
+      <script type="text/javascript" src="/Public/js/smartresize.js?v=0.0.0"></script>   
+      
+<script src="/Public/js/detail.js?jack"></script>
 
+	  <script type="text/javascript" src="http://www.js-css.cn/jscode/highlight/highlight1/prettify.js"></script>
+      <script>
+      	  var preObj = document.getElementsByTagName("pre");
+      	  for(var i = 0; i < preObj.length; i++){
+      		  preObj[i].className = "prettyprint lang-php";
+      	  }
+      </script>
+      <script>
+		var _hmt = _hmt || [];
+		(function() {
+		 	var hm = document.createElement("script");
+		  	hm.src = "https://hm.baidu.com/hm.js?77834ec9e0919b0d048ceba486388472";
+		  	var s = document.getElementsByTagName("script")[0]; 
+		  	s.parentNode.insertBefore(hm, s);
+		})();   
+
+		 (function(){
+	    		var bp = document.createElement('script');
+	    		var curProtocol = window.location.protocol.split(':')[0];
+	    		if (curProtocol === 'https') {
+	        		bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    		}
+	    		else {
+	        		bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    		}
+	    		var s = document.getElementsByTagName("script")[0];
+	    		s.parentNode.insertBefore(bp, s);
+		 })();
+
+	</script>
+	<script>
+		//搜索功能
+		var oSearch = document.getElementById("local-search-input");
+		oSearch.onkeydown = function(e){
+			if(this.value != "" && e.keyCode == 13){
+				location.href = "/index.php/Home/Index/search/keywords/"+this.value;
+			}
+		}
+	</script>
 </html>

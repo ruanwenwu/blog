@@ -1,5 +1,8 @@
 <extend name="Public:base" />
 <block name="body">
+<if condition="$index">
+<h1 style="display:none;">阮文武</h1>
+</if>
 <foreach name="post" item="vo">
    <div class="post">
      <h2 class="post-title">

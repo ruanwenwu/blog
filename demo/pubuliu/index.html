@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN"> 
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+	<title>阮文武 瀑布流demo</title>
+	<meta name="keywords" content="阮文武,瀑布流,瀑布流demo" />
+	<meta name="description" content="阮文武瀑布流demo" />
+	<style>
+		*{margin:0;padding:0;}
+		.pubuliu_container{margin:0 auto;position:relative;}
+		.pubuliu_container img{position:absolute;display:block;}
+	</style> 
+</head>
+<body> 
+<h1>阮文武瀑布流demo</h1>
+</body>
+</html>
+<script src="jquery-1.js"></script>
+<script>
+/**
+ * 瀑布流功能
+ *
+ * @param imgWidth定义每列图片宽度
+ * @param imgGap 图片间距
+ * @param maxCol 最大列数
+ * @param page 当前页数
+ * @param dataUrl 获取数据地址
+ */
+function Pubuliu(param) {
+	var cWidth = window.innerWidth;
+	var ua = window.navigator.userAgent;
+	//alert(ua);
+	var pattern = /android|ios/i;
+	var iniWidth = 250;
+	if(pattern.test(ua)){
+		iniWidth = cWidth/2-30;
+	}
+	this.imgWidth 	 = param.imgWidth ? param.imgWidth : iniWidth;
+	this.imgGap   	 = param.imgGap ? param.imgWidth : 10;
+	this.maxCol   	 = param.maxCol ? param.maxCol : 6;
+	this.minCol 		 = param.minCol ? param.minCol : 2;
+	this.page     	 = param.page ? param.page : 1;
+	this.dataUrl  	 = param.dataUrl;
+	this.verticalGap = param.verticalGap ? param.verticalGap : 10;
+	this.dataSwitch	 = true;
+	this.heightArr = new Array();
+	this.index = 0;	//最矮的列初始值
+	this.colsChange = false;
+	this.resizeAllow = true;
+}
+
+Pubuliu.prototype = {
+		constructor : Pubuliu,
+		
+		//获取列数，获取容器宽度
+		"init": function(){
+			this.getCols();
+			this.getContainer();
+			this.initialColsHeight();	//初始化各列高度
+			this.fetchData();	//初始化数据
+			this.addEvent();
+			
+		},
+		
+		//获取列数
+		getCols: function(){
+			var cols = Math.floor(($(window).width())/(this.imgWidth + this.imgGap));
+		    var cols = cols > this.maxCol ? this.maxCol : cols;
+		    cols = cols < this.minCol ? this.minCol : cols;
+		    if(cols != this.cols){
+		    		this.colsChange = true;
+		    }else{
+		    		this.colsChange = false;
+		    }
+		    this.cols = cols;
+			
+		},
+		
+		//获取容器
+		getContainer: function(){
+			var displayContainerWidth = (this.imgWidth + this.imgGap) * this.cols - this.imgGap;
+			if(this.oDisplayContainer == null){
+				this.oDisplayContainer = document.createElement("div");
+				this.oDisplayContainer.className = "pubuliu_container";
+				document.body.appendChild(this.oDisplayContainer);
+			}			
+			this.oDisplayContainer.style.width = displayContainerWidth + "px";		
+		},
+		
+		//添加滚动事件
+		addEvent : function(){
+			this.scrollEvent();
+			this.resizeEvent();
+			
+		},
+		
+		scrollEvent : function(){
+			var self = this;
+			$(window).scroll(function(){
+				if($(window).scrollTop() + $(window).innerWidth() >= $(document).height() - 300){
+					if(self.dataSwitch){
+						self.page++;
+						self.fetchData();
+					}
+				}
+			})
+		},
+		
+		resizeEvent : function(){
+			var self = this;
+			$(window).resize(function(){
+				self.dataSwitch = false;
+				self.getCols();
+				if(self.colsChange && self.resizeAllow){
+					self.resizeAllow = false;
+					self.getContainer();
+					self.initialColsHeight();	//初始化各列高度
+					var data = $("img");
+					data.each(function(i,n){
+						self.getMinCol();
+						var pos = self.getPos();
+						self.heightArr[self.index] = self.heightArr[self.index] + n.offsetHeight + self.verticalGap;
+						$(n).animate({top:pos.top+"px",left:pos.left+"px"},"slow");
+					});
+					self.resizeAllow = true;
+				}
+				self.dataSwitch = true;
+			});
+		},
+		
+		//获取数据
+		fetchData : function(){
+			var self = this;
+			if (this.dataSwitch) {
+				this.dataSwitch = false;
+				$.post(this.dataUrl,{page:this.page},function(response){
+					if (response.status) {
+						//布置数据
+						for(var i = 0; i < response.data.length; i++){
+							self.getMinCol();
+							var pos = self.getPos();
+							self.createImg(pos,response.data[i]);
+							self.dataSwitch = true;
+						}
+					} else {
+						alert("error");
+					}
+				},"json");
+			}
+		},
+		
+		//初始化列高
+		initialColsHeight : function(){
+			this.heightArr = new Array();
+			for(var i = 0; i < this.cols; i++){
+				this.heightArr.push(0);
+			}
+		},
+		
+		//得到最矮的列
+		getMinCol : function(){
+			var iv = this.heightArr[0];
+			this.index = 0;
+			for(var i = 1; i < this.cols; i++){
+				if(this.heightArr[i] < iv){
+					iv = this.heightArr[i];
+					this.minHeight = this.heightArr[i];
+					this.index = i;
+				}
+			}
+		},
+		
+		//得到图像坐标
+		getPos: function(){
+			return {
+				left:(this.index)*(this.imgWidth+this.imgGap),
+				top:this.heightArr[this.index] + this.verticalGap
+			}
+		},
+		
+		//创建图像
+		createImg: function(pos,data){
+			var oImg = document.createElement("img");
+			oImg.style.top = pos.top + 'px';
+			oImg.style.left = pos.left + "px";
+			oImg.setAttribute("src",data.src);
+			oImg.style.width = this.imgWidth + "px";
+			oImg.style.height = (this.imgWidth/data.width)*data.height + "px";
+			this.oDisplayContainer.appendChild(oImg);
+			this.heightArr[this.index] = this.heightArr[this.index] + oImg.offsetHeight + this.verticalGap;
+		}		
+}
+
+var instance = new Pubuliu({
+	dataUrl : "a.php",
+	maxCol:6,
+});
+instance.init();
+</script> 
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+
+var _hmt = _hmt || [];
+(function() {
+ 	var hm = document.createElement("script");
+  	hm.src = "https://hm.baidu.com/hm.js?77834ec9e0919b0d048ceba486388472";
+  	var s = document.getElementsByTagName("script")[0]; 
+  	s.parentNode.insertBefore(hm, s);
+})(); 
+
+    </script>
