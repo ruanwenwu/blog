@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/4.2.0/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css">
     <link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css">
-    <link href="http://www.js-css.cn/jscode/highlight/highlight1/prettify.css" type="text/css" rel="stylesheet"/>
+    <!--<link href="http://www.js-css.cn/jscode/highlight/highlight1/prettify.css" type="text/css" rel="stylesheet"/>-->
     <link rel="stylesheet" type="text/css" href="/Public/css/style.css?v=0.0.2"> 
     
 <style>
@@ -67,7 +67,7 @@ form.mobile textarea{font-size:16px;}
     <link rel="apple-touch-icon" href="/Public/img/apple-touch-icon.png">
     <link rel="apple-touch-icon-precomposed" href="/Public/img/apple-touch-icon.png"></head>
   
-  <body onload="prettyPrint()">
+  <body>
     <div class="body_container">
       <div id="header">
         <div class="site-name">
@@ -275,7 +275,7 @@ form.mobile textarea{font-size:16px;}
       
 <script src="/Public/js/detail.js?jack"></script>
 
-	  <script type="text/javascript" src="http://www.js-css.cn/jscode/highlight/highlight1/prettify.js"></script>
+	  <!--<script type="text/javascript" src="http://www.js-css.cn/jscode/highlight/highlight1/prettify.js"></script>-->
       <script>
       	  var preObj = document.getElementsByTagName("pre");
       	  for(var i = 0; i < preObj.length; i++){
