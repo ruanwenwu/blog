@@ -1,0 +1,21 @@
+<extend name="Public:base" />
+<block name="css">
+<style>
+
+</style>
+</block>
+<block name="content">
+<img id="img1" width="539" height="290" src="/Public/img/ceshi.png" />
+</block>
+<block name="script">
+<script>
+window.onload = function(){
+	var oImg = document.getElementById("img1");
+	var oImgOri = new Image();
+	oImgOri.src = "/Public/img/ceshi-ori.png";
+	oImgOri.onload = function(){
+		oImg.src = oImgOri.src;
+	}
+}
+</script>
+</block>
