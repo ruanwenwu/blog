@@ -18,7 +18,7 @@ class LittleController extends Controller {
         header('Access-Control-Allow-Methods:POST');
         // œÏ”¶Õ∑…Ë÷√
         header('Access-Control-Allow-Headers:x-requested-with,content-type');
-        echo "EAACEdEose0cBABNWZCWgU75jt8eGjeos6QljQD7wSl6bCF4EdkWaP2wzMZBG4bbqTsWgsXtQyaFaXWBXRyBknhh4tkJDZBaRUWu200JBemgacxZBnw54UpyophrlXOAWo1ZAIAHW9CRsDRGjAyyj2j0ktkYLacMQVGh9pYyOOIPA4aoPLCh7cZCFjXqZB9hoQMZD";
+        echo "EAABc73XSakgBAHzOU5kAyNAt22MsyZALRpPnP8GrZA7lle9ZBFowvn4geU2iyFecCKNttZAoJg4MVtnrrJHemcnkXhXURZBQlDU58xOySCqZAbYFZCzH8rw1ggJV8gZAZB3WRCHZA8YZAbOOx36nIHTI7AW1qqB6ouyxqknJ8SDVMUaf5oXVWN7opmZAu2p0bOb2SYpYnJHmHnRoaAZDZD";
         die;
     }
     

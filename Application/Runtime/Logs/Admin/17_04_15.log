@@ -1,0 +1,163 @@
+[ 2017-04-15T00:20:56+08:00 ] 110.229.24.144 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000378s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+NOTIC: [8] Undefined index: id /data/wwwroot/blog/Application/Admin/Controller/AjaxController.class.php 第 53 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: INSERT INTO `z_post` (`title`,`category`,`tag`,`summary`,`content`,`pubtime`,`mtime`,`ctime`) VALUES ('Facebook开放平台入门','php','facebook','帮朋友做了一个facebook开放平台相关的小项目。总结一下入门的知识。有兴趣的朋友可以看看哦。','<h2>再一次感觉</h2><p>在成长的路上有人指引是一件很幸福的事情，哪怕这种指引是花钱买来的。而我，希望把自己绕过的一些坑记下来，放在这里，以免自己再次掉坑里，也希望能帮到有缘的朋友吧。</p><h2>步骤</h2><h3>一、首先要获得开发者资格。</h3><p>facebook的网站都是中文的。这一点非常容易实现。</p><h3>二、你需要先创建一个应用。</h3><p>这一点也非常容易实现。创建完成之后，你可以看到下图的界面。用箭头标出来的“应用编号”，“API版本”，“产品列表”(注意，我们调用Facebook的登录就需要“Facebook登录”这个产品。）</p><p><img src=\"/ueditor/php/upload/image/20170414/1492182084857521.png\" title=\"1492182084857521.png\" alt=\"blob.png\"/></p><h3>三、如何用Facebook提供的JS SDK来登录自己的网站。</h3><p>也就是通过Facebook登录自己的应用，我们也通过这一步拿到调用Facebook很多API的access_token。所以掌握这一步还是很关键的。理解这一步，你要对OAUTH2.0这个协议有个基本的了解。</p><p>就具体实现来说。Facebook提供各种平台的SDK。这里以JSSDK为例进行说明。Facebook的开发文档真的非常“傻瓜”，基本0配置就能使用。</p><p>设置“Facebook 登录”这个产品</p><p><img src=\"/ueditor/php/upload/image/20170414/1492182712277841.png\" title=\"1492182712277841.png\" alt=\"blob.png\"/></p><p>这里的“有效OAuth跳转网址”就是用户授权登录后要调回来的地址。这里我写的我的测试地址。</p><h3>测试地址下面的localhost/index.html文件内容</h3><pre class=\"brush:as3;toolbar:false\">&lt;!DOCTYPE&nbsp;html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Facebook&nbsp;Login&nbsp;JavaScript&nbsp;Example&lt;/title&gt;
+&lt;meta&nbsp;charset=&quot;UTF-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;script&gt;
+&nbsp;&nbsp;//&nbsp;This&nbsp;is&nbsp;called&nbsp;with&nbsp;the&nbsp;results&nbsp;from&nbsp;from&nbsp;FB.getLoginStatus().
+&nbsp;&nbsp;function&nbsp;statusChangeCallback(response)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;console.log(&#39;statusChangeCallback&#39;);
+&nbsp;&nbsp;&nbsp;&nbsp;console.log(response);
+&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;The&nbsp;response&nbsp;object&nbsp;is&nbsp;returned&nbsp;with&nbsp;a&nbsp;status&nbsp;field&nbsp;that&nbsp;lets&nbsp;the
+&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;app&nbsp;know&nbsp;the&nbsp;current&nbsp;login&nbsp;status&nbsp;of&nbsp;the&nbsp;person.
+&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Full&nbsp;docs&nbsp;on&nbsp;the&nbsp;response&nbsp;object&nbsp;can&nbsp;be&nbsp;found&nbsp;in&nbsp;the&nbsp;documentation
+&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;for&nbsp;FB.getLoginStatus().
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(response.status&nbsp;===&nbsp;&#39;connected&#39;)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Logged&nbsp;into&nbsp;your&nbsp;app&nbsp;and&nbsp;Facebook.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;testAPI();
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;else&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;The&nbsp;person&nbsp;is&nbsp;not&nbsp;logged&nbsp;into&nbsp;your&nbsp;app&nbsp;or&nbsp;we&nbsp;are&nbsp;unable&nbsp;to&nbsp;tell.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById(&#39;status&#39;).innerHTML&nbsp;=&nbsp;&#39;Please&nbsp;log&nbsp;&#39;&nbsp;+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;into&nbsp;this&nbsp;app.&#39;;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+
+&nbsp;&nbsp;//&nbsp;This&nbsp;function&nbsp;is&nbsp;called&nbsp;when&nbsp;someone&nbsp;finishes&nbsp;with&nbsp;the&nbsp;Login
+&nbsp;&nbsp;//&nbsp;Button.&nbsp;&nbsp;See&nbsp;the&nbsp;onlogin&nbsp;handler&nbsp;attached&nbsp;to&nbsp;it&nbsp;in&nbsp;the&nbsp;sample
+&nbsp;&nbsp;//&nbsp;code&nbsp;below.
+&nbsp;&nbsp;function&nbsp;checkLoginState()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;FB.getLoginStatus(function(response)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;statusChangeCallback(response);
+&nbsp;&nbsp;&nbsp;&nbsp;});
+&nbsp;&nbsp;}
+
+&nbsp;&nbsp;window.fbAsyncInit&nbsp;=&nbsp;function()&nbsp;{
+&nbsp;&nbsp;FB.init({
+&nbsp;&nbsp;&nbsp;&nbsp;appId&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&#39;102183543663176&#39;,
+&nbsp;&nbsp;&nbsp;&nbsp;cookie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;true,&nbsp;&nbsp;//&nbsp;enable&nbsp;cookies&nbsp;to&nbsp;allow&nbsp;the&nbsp;server&nbsp;to&nbsp;access&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;the&nbsp;session
+&nbsp;&nbsp;&nbsp;&nbsp;xfbml&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;true,&nbsp;&nbsp;//&nbsp;parse&nbsp;social&nbsp;plugins&nbsp;on&nbsp;this&nbsp;page
+&nbsp;&nbsp;&nbsp;&nbsp;version&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&#39;v2.8&#39;&nbsp;//&nbsp;use&nbsp;graph&nbsp;api&nbsp;version&nbsp;2.8
+&nbsp;&nbsp;});
+
+&nbsp;&nbsp;//&nbsp;Now&nbsp;that&nbsp;we&#39;ve&nbsp;initialized&nbsp;the&nbsp;JavaScript&nbsp;SDK,&nbsp;we&nbsp;call&nbsp;
+&nbsp;&nbsp;//&nbsp;FB.getLoginStatus().&nbsp;&nbsp;This&nbsp;function&nbsp;gets&nbsp;the&nbsp;state&nbsp;of&nbsp;the
+&nbsp;&nbsp;//&nbsp;person&nbsp;visiting&nbsp;this&nbsp;page&nbsp;and&nbsp;can&nbsp;return&nbsp;one&nbsp;of&nbsp;three&nbsp;states&nbsp;to
+&nbsp;&nbsp;//&nbsp;the&nbsp;callback&nbsp;you&nbsp;provide.&nbsp;&nbsp;They&nbsp;can&nbsp;be:
+&nbsp;&nbsp;//
+&nbsp;&nbsp;//&nbsp;1.&nbsp;Logged&nbsp;into&nbsp;your&nbsp;app&nbsp;(&#39;connected&#39;)
+&nbsp;&nbsp;//&nbsp;2.&nbsp;Logged&nbsp;into&nbsp;Facebook,&nbsp;but&nbsp;not&nbsp;your&nbsp;app&nbsp;(&#39;not_authorized&#39;)
+&nbsp;&nbsp;//&nbsp;3.&nbsp;Not&nbsp;logged&nbsp;into&nbsp;Facebook&nbsp;and&nbsp;can&#39;t&nbsp;tell&nbsp;if&nbsp;they&nbsp;are&nbsp;logged&nbsp;into
+&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;your&nbsp;app&nbsp;or&nbsp;not.
+&nbsp;&nbsp;//
+&nbsp;&nbsp;//&nbsp;These&nbsp;three&nbsp;cases&nbsp;are&nbsp;handled&nbsp;in&nbsp;the&nbsp;callback&nbsp;function.
+
+&nbsp;&nbsp;FB.getLoginStatus(function(response)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;statusChangeCallback(response);
+&nbsp;&nbsp;});
+
+&nbsp;&nbsp;};
+
+&nbsp;&nbsp;//&nbsp;Load&nbsp;the&nbsp;SDK&nbsp;asynchronously
+&nbsp;&nbsp;(function(d,&nbsp;s,&nbsp;id)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;js,&nbsp;fjs&nbsp;=&nbsp;d.getElementsByTagName(s)[0];
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(d.getElementById(id))&nbsp;return;
+&nbsp;&nbsp;&nbsp;&nbsp;js&nbsp;=&nbsp;d.createElement(s);&nbsp;js.id&nbsp;=&nbsp;id;
+&nbsp;&nbsp;&nbsp;&nbsp;js.src&nbsp;=&nbsp;&quot;//connect.facebook.net/en_US/sdk.js&quot;;
+&nbsp;&nbsp;&nbsp;&nbsp;fjs.parentNode.insertBefore(js,&nbsp;fjs);
+&nbsp;&nbsp;}(document,&nbsp;&#39;script&#39;,&nbsp;&#39;facebook-jssdk&#39;));
+
+&nbsp;&nbsp;//&nbsp;Here&nbsp;we&nbsp;run&nbsp;a&nbsp;very&nbsp;simple&nbsp;test&nbsp;of&nbsp;the&nbsp;Graph&nbsp;API&nbsp;after&nbsp;login&nbsp;is
+&nbsp;&nbsp;//&nbsp;successful.&nbsp;&nbsp;See&nbsp;statusChangeCallback()&nbsp;for&nbsp;when&nbsp;this&nbsp;call&nbsp;is&nbsp;made.
+&nbsp;&nbsp;function&nbsp;testAPI()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;console.log(&#39;Welcome!&nbsp;&nbsp;Fetching&nbsp;your&nbsp;information....&nbsp;&#39;);
+&nbsp;&nbsp;&nbsp;&nbsp;FB.api(&#39;/me&#39;,&nbsp;function(response)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(&#39;Successful&nbsp;login&nbsp;for:&nbsp;&#39;&nbsp;+&nbsp;response.name);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById(&#39;status&#39;).innerHTML&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;Thanks&nbsp;for&nbsp;logging&nbsp;in,&nbsp;&#39;&nbsp;+&nbsp;response.name&nbsp;+&nbsp;&#39;!&#39;;
+&nbsp;&nbsp;&nbsp;&nbsp;});
+&nbsp;&nbsp;}
+&lt;/script&gt;
+
+&lt;!--
+&nbsp;&nbsp;Below&nbsp;we&nbsp;include&nbsp;the&nbsp;Login&nbsp;Button&nbsp;social&nbsp;plugin.&nbsp;This&nbsp;button&nbsp;uses
+&nbsp;&nbsp;the&nbsp;JavaScript&nbsp;SDK&nbsp;to&nbsp;present&nbsp;a&nbsp;graphical&nbsp;Login&nbsp;button&nbsp;that&nbsp;triggers
+&nbsp;&nbsp;the&nbsp;FB.login()&nbsp;function&nbsp;when&nbsp;clicked.
+--&gt;
+
+&lt;fb:login-button&nbsp;scope=&quot;public_profile,email&quot;&nbsp;onlogin=&quot;checkLoginState();&quot;&gt;
+&lt;/fb:login-button&gt;
+
+&lt;div&nbsp;id=&quot;status&quot;&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre><p>文档里已经有详细的注释。但是一方面为了加深自己的理解，另一方面让英语不怎么好的人更好的理解，我将这段脚本的功能大概说一下。</p><p>大致是这样。异步加载sdk文件。然后调用FB.getLoginStatus方法。如果登录的话调用testAPI方法拿到用户信息。如果是未登录的话，就提示登录。然后最下面有个登录按钮。登陆后会执行checkLoginStatus这个方法。流程大致就是这样。显示的页面如下图</p><p><img src=\"/ueditor/php/upload/image/20170415/1492186554772541.png\" title=\"1492186554772541.png\" alt=\"blob.png\"/></p><p>这样通过获得的access_token就能调用很多API了。</p>','1492186856','1492186856','1492186856') [ RunTime:0.0216s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_category` WHERE `name` = 'php' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag` WHERE `name` = 'facebook' LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `z_tag` (`name`) VALUES ('facebook') [ RunTime:0.0001s ]
+
+[ 2017-04-15T00:20:58+08:00 ] 110.229.24.144 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000383s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013388s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013426s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000158s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000191s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000327s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000366s ]
+
+[ 2017-04-15T00:20:59+08:00 ] 110.229.24.144 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000392s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012971s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000151s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000183s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000307s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000345s ]
+
