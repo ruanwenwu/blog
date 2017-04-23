@@ -1,0 +1,844 @@
+[ 2017-04-23T15:16:42+08:00 ] 101.27.213.149 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000395s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+
+[ 2017-04-23T15:16:42+08:00 ] 101.27.213.149 /admin.php/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004515s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004554s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000359s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000393s ]
+
+[ 2017-04-23T15:16:48+08:00 ] 101.27.213.149 /admin.php/Ajax/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000338s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+
+[ 2017-04-23T15:16:48+08:00 ] 101.27.213.149 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 361 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 424 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 438 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013929s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013966s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000328s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000368s ]
+
+[ 2017-04-23T15:24:01+08:00 ] 101.27.213.149 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000363s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+NOTIC: [8] Undefined index: id /data/wwwroot/blog/Application/Admin/Controller/AjaxController.class.php 第 53 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: INSERT INTO `z_post` (`title`,`category`,`tag`,`summary`,`content`,`pubtime`,`mtime`,`ctime`) VALUES ('angular.js动画入门','AngularJS','angular','angular.js动画的一些知识点。转载的，用到的时候有个参考。','<p><span style=\"font-size: 14px;\"><b>本文转载自：<a href=\"http://www.cnblogs.com/wushangjue/p/4529063.html?utm_source=tuicool&utm_medium=referral\">http://www.cnblogs.com/wushangjue/p/4529063.html?utm_source=tuicool&amp;utm_medium=referral</a></b></span></p><h1 class=\"postTitle\" style=\"margin: 0px; padding: 0px 0px 0px 5px; float: left; line-height: 1.5; width: 988.078125px; clear: both; font-size: 14px;\"><a class=\"postTitle2\" href=\"http://www.cnblogs.com/wushangjue/p/4529063.html\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179); text-decoration: none;\">AngularJS入门之动画</a></h1><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\"><span style=\"margin: 0px; padding: 0px; line-height: 1.5;\">AngularJS中ngAnimate模块支持动画效果，但是ngAnimate模块并未包含在AngularJS核心库中，因此需要使用ngAnimate需要在定义Module时声明对其的引用。</span></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">AngularJS中实现动画效果有两大种方式：</p><ul style=\"margin-left: 30px; padding: 0px; word-break: break-all;\" class=\" list-paddingleft-2\"><li><p>基于CSS的动画效果</p></li><ul style=\"list-style-type: square;\" class=\" list-paddingleft-2\"><li><p>CSS Transition&nbsp;Animation</p></li><li><p>CSS Class-based Animation</p></li></ul><li><p>基于Javascript的动画效果</p></li></ul><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">&nbsp;</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">官方给出的能支持动画效果的Directives：</p><table class=\"ng-scope table table-bordered table-striped code-table\"><thead style=\"margin: 0px; padding: 0px;\"><tr style=\"margin: 0px; padding: 0px;\" class=\"firstRow\"><th style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\">Directive</th><th style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\">Supported Animations</th></tr></thead><tbody style=\"margin: 0px; padding: 0px;\"><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\"><a href=\"https://docs.angularjs.org/api/ng/directive/ngRepeat#animations\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">ngRepeat</a></td><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\">enter, leave and move</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\"><a href=\"https://docs.angularjs.org/api/ngRoute/directive/ngView#animations\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">ngView</a></td><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\">enter and leave</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\"><a href=\"https://docs.angularjs.org/api/ng/directive/ngInclude#animations\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">ngInclude</a></td><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\">enter and leave</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\"><a href=\"https://docs.angularjs.org/api/ng/directive/ngSwitch#animations\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">ngSwitch</a></td><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\">enter and leave</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\"><a href=\"https://docs.angularjs.org/api/ng/directive/ngIf#animations\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">ngIf</a></td><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\">enter and leave</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\"><a href=\"https://docs.angularjs.org/api/ng/directive/ngClass#animations\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">ngClass</a></td><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\">add and remove (the CSS class(es) present)</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\"><a href=\"https://docs.angularjs.org/api/ng/directive/ngShow#animations\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">ngShow</a>&nbsp;&amp;&nbsp;<a href=\"https://docs.angularjs.org/api/ng/directive/ngHide#animations\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">ngHide</a></td><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\">add and remove (the ng-hide class value)</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\"><a href=\"https://docs.angularjs.org/api/ng/directive/form#animation-hooks\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">form</a>&nbsp;&amp;&nbsp;<a href=\"https://docs.angularjs.org/api/ng/directive/ngModel#animation-hooks\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">ngModel</a></td><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\">add and remove (dirty, pristine, valid, invalid &amp; all other validations)</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\"><a href=\"https://docs.angularjs.org/api/ngMessages#animations\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">ngMessages</a></td><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\">add and remove (ng-active &amp; ng-inactive)</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\"><a href=\"https://docs.angularjs.org/api/ngMessages#animations\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">ngMessage</a></td><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\">enter and leave</td></tr></tbody></table><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">&nbsp;</p><h2 class=\"contentTitle\" style=\"margin: 10px 0px; padding: 5px; width: 971.265625px; background-color: rgb(192, 192, 192); border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; font-size: 21px; line-height: 1.5;\">基于CSS的动画效果:</h2><h2 style=\"margin: 10px 0px; padding: 0px; font-size: 21px; line-height: 1.5;\">1. CSS Transition Animation</h2><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">示例1（官方Demo）：</p><p><br/></p><pre class=\"brush:as3;toolbar:false\">&lt;!DOCTYPE&gt;
+&lt;html&gt;
+&lt;head&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&nbsp;type=&quot;text/css&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/*&nbsp;开始时的样式&nbsp;*/
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.fade.ng-enter&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;5s&nbsp;linear&nbsp;all;&nbsp;/*&nbsp;当使用css&nbsp;transition实现动画效果时，在开始时的样式中必须包含transition的设置&nbsp;*/
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/*&nbsp;结束时的样式&nbsp;*/
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.fade.ng-enter.ng-enter-active&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=&quot;/Scripts/angular.js&quot;&gt;&lt;/script&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=&quot;/Scripts/angular-animate.js&quot;&gt;&lt;/script&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;type=&quot;text/javascript&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;app&nbsp;=&nbsp;angular.module(&#39;cssBasedAnimationTest&#39;,&nbsp;[&#39;ngAnimate&#39;]);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})();
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&nbsp;ng-app=&quot;cssBasedAnimationTest&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;ng-if=&quot;bool&quot;&nbsp;class=&quot;fade&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fade&nbsp;me&nbsp;in&nbsp;out
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;button&nbsp;ng-click=&quot;bool=true&quot;&gt;Fade&nbsp;In!&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;button&nbsp;ng-click=&quot;bool=false&quot;&gt;Fade&nbsp;Out!&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre><p><span class=\"cnblogs_code_copy\" style=\"margin: 0px; padding: 0px 5px 0px 0px; line-height: 1.5;\"><a title=\"复制代码\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179); text-decoration: underline; border: none !important;\"><img src=\"/ueditor/php/upload/image/20170423/1492931876648750.gif\" alt=\"复制代码\"/></a></span><br/></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">注意：使用CSS Transition时，ng-EVENT（动画开始前的样式）和ng-EVENT-active（动画执行完毕后的样式）这两组样式必须同时出现，且在ng-EVENT中必须包含transition的设置。</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">&nbsp;</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">本篇开头提到过，AngularJS核心库并不包含ngAnimate模块，因此我们首先需要在定义Module时，添加对ngAnimate模块引用的声明：</p><pre style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; white-space: pre-wrap; word-wrap: break-word; font-family: &#39;Courier New&#39; !important;\">var&nbsp;app&nbsp;=&nbsp;angular.module(&#39;cssBasedAnimationTest&#39;,&nbsp;[&#39;ngAnimate&#39;]);</pre><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">&nbsp;</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">使用ngIf（ng-if）来控制class=&quot;fade&quot;的元素是否加载到DOM：</p><pre style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; white-space: pre-wrap; word-wrap: break-word; font-family: &#39;Courier New&#39; !important;\">&lt;div&nbsp;ng-if=&quot;bool&quot;&nbsp;class=&quot;fade&quot;&gt;</pre><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">注意：ngIf和ngShow/ngHide不同，ngIf在元素隐藏时DOM中并没有该元素，而使用ngShow/ngHide时元素依然存在于DOM中。</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">&nbsp;</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">点击&quot;Fade In!&quot;按钮时，加载div到DOM并触发enter，AngularJS对元素自动添加ng-enter和ng-enter-active的样式，并从ng-enter到ng-enter-active执行样式转换。为了能看清过程，我们将ng-enter中的过渡时间设置为5s，点击&quot;Fade In!&quot;按钮后观察Html的变化。</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\"><strong style=\"margin: 0px; padding: 0px;\">Step 1（点击前，如前面所说，ngIf在触发前，DOM中并没有div）：</strong></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\"><img class=\"myimg\" src=\"/ueditor/php/upload/image/20170423/1492931877810007.png\" alt=\"\"/></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">&nbsp;</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\"><strong style=\"margin: 0px; padding: 0px;\">Step 2（点击按钮后，AngularJS自动添加了ng-animate、ng-enter、ng-enter-active这三个动画相关的样式名，并由ngAnimate模块执行动画效果）：</strong></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\"><img class=\"myimg\" src=\"/ueditor/php/upload/image/20170423/1492931877462668.png\" alt=\"\"/></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">&nbsp;</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\"><strong style=\"margin: 0px; padding: 0px;\">Step 3（动画执行完后，示例中是5s后，ng-animate、ng-enter、ng-enter-active被移除，div的状态为ng-enter-active中指定的状态）：</strong></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\"><img class=\"myimg\" src=\"/ueditor/php/upload/image/20170423/1492931878301952.png\" alt=\"\"/></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">&nbsp;</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">另外一种CSS transition的方法是使用CSS的Keyframe关键字，对于示例1中样式文件可改为如下：</p><pre class=\"brush:as3;toolbar:false\">&lt;style&nbsp;type=&quot;text/css&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;/*&nbsp;开始时的样式，使用keyframes不需要定义结束时的样式&nbsp;*/
+&nbsp;&nbsp;&nbsp;&nbsp;.fade.ng-enter&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;animation:&nbsp;my_fade_animation&nbsp;0.5s&nbsp;linear;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-webkit-animation:&nbsp;my_fade_animation&nbsp;0.5s&nbsp;linear;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;@keyframes&nbsp;my_fade_animation&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;@-webkit-keyframes&nbsp;my_fade_animation&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&lt;/style&gt;</pre><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">这种写法中是不需要ng-EVENT-active的。</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">&nbsp;</p><h2 style=\"margin: 10px 0px; padding: 0px; font-size: 21px; line-height: 1.5;\">2. CSS Class-based Animation:</h2><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">Class-based Animation即为通过ngClass、ngShow、ngHide等Directives执行动画效果。 &nbsp;</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">示例2：</p><pre class=\"brush:as3;toolbar:false\">&lt;!DOCTYPE&gt;
+&lt;html&gt;
+&lt;head&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&nbsp;type=&quot;text/css&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.fade.ng-hide&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;3s&nbsp;linear&nbsp;all;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.fade.ng-show&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;3s&nbsp;linear&nbsp;all;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=&quot;/Scripts/angular.js&quot;&gt;&lt;/script&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=&quot;/Scripts/angular-animate.js&quot;&gt;&lt;/script&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;type=&quot;text/javascript&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;app&nbsp;=&nbsp;angular.module(&#39;cssClassBasedAnimationTest&#39;,&nbsp;[&#39;ngAnimate&#39;]);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})();
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&nbsp;ng-app=&quot;cssClassBasedAnimationTest&quot;&nbsp;ng-init=&quot;bool=true&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;ng-show=&quot;bool&quot;&nbsp;class=&quot;fade&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;is&nbsp;ng-show.
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;ng-hide=&quot;bool&quot;&nbsp;class=&quot;fade&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;is&nbsp;ng-hide.
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;button&nbsp;ng-click=&quot;bool=!bool&quot;&gt;Toggle&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">本例改自官方Demo，除了官方Demo中有点问题之外，另外我自己添加了.fade.ng-show以及两个div分别使用ng-show和ng-hide两个属性。为了能看清Html的变化，动画过渡时间也设置成了3s。</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\"><strong style=\"margin: 0px; padding: 0px;\">图1：</strong></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\"><img class=\"myimg\" src=\"/ueditor/php/upload/image/20170423/1492931879538798.png\" alt=\"\"/></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">&nbsp;</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\"><strong style=\"margin: 0px; padding: 0px;\">图2：</strong></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\"><img class=\"myimg\" src=\"/ueditor/php/upload/image/20170423/1492931880294102.png\" alt=\"\"/></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">&nbsp;</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">实际观察Html的变化，无论是ngShow还是ngHide，其实都是在隐藏元素时，默认添加ng-hide-animate、ng-hide-add、ng-hide-add-active样式。也就是针对像ngHide、ngShow等这些可以感知动画的Directives，由AngularJS的ngAnimate模块自动添加了CSS Transition动画。</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">ngAminate能检测的行为是样式的add或者remove， 那如何显式的指定add和remove的样式呢？</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">示例3（官方Demo）：</p><pre class=\"brush:as3;toolbar:false\">&lt;!DOCTYPE&gt;
+&lt;html&gt;
+&lt;head&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&nbsp;type=&quot;text/css&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.highlight&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;3s&nbsp;linear&nbsp;all;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.highlight.on-add&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;white;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.highlight.on&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;yellow;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.highlight.on-remove&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;black;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=&quot;/Scripts/angular.js&quot;&gt;&lt;/script&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=&quot;/Scripts/angular-animate.js&quot;&gt;&lt;/script&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;type=&quot;text/javascript&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;app&nbsp;=&nbsp;angular.module(&#39;cssClassBasedAnimationTest&#39;,&nbsp;[&#39;ngAnimate&#39;]);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})();
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&nbsp;ng-app=&quot;cssClassBasedAnimationTest&quot;&nbsp;ng-init=&quot;bool=true&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;ng-class=&quot;{on:onOff}&quot;&nbsp;class=&quot;highlight&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Highlight&nbsp;this&nbsp;box
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;button&nbsp;ng-click=&quot;onOff=!onOff&quot;&gt;Toggle&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">&nbsp;</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">我们让ng-class随着点击Toggle按钮变化，当onOff=true时样式on会被ngAnimate执行on-add的过程，反之则执行on-remove的过程。由于显式指定了样式，当我们运行示例3时，这个过程就一目了然了。</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">&nbsp;&nbsp;</p><h2 class=\"contentTitle\" style=\"margin: 10px 0px; padding: 5px; width: 971.265625px; background-color: rgb(192, 192, 192); border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; font-size: 21px; line-height: 1.5;\">基于Javascript的动画效果:</h2><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">使用基于Javascript的动画效果可以让你在脚本中使用其他的Service甚至引用第三方的脚本进行动画的制作，使动画效果更丰富多变。</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">与基于CSS的动画效果相似，基于Javascript的动画效果也会由AngularJS自动添加一些指定的样式到元素上，但基于Javascript的动画效果还需要使用<span class=\"kwd\" style=\"margin: 0px; padding: 0px; line-height: 1.5;\">module<span class=\"pun\" style=\"margin: 0px; padding: 0px; line-height: 1.5;\">.<span class=\"pln\" style=\"margin: 0px; padding: 0px; line-height: 1.5;\">animation<span class=\"pun\" style=\"margin: 0px; padding: 0px; line-height: 1.5;\">()添加动画脚本。</span></span></span></span></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">&nbsp;</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">示例4：</p><pre class=\"brush:as3;toolbar:false\">&lt;!DOCTYPE&gt;
+&lt;html&gt;
+&lt;head&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=&quot;/Scripts/angular.js&quot;&gt;&lt;/script&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=&quot;/Scripts/angular-animate.js&quot;&gt;&lt;/script&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=&quot;/Scripts/jquery-1.9.1.js&quot;&gt;&lt;/script&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;type=&quot;text/javascript&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;app&nbsp;=&nbsp;angular.module(&#39;javascriptBasedAnimationTest&#39;,&nbsp;[&#39;ngAnimate&#39;]);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app.animation(&#39;.slide&#39;,&nbsp;[function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enter:&nbsp;function&nbsp;(element,&nbsp;doneFn)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jQuery(element).fadeIn(1000,&nbsp;doneFn);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;move:&nbsp;function&nbsp;(element,&nbsp;doneFn)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jQuery(element).fadeIn(1000,&nbsp;doneFn);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;leave:&nbsp;function&nbsp;(element,&nbsp;doneFn)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jQuery(element).fadeOut(1000,&nbsp;doneFn);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}]);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app.controller(&#39;myController&#39;,&nbsp;[&#39;$scope&#39;,&nbsp;function&nbsp;($scope)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$scope.students&nbsp;=&nbsp;[&quot;Tom&quot;,&quot;Jack&quot;,&quot;Alice&quot;,&quot;May&quot;,&quot;Thomas&quot;];
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}]);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})();
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&nbsp;ng-app=&quot;javascriptBasedAnimationTest&quot;&nbsp;ng-controller=&quot;myController&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;ng-if=&quot;isshow&quot;&nbsp;ng-repeat=&quot;stu&nbsp;in&nbsp;students&quot;&nbsp;class=&quot;slide&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{&nbsp;stu&nbsp;}}
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;button&quot;&nbsp;value=&quot;Toggle&quot;&nbsp;ng-click=&quot;isshow=!isshow&quot;&nbsp;/&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">注：本例为了便于实现js的动画效果引入了jQuery。<br/></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">&nbsp;</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">示例4中，我们对class=&#39;slide&#39;的元素的AngularJS中的默认行为添加了动画行为，当使用ngIf让元素enter或者remove时，将触发动画效果。</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">关于更复杂的对象，也可参考参考资料中提到的AngularJS Hub的例子，本文就不展开了。</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">&nbsp;</p><p>&lt;style type=&quot;text/css&quot;&gt;</p><p>&nbsp; &nbsp; /* 开始时的样式，使用keyframes不需要定义结束时的样式 */</p><p>&nbsp; &nbsp; .fade.ng-enter {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; animation: my_fade_animation 0.5s linear;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; -webkit-animation: my_fade_animation 0.5s linear;</p><p>&nbsp; &nbsp; }</p><p>&nbsp; &nbsp; @keyframes my_fade_animation {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; from {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; opacity: 0;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; }</p><p>&nbsp; &nbsp; &nbsp; &nbsp; to {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; opacity: 1;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; }</p><p>&nbsp; &nbsp; }</p><p>&nbsp; &nbsp; @-webkit-keyframes my_fade_animation {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; from {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; opacity: 0;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; }</p><p>&nbsp; &nbsp; &nbsp; &nbsp; to {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; opacity: 1;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; }</p><p>&nbsp; &nbsp; }</p><p>&lt;/style&gt;</p><h3 class=\"contentTile\" style=\"margin: 10px 0px; padding: 0px; font-size: 16px; line-height: 1.5;\">参考资料</h3><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">AngularJS官方文档：<a href=\"https://docs.angularjs.org/api/ngAnimate\" target=\"_blank\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">https://docs.angularjs.org/api/ngAnimate</a></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">ngAnimate：<a href=\"http://www.nganimate.org/\" target=\"_blank\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">http://www.nganimate.org/</a></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">AngularJS Hub:&nbsp;<a href=\"http://www.angularjshub.com/examples/animations/javascriptanimations/\" target=\"_blank\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">http://www.angularjshub.com/examples/animations/javascriptanimations/</a></p><p><br/></p>','1492932241','1492932241','1492932241') [ RunTime:0.0385s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_category` WHERE `name` = 'AngularJS' LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `z_category` (`name`) VALUES ('AngularJS') [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag` WHERE `name` = 'angular' LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `z_tag` (`name`) VALUES ('angular') [ RunTime:0.0001s ]
+
+[ 2017-04-23T15:24:03+08:00 ] 101.27.213.149 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014138s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014178s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000338s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000377s ]
+
+[ 2017-04-23T15:24:33+08:00 ] 101.27.213.149 /admin.php/Post/updatePost/id/122
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000417s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 122 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b94d69ac1621e983387ec69783f12599.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013438s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013476s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000353s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000392s ]
+
+[ 2017-04-23T15:26:11+08:00 ] 101.27.213.149 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000307s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000356s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: UPDATE `z_post` SET `title`='angular.js动画入门',`category`='AngularJS',`tag`='angular',`summary`='angular.js动画的一些知识点。转载的，用到的时候有个参考。',`content`='<p>								</p><p><span style=\"font-size: 14px;\"><strong>本文转载自：<a href=\"http://www.cnblogs.com/wushangjue/p/4529063.html?utm_source=tuicool&utm_medium=referral\">http://www.cnblogs.com/wushangjue/p/4529063.html?utm_source=tuicool&amp;utm_medium=referral</a></strong></span></p><h1 class=\"postTitle\" style=\"margin: 0px; padding: 0px 0px 0px 5px; float: left; line-height: 1.5; width: 988.078125px; clear: both; font-size: 14px;\"><a class=\"postTitle2\" href=\"http://www.cnblogs.com/wushangjue/p/4529063.html\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179); text-decoration: none;\">AngularJS入门之动画</a></h1><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\"><span style=\"margin: 0px; padding: 0px; line-height: 1.5;\">AngularJS中ngAnimate模块支持动画效果，但是ngAnimate模块并未包含在AngularJS核心库中，因此需要使用ngAnimate需要在定义Module时声明对其的引用。</span></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">AngularJS中实现动画效果有两大种方式：</p><ul style=\"margin-left: 30px; padding: 0px; word-break: break-all;\" class=\" list-paddingleft-2\"><li><p>基于CSS的动画效果</p></li><ul style=\"list-style-type: square;\" class=\" list-paddingleft-2\"><li><p>CSS Transition&nbsp;Animation</p></li><li><p>CSS Class-based Animation</p></li></ul><li><p>基于Javascript的动画效果</p></li></ul><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">&nbsp;</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">官方给出的能支持动画效果的Directives：</p><table class=\"ng-scope table table-bordered table-striped code-table\"><thead style=\"margin: 0px; padding: 0px;\"><tr style=\"margin: 0px; padding: 0px;\" class=\"firstRow\"><th style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\">Directive</th><th style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\">Supported Animations</th></tr></thead><tbody style=\"margin: 0px; padding: 0px;\"><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\"><a href=\"https://docs.angularjs.org/api/ng/directive/ngRepeat#animations\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">ngRepeat</a></td><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\">enter, leave and move</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\"><a href=\"https://docs.angularjs.org/api/ngRoute/directive/ngView#animations\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">ngView</a></td><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\">enter and leave</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\"><a href=\"https://docs.angularjs.org/api/ng/directive/ngInclude#animations\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">ngInclude</a></td><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\">enter and leave</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\"><a href=\"https://docs.angularjs.org/api/ng/directive/ngSwitch#animations\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">ngSwitch</a></td><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\">enter and leave</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\"><a href=\"https://docs.angularjs.org/api/ng/directive/ngIf#animations\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">ngIf</a></td><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\">enter and leave</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\"><a href=\"https://docs.angularjs.org/api/ng/directive/ngClass#animations\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">ngClass</a></td><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\">add and remove (the CSS class(es) present)</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\"><a href=\"https://docs.angularjs.org/api/ng/directive/ngShow#animations\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">ngShow</a>&nbsp;&amp;&nbsp;<a href=\"https://docs.angularjs.org/api/ng/directive/ngHide#animations\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">ngHide</a></td><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\">add and remove (the ng-hide class value)</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\"><a href=\"https://docs.angularjs.org/api/ng/directive/form#animation-hooks\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">form</a>&nbsp;&amp;&nbsp;<a href=\"https://docs.angularjs.org/api/ng/directive/ngModel#animation-hooks\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">ngModel</a></td><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\">add and remove (dirty, pristine, valid, invalid &amp; all other validations)</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\"><a href=\"https://docs.angularjs.org/api/ngMessages#animations\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">ngMessages</a></td><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\">add and remove (ng-active &amp; ng-inactive)</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse;\"><a href=\"https://docs.angularjs.org/api/ngMessages#animations\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">ngMessage</a></td><td style=\"margin: 0px; padding: 3px; border-color: silver; border-collapse: collapse; word-break: break-all;\">enter and leave</td></tr></tbody></table><h2 style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">基于CSS的动画效果</h2><h2 style=\"margin: 10px 0px; padding: 0px; font-size: 21px; line-height: 1.5;\">1. CSS Transition Animation</h2><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">示例1（官方Demo）：</p><pre class=\"brush:as3;toolbar:false\">&lt;!DOCTYPE&gt;
+&lt;html&gt;
+&lt;head&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&nbsp;type=&quot;text/css&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/*&nbsp;开始时的样式&nbsp;*/
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.fade.ng-enter&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;5s&nbsp;linear&nbsp;all;&nbsp;/*&nbsp;当使用css&nbsp;transition实现动画效果时，在开始时的样式中必须包含transition的设置&nbsp;*/
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/*&nbsp;结束时的样式&nbsp;*/
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.fade.ng-enter.ng-enter-active&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=&quot;/Scripts/angular.js&quot;&gt;&lt;/script&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=&quot;/Scripts/angular-animate.js&quot;&gt;&lt;/script&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;type=&quot;text/javascript&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;app&nbsp;=&nbsp;angular.module(&#39;cssBasedAnimationTest&#39;,&nbsp;[&#39;ngAnimate&#39;]);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})();
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&nbsp;ng-app=&quot;cssBasedAnimationTest&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;ng-if=&quot;bool&quot;&nbsp;class=&quot;fade&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fade&nbsp;me&nbsp;in&nbsp;out
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;button&nbsp;ng-click=&quot;bool=true&quot;&gt;Fade&nbsp;In!&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;button&nbsp;ng-click=&quot;bool=false&quot;&gt;Fade&nbsp;Out!&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">注意：使用CSS Transition时，ng-EVENT（动画开始前的样式）和ng-EVENT-active（动画执行完毕后的样式）这两组样式必须同时出现，且在ng-EVENT中必须包含transition的设置。</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">本篇开头提到过，AngularJS核心库并不包含ngAnimate模块，因此我们首先需要在定义Module时，添加对ngAnimate模块引用的声明：</p><pre style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; white-space: pre-wrap; word-wrap: break-word; font-family: &#39;Courier New&#39; !important;\">var&nbsp;app&nbsp;=&nbsp;angular.module(&#39;cssBasedAnimationTest&#39;,&nbsp;[&#39;ngAnimate&#39;]);</pre><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">使用ngIf（ng-if）来控制class=&quot;fade&quot;的元素是否加载到DOM：</p><pre style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; white-space: pre-wrap; word-wrap: break-word; font-family: &#39;Courier New&#39; !important;\">&lt;div&nbsp;ng-if=&quot;bool&quot;&nbsp;class=&quot;fade&quot;&gt;</pre><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">注意：ngIf和ngShow/ngHide不同，ngIf在元素隐藏时DOM中并没有该元素，而使用ngShow/ngHide时元素依然存在于DOM中。&nbsp;</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">点击&quot;Fade In!&quot;按钮时，加载div到DOM并触发enter，AngularJS对元素自动添加ng-enter和ng-enter-active的样式，并从ng-enter到ng-enter-active执行样式转换。为了能看清过程，我们将ng-enter中的过渡时间设置为5s，点击&quot;Fade In!&quot;按钮后观察Html的变化。</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\"><strong style=\"margin: 0px; padding: 0px;\">Step 1（点击前，如前面所说，ngIf在触发前，DOM中并没有div）：</strong></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\"><img class=\"myimg\" src=\"/ueditor/php/upload/image/20170423/1492931877810007.png\" alt=\"\"/></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\"><strong style=\"margin: 0px; padding: 0px;\">Step 2（点击按钮后，AngularJS自动添加了ng-animate、ng-enter、ng-enter-active这三个动画相关的样式名，并由ngAnimate模块执行动画效果）：</strong></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\"><img class=\"myimg\" src=\"/ueditor/php/upload/image/20170423/1492931877462668.png\" alt=\"\"/></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\"><strong style=\"margin: 0px; padding: 0px;\">Step 3（动画执行完后，示例中是5s后，ng-animate、ng-enter、ng-enter-active被移除，div的状态为ng-enter-active中指定的状态）：</strong></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\"><img class=\"myimg\" src=\"/ueditor/php/upload/image/20170423/1492931878301952.png\" alt=\"\"/></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">另外一种CSS transition的方法是使用CSS的Keyframe关键字，对于示例1中样式文件可改为如下：</p><pre class=\"brush:as3;toolbar:false\">&lt;style&nbsp;type=&quot;text/css&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;/*&nbsp;开始时的样式，使用keyframes不需要定义结束时的样式&nbsp;*/
+&nbsp;&nbsp;&nbsp;&nbsp;.fade.ng-enter&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;animation:&nbsp;my_fade_animation&nbsp;0.5s&nbsp;linear;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-webkit-animation:&nbsp;my_fade_animation&nbsp;0.5s&nbsp;linear;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;@keyframes&nbsp;my_fade_animation&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;@-webkit-keyframes&nbsp;my_fade_animation&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&lt;/style&gt;</pre><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">这种写法中是不需要ng-EVENT-active的。</p><h2 style=\"margin: 10px 0px; padding: 0px; font-size: 21px; line-height: 1.5;\">2. CSS Class-based Animation:</h2><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">Class-based Animation即为通过ngClass、ngShow、ngHide等Directives执行动画效果。 &nbsp;</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">示例2：</p><pre class=\"brush:as3;toolbar:false\">&lt;!DOCTYPE&gt;
+&lt;html&gt;
+&lt;head&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&nbsp;type=&quot;text/css&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.fade.ng-hide&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;3s&nbsp;linear&nbsp;all;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.fade.ng-show&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;3s&nbsp;linear&nbsp;all;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity:&nbsp;1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=&quot;/Scripts/angular.js&quot;&gt;&lt;/script&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=&quot;/Scripts/angular-animate.js&quot;&gt;&lt;/script&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;type=&quot;text/javascript&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;app&nbsp;=&nbsp;angular.module(&#39;cssClassBasedAnimationTest&#39;,&nbsp;[&#39;ngAnimate&#39;]);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})();
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&nbsp;ng-app=&quot;cssClassBasedAnimationTest&quot;&nbsp;ng-init=&quot;bool=true&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;ng-show=&quot;bool&quot;&nbsp;class=&quot;fade&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;is&nbsp;ng-show.
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;ng-hide=&quot;bool&quot;&nbsp;class=&quot;fade&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;is&nbsp;ng-hide.
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;button&nbsp;ng-click=&quot;bool=!bool&quot;&gt;Toggle&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">本例改自官方Demo，除了官方Demo中有点问题之外，另外我自己添加了.fade.ng-show以及两个div分别使用ng-show和ng-hide两个属性。为了能看清Html的变化，动画过渡时间也设置成了3s。</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\"><strong style=\"margin: 0px; padding: 0px;\">图1：</strong></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\"><img class=\"myimg\" src=\"/ueditor/php/upload/image/20170423/1492931879538798.png\" alt=\"\"/></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">&nbsp;</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\"><strong style=\"margin: 0px; padding: 0px;\">图2：</strong></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\"><img class=\"myimg\" src=\"/ueditor/php/upload/image/20170423/1492931880294102.png\" alt=\"\"/></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">&nbsp;</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">实际观察Html的变化，无论是ngShow还是ngHide，其实都是在隐藏元素时，默认添加ng-hide-animate、ng-hide-add、ng-hide-add-active样式。也就是针对像ngHide、ngShow等这些可以感知动画的Directives，由AngularJS的ngAnimate模块自动添加了CSS Transition动画。</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">ngAminate能检测的行为是样式的add或者remove， 那如何显式的指定add和remove的样式呢？</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">示例3（官方Demo）：</p><pre class=\"brush:as3;toolbar:false\">&lt;!DOCTYPE&gt;
+&lt;html&gt;
+&lt;head&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&nbsp;type=&quot;text/css&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.highlight&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transition:&nbsp;3s&nbsp;linear&nbsp;all;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.highlight.on-add&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;white;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.highlight.on&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;yellow;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.highlight.on-remove&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background:&nbsp;black;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=&quot;/Scripts/angular.js&quot;&gt;&lt;/script&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=&quot;/Scripts/angular-animate.js&quot;&gt;&lt;/script&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;type=&quot;text/javascript&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;app&nbsp;=&nbsp;angular.module(&#39;cssClassBasedAnimationTest&#39;,&nbsp;[&#39;ngAnimate&#39;]);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})();
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&nbsp;ng-app=&quot;cssClassBasedAnimationTest&quot;&nbsp;ng-init=&quot;bool=true&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;ng-class=&quot;{on:onOff}&quot;&nbsp;class=&quot;highlight&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Highlight&nbsp;this&nbsp;box
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;button&nbsp;ng-click=&quot;onOff=!onOff&quot;&gt;Toggle&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">&nbsp;</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">我们让ng-class随着点击Toggle按钮变化，当onOff=true时样式on会被ngAnimate执行on-add的过程，反之则执行on-remove的过程。由于显式指定了样式，当我们运行示例3时，这个过程就一目了然了。</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">&nbsp;&nbsp;</p><h2 class=\"contentTitle\" style=\"margin: 10px 0px; padding: 5px; width: 971.265625px; background-color: rgb(192, 192, 192); border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; font-size: 21px; line-height: 1.5;\">基于Javascript的动画效果:</h2><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">使用基于Javascript的动画效果可以让你在脚本中使用其他的Service甚至引用第三方的脚本进行动画的制作，使动画效果更丰富多变。</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">与基于CSS的动画效果相似，基于Javascript的动画效果也会由AngularJS自动添加一些指定的样式到元素上，但基于Javascript的动画效果还需要使用<span class=\"kwd\" style=\"margin: 0px; padding: 0px; line-height: 1.5;\">module<span class=\"pun\" style=\"margin: 0px; padding: 0px; line-height: 1.5;\">.<span class=\"pln\" style=\"margin: 0px; padding: 0px; line-height: 1.5;\">animation<span class=\"pun\" style=\"margin: 0px; padding: 0px; line-height: 1.5;\">()添加动画脚本。</span></span></span></span></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">示例4：</p><pre class=\"brush:as3;toolbar:false\">&lt;!DOCTYPE&gt;
+&lt;html&gt;
+&lt;head&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=&quot;/Scripts/angular.js&quot;&gt;&lt;/script&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=&quot;/Scripts/angular-animate.js&quot;&gt;&lt;/script&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;src=&quot;/Scripts/jquery-1.9.1.js&quot;&gt;&lt;/script&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;type=&quot;text/javascript&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;app&nbsp;=&nbsp;angular.module(&#39;javascriptBasedAnimationTest&#39;,&nbsp;[&#39;ngAnimate&#39;]);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app.animation(&#39;.slide&#39;,&nbsp;[function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enter:&nbsp;function&nbsp;(element,&nbsp;doneFn)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jQuery(element).fadeIn(1000,&nbsp;doneFn);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;move:&nbsp;function&nbsp;(element,&nbsp;doneFn)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jQuery(element).fadeIn(1000,&nbsp;doneFn);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;leave:&nbsp;function&nbsp;(element,&nbsp;doneFn)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jQuery(element).fadeOut(1000,&nbsp;doneFn);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}]);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app.controller(&#39;myController&#39;,&nbsp;[&#39;$scope&#39;,&nbsp;function&nbsp;($scope)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$scope.students&nbsp;=&nbsp;[&quot;Tom&quot;,&quot;Jack&quot;,&quot;Alice&quot;,&quot;May&quot;,&quot;Thomas&quot;];
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}]);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})();
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&nbsp;ng-app=&quot;javascriptBasedAnimationTest&quot;&nbsp;ng-controller=&quot;myController&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;ng-if=&quot;isshow&quot;&nbsp;ng-repeat=&quot;stu&nbsp;in&nbsp;students&quot;&nbsp;class=&quot;slide&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{&nbsp;stu&nbsp;}}
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;button&quot;&nbsp;value=&quot;Toggle&quot;&nbsp;ng-click=&quot;isshow=!isshow&quot;&nbsp;/&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">注：本例为了便于实现js的动画效果引入了jQuery。</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">示例4中，我们对class=&#39;slide&#39;的元素的AngularJS中的默认行为添加了动画行为，当使用ngIf让元素enter或者remove时，将触发动画效果。</p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">关于更复杂的对象，也可参考参考资料中提到的AngularJS Hub的例子，本文就不展开了。</p><p>&lt;style type=&quot;text/css&quot;&gt;</p><p>&nbsp; &nbsp; /* 开始时的样式，使用keyframes不需要定义结束时的样式 */</p><p>&nbsp; &nbsp; .fade.ng-enter {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; animation: my_fade_animation 0.5s linear;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; -webkit-animation: my_fade_animation 0.5s linear;</p><p>&nbsp; &nbsp; }</p><p>&nbsp; &nbsp; @keyframes my_fade_animation {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; from {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; opacity: 0;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; }</p><p>&nbsp; &nbsp; &nbsp; &nbsp; to {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; opacity: 1;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; }</p><p>&nbsp; &nbsp; }</p><p>&nbsp; &nbsp; @-webkit-keyframes my_fade_animation {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; from {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; opacity: 0;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; }</p><p>&nbsp; &nbsp; &nbsp; &nbsp; to {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; opacity: 1;</p><p>&nbsp; &nbsp; &nbsp; &nbsp; }</p><p>&nbsp; &nbsp; }</p><p>&lt;/style&gt;</p><h3 class=\"contentTile\" style=\"margin: 10px 0px; padding: 0px; font-size: 16px; line-height: 1.5;\">参考资料</h3><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">AngularJS官方文档：<a href=\"https://docs.angularjs.org/api/ngAnimate\" target=\"_blank\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">https://docs.angularjs.org/api/ngAnimate</a></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">ngAnimate：<a href=\"http://www.nganimate.org/\" target=\"_blank\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">http://www.nganimate.org/</a></p><p style=\"margin: 10px auto; padding: 0px; line-height: 1.5;\">AngularJS Hub:&nbsp;<a href=\"http://www.angularjshub.com/examples/animations/javascriptanimations/\" target=\"_blank\" style=\"margin: 0px; padding: 0px; color: rgb(7, 93, 179);\">http://www.angularjshub.com/examples/animations/javascriptanimations/</a></p><p><br/></p><p>							</p>',`mtime`='1492932371' WHERE `id` = 122 [ RunTime:0.0123s ]
+NOTIC: [8] Undefined variable: id /data/wwwroot/blog/Application/Admin/Controller/AjaxController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category` WHERE `name` = 'AngularJS' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag` WHERE `name` = 'angular' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-04-23T15:26:13+08:00 ] 101.27.213.149 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012933s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012970s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000356s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000394s ]
+
+[ 2017-04-23T15:39:14+08:00 ] 101.27.213.149 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 361 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 424 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 438 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013345s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013380s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000182s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000317s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000356s ]
+
+[ 2017-04-23T15:49:21+08:00 ] 101.27.213.149 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000423s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+NOTIC: [8] Undefined index: id /data/wwwroot/blog/Application/Admin/Controller/AjaxController.class.php 第 53 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: INSERT INTO `z_post` (`title`,`category`,`tag`,`summary`,`content`,`pubtime`,`mtime`,`ctime`) VALUES ('angular.js中的ui-router实现路由','AngularJS','angular','用angular.js可以实现单页应用。而单页应用的页面之间的跳转就要用到ui-router这个东西。这个东西比angular.js自带的ng-router的优势是，它可以实现路由嵌套。','<p>实例</p><p><a href=\"http://ruanwenwu.cn/route/app/UIRoute3.html\">http://ruanwenwu.cn/route/app/UIRoute3.html</a></p><p>注意点</p><h2>一、路由嵌套通过ui-view属性来实现。子页面实际上替换的是父页面的ui-view。</h2><p>比如这种结构：</p><p><img src=\"blob:http://www.ruanwenwu.cn/36aa3420-dd0e-42a0-987a-1ca055e5cbdf\"/></p><p>/highenduser这个地址的模板里的内容替换的是/usermng这个页面的模板里的ui-view。</p><h2>二、页面之间的转场动画，是通过ng-animation模块来实现的。</h2><p>这个模块要被作为依赖模块载入。实现动画的几种方式可以在<a href=\"/blog/122.html\" target=\"_blank\">上一篇博文</a>中了解。当前这个页面里的demo的转场动画是由css3的transtion来实现的。</p><p><br/></p>','1492933761','1492933761','1492933761') [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category` WHERE `name` = 'AngularJS' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag` WHERE `name` = 'angular' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2017-04-23T15:49:23+08:00 ] 101.27.213.149 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000393s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013602s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013642s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000382s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000421s ]
+
+[ 2017-04-23T15:50:02+08:00 ] 101.27.213.149 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+
+[ 2017-04-23T15:50:03+08:00 ] 101.27.213.149 /admin.php/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000395s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000434s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000072s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004614s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004653s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000357s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000391s ]
+
+[ 2017-04-23T15:50:04+08:00 ] 101.27.213.149 /admin.php/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000070s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004409s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004446s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000381s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000420s ]
+
+[ 2017-04-23T15:50:05+08:00 ] 101.27.213.149 /admin.php/Ajax/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000382s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+
+[ 2017-04-23T15:50:05+08:00 ] 101.27.213.149 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 361 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 424 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 438 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013327s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013363s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000311s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000350s ]
+
+[ 2017-04-23T15:50:06+08:00 ] 101.27.213.149 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000395s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 361 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 424 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 438 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013886s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013922s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000346s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000385s ]
+
+[ 2017-04-23T15:50:09+08:00 ] 101.27.213.149 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000430s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012939s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012979s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000357s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000399s ]
+
+[ 2017-04-23T15:50:09+08:00 ] 101.27.213.149 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000399s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013295s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013341s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000152s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000499s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000547s ]
+
+[ 2017-04-23T15:50:11+08:00 ] 101.27.213.149 /admin.php/Post/updatePost/id/123
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 123 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b94d69ac1621e983387ec69783f12599.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014039s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014078s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000373s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000412s ]
+
+[ 2017-04-23T15:50:12+08:00 ] 101.27.213.149 /admin.php/Post/updatePost/id/123
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000393s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 123 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b94d69ac1621e983387ec69783f12599.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014327s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014366s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000324s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000455s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000500s ]
+
+[ 2017-04-23T15:51:54+08:00 ] 101.27.213.149 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000387s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: UPDATE `z_post` SET `title`='angular.js中的ui-router实现路由',`category`='AngularJS',`tag`='angular',`summary`='用angular.js可以实现单页应用。而单页应用的页面之间的跳转就要用到ui-router这个东西。这个东西比angular.js自带的ng-router的优势是，它可以实现路由嵌套。',`content`='<p>								</p><h2>实例</h2><h2><a href=\"http://ruanwenwu.cn/route/app/UIRoute3.html\">http://ruanwenwu.cn/route/app/UIRoute3.html</a></h2><h2>注意点</h2><h3>一、路由嵌套通过ui-view属性来实现。子页面实际上替换的是父页面的ui-view。</h3><p>比如这种结构：</p><pre class=\"brush:as3;toolbar:false\">.state(&#39;index.usermng&#39;,&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url:&nbsp;&#39;/usermng&#39;,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;views:&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;main@index&#39;:&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;templateUrl:&nbsp;&#39;tpls3/usermng.html&#39;,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;controller:&nbsp;function($scope,&nbsp;$state)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$scope.addUserType&nbsp;=&nbsp;function()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$state.go(&quot;index.usermng.addusertype&quot;);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.state(&#39;index.usermng.highendusers&#39;,&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url:&nbsp;&#39;/highendusers&#39;,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;templateUrl:&nbsp;&#39;tpls3/highendusers.html&#39;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})</pre><p>/highenduser这个地址的模板里的内容替换的是/usermng这个页面的模板里的ui-view。</p><h3>二、页面之间的转场动画，是通过ng-animation模块来实现的。</h3><p>这个模块要被作为依赖模块载入。实现动画的几种方式可以在<a href=\"/blog/122.html\" target=\"_blank\">上一篇博文</a>中了解。当前这个页面里的demo的转场动画是由css3的transtion来实现的。</p><p>							</p>',`mtime`='1492933914' WHERE `id` = 123 [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: id /data/wwwroot/blog/Application/Admin/Controller/AjaxController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category` WHERE `name` = 'AngularJS' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_tag` WHERE `name` = 'angular' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2017-04-23T15:51:56+08:00 ] 101.27.213.149 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000414s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013566s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013613s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000167s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000201s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000322s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000360s ]
+
+[ 2017-04-23T15:51:56+08:00 ] 101.27.213.149 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013126s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013165s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000381s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000420s ]
+
