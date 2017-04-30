@@ -1,0 +1,110 @@
+[ 2017-05-01T00:20:17+08:00 ] 101.27.211.148 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000347s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+NOTIC: [8] Undefined index: id /data/wwwroot/blog/Application/Admin/Controller/AjaxController.class.php 第 53 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: INSERT INTO `z_post` (`title`,`category`,`tag`,`summary`,`content`,`pubtime`,`mtime`,`ctime`) VALUES ('揣摩','散文','心境','最近家里的开支大了许多，还是需要努力工作，好好学习，为将来挣更多的钱准备。决定了，明天去公司加班，做一下这周没有完成好的工作。我曾经说过：“要在工作中体现自己的价值。”这个价值观，我扔是要维护的。做一份工就做好它。不求做到最好，但求问心无愧吧。','<p>晚上10点多，睡了一小会的小孩子下床来，开了灯，穿衣服。还在码字的我问她：“这么晚了还穿衣服干什么？”她说：“我要下楼跟姥姥睡。”说完，关了卧室的灯，带上房门出去了。过了一小会又推开门走到我身边对我说：“我要喝水。”我说：“要喝水下楼去倒啊。”她还是说：“要喝水。” 我又说：“要喝水下楼去倒啊。”她还是说：“我要喝水。”我凑近了看她，发现她眼里有泪光。我问她：“是不是害怕？”她说：“是”。我说：“爸爸陪你一起下去。”我抱着她，问她：“为什么不敢一个人下楼呢？” 她说：“怕小老鼠。”</p><p>喝完水，我说：“我们上去睡吧。”她说：“我热。你看我后背都湿了。”我说：“我们把两边的窗户打开就不会热了。”她还是不愿意上楼。我猜她还想出去玩，于是问她：“你是不是还想出去玩？”她说：“是。”我说：“已经好晚了，外边都没得玩了，还有好多抓小孩的坏人。”但是她不听，仍想出去玩。我有些困，有些不耐烦了，对她说：“我先上去了，你要是热，在摇椅上睡会。”我上楼的时候，看她边看我，边要往屋外走。上楼后我在窗口看着楼下，她到底是没敢出门。过了几分钟我下去看她，发现她侧卧在躺椅上。走近了，我又看她眼睛里有泪光，我的心里就不好受了，觉得自己做错了。我对她说：“我抱着你在躺椅上睡会？”她摇了摇头。我弯下腰，抱起她，她好像等这一刻好久了，紧紧地抱着我的脖子，把头埋在我的肩上。</p><p>我抱着她躺在摇椅上。我轻轻地拍着她的后背，一直到她睡熟了。我能感觉到她对我的依赖，我越发觉得，即使短暂的分别对她，对我都是一种煎熬。</p><p>写到这里我突然觉得，我们这些大人有时候觉得小孩子调皮实在是不该。如果我们能仔细的揣摩一下孩子的心理，也许孩子就会少很多“调皮”，多很多快乐。</p><p>说到揣摩，我今天收到新朋友，“老相识”的同事L的微信，说的是工作内容，说完后告诉我是想表达别的意思，让我自己悟。</p><p>先说“新朋友，老相识”这六个字的意思。这应该是很多人都有的体会，一群人在一起若干年却不能彼此称友，特别是在工作之后。我想了一下，造成这种情况大抵是因为大家都没有“交心”，最终成了“熟人”，连“新朋友”都算不上。我和这位L君“交心”也是这两天突然，偶然发生的事情。所以交个朋友算是十分难得且幸运的事了。</p><p>对于”让我悟&quot;的话，我揣摩了，但我不知道自己揣摩的对不对。是指我们之间以后只是工作关系？还是别的意思呢？如果真是这样，我能接受，但我会很难过。我有十年没交过“朋友”，因为我自己封闭了自己，同时我也没有遇到和自己趣味相投的人。而这位L君却让我格外“喜欢”。这种喜欢出于她让我感受到的“风度”，出于她文章里的思想。这种喜欢也会止于这两点，所谓君子之交，一切顺其自然罢了。</p><p>最近家里的开支大了许多，还是需要努力工作，好好学习，为将来挣更多的钱准备。决定了，明天去公司加班，做一下这周没有完成好的工作。我曾经说过：“要在工作中体现自己的价值。”这个价值观，我扔是要维护的。做一份工就做好它。不求做到最好，但求问心无愧吧。</p>','1493569217','1493569217','1493569217') [ RunTime:0.0173s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category` WHERE `name` = '散文' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag` WHERE `name` = '心境' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2017-05-01T00:20:19+08:00 ] 101.27.211.148 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013187s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013226s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000314s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000352s ]
+
+[ 2017-05-01T00:31:00+08:00 ] 101.27.211.148 /admin.php/Post/updatePost/id/124
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000427s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 124 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b94d69ac1621e983387ec69783f12599.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013588s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000335s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000374s ]
+
+[ 2017-05-01T00:31:10+08:00 ] 101.27.211.148 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0007s ]
+SQL: UPDATE `z_post` SET `title`='感觉有光在心中生长',`category`='散文',`tag`='心境',`summary`='“记录生命，分享感动！”这即是我想成为作家的初衷了。试想，如果个读者读了我的文章，像我读了我这个朋友的文章一样，心境一下子变得明朗，心中生出光来，那将是我最为欣慰的事了。这也是我突然地要重新做这件事情的原因了。',`content`='<p>								</p><p>好多年前，我搁下了心爱的笔，不再写一些东西。自那时以及后来很长一段时间，我觉得，有些感觉，将她放在心中默默感受就好了，因为无人言说，也无法言说。毕竟有些微妙的感觉，说不清楚。有些美好，也并不足外人道罢。<br/></p><p>可是我现在决定，我要重拾这个&quot;曾经的挚爱&quot;。</p><p>提起这个挚爱，我不禁想起一个情景。那是我读大二的时候，在教务处的办公室里，有一个老师问我：“你将来想做什么工作？”我毫不犹豫地说：“我想成为一个作家！”</p><p>后来我读了很多小说和诗歌，写作成为我的最爱。我记得有好多次，我写到了天亮。每写完一篇自己喜欢的文字都感觉特别的喜悦与满足。有一次写到天亮，下雪了，我兴致很高，打着伞出去看雪，吃早餐。因为人的心境的关系，这世界的一切在你眼中都是可以那么那么的美好的啊。</p><p>要不是有个作家朋友的突然出现，我想我不会觉出我正在失去一些于我最可贵的东西。要不是这个朋友的突然出现，我想我仍然会跟大多数的“正常人”一样，每天做的事情就是努力挣钱，不断学习挣钱的技能，一直到老吧。这太可怕了，对物质的追求和单调的循环占据了人生的一切。这样的人生继续下去，该有多苍白，多无趣呢？</p><p>不要让自己的内心世界继续荒芜下去了。停下脚步，参加一些活动，思考一下人生，多关心一下周围人和自己的内心世界吧。做一个勇敢，善良，有温度的人吧。</p><p>要不是这个朋友离我如此之近，我的感受也不会如此强烈。看着他的文字，你能想象这样一个人就在你的身边，说着文章里的话。这种感觉如此真实而又如此陌生，让我着迷，让我想起了自己曾经的那个“梦想”。</p><p>“记录生命，分享感动！”这即是我想成为作家的初衷了。试想，如果个读者读了我的文章，像我读了我这个朋友的文章一样，心境一下子变得明朗，心中生出光来，那将是我最为欣慰的事了。这也是我突然地要重新做这件事情的原因了。</p><p><br/></p><p>							</p>',`mtime`='1493569870' WHERE `id` = 124 [ RunTime:0.0226s ]
+NOTIC: [8] Undefined variable: id /data/wwwroot/blog/Application/Admin/Controller/AjaxController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category` WHERE `name` = '散文' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag` WHERE `name` = '心境' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2017-05-01T00:31:12+08:00 ] 101.27.211.148 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000390s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012937s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012977s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000321s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000359s ]
+
