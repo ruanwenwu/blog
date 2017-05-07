@@ -11,7 +11,7 @@ class IndexController extends BaseController {
         //得到分页模版
  $page = I("get.page") ? I("get.page"):1;
         $total = $this->postModel->getPost(null,true);
-        $perpage = 5;
+        $perpage = 10;
         $pages = ceil($total/$perpage);
         $show = ""; //初始化分页模版为空
         if($pages > 1){
