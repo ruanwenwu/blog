@@ -9,13 +9,20 @@ class IndexController extends BaseController {
     public function index(){
         //$this->show('<style type="text/css">*{ padding: 0; margin: 0; } div{ padding: 4px 48px;} body{ background: #fff; font-family: "微软雅黑"; color: #333;font-size:24px} h1{ font-size: 100px; font-weight: normal; margin-bottom: 12px; } p{ line-height: 1.8em; font-size: 36px } a,a:hover{color:blue;}</style><div style="padding: 24px 48px;"> <h1>:)</h1><p>欢迎使用 <b>ThinkPHP</b>！</p><br/>版本 V{$Think.version}</div><script type="text/javascript" src="http://ad.topthink.com/Public/static/client.js"></script><thinkad id="ad_55e75dfae343f5a1"></thinkad><script type="text/javascript" src="http://tajs.qq.com/stats?sId=9347272" charset="UTF-8"></script>','utf-8');
         //得到分页模版
- $page = I("get.page") ? I("get.page"):1;
-        $total = $this->postModel->getPost(null,true);
+        $page = I("get.page") ? I("get.page"):1;
+        $username = I("get.name");
+        if ($username != "sasa") {
+            $whereArr = array("status"=>1);
+        } else {
+            $whereArr = null;
+        }
+        
+        $total = $this->postModel->getPost($whereArr,true);
         $perpage = 10;
         $pages = ceil($total/$perpage);
         $show = ""; //初始化分页模版为空
         if($pages > 1){
-            $pageObj    = new \Org\Util\Page($total,$perpage,array(),"/blog/page/".urlencode("[PAGE]")."/");// 实例化分页类 传入总记录数和每页显示的记录数(25)
+            $pageObj    = new \Org\Util\Page($total,$perpage,array(),"/blog/page/".urlencode("[PAGE]")."/name/{$username}");// 实例化分页类 传入总记录数和每页显示的记录数(25)
             $pageObj->setConfig("next","下一页");
             $pageObj->setConfig("prev","上一页");
             $show       = $pageObj->show();// 分页显示输出
@@ -23,7 +30,7 @@ class IndexController extends BaseController {
         
         //得到数据
         $limit = $pageObj->firstRow.','.$pageObj->listRows;
-        $post = $this->postModel->getPost(null,null,$limit);
+        $post = $this->postModel->getPost($whereArr,null,$limit);
         $this->assign("index_current","current");
         $this->assign("post",$post);
         $this->assign("show",$show);
@@ -33,16 +40,22 @@ class IndexController extends BaseController {
     }
     
     public function archive(){
+        $username = I("get.name");
         $this->assign("archive_current","current");
         $tag = I("get.tag");
         $category = I("get.category");
-        $where = null;
         $pageUrlInitial = "/blog/archive/".urlencode("[PAGE]")."/";
         if($tag){   
             $where = array("tag"=>$tag);
+            if (!$username){
+                $where['status'] = 1;
+            }
             $pageUrlInitial = "/blog/tag/$tag/".urlencode("[PAGE]")."/";
         }else if($category){
             $where = array("category"=>$category);
+            if (!$username){
+                $where['status'] = 1;
+            }
             $pageUrlInitial = "/blog/category/$category/".urlencode("[PAGE]")."/";
         }
         
