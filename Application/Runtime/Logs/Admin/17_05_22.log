@@ -1,0 +1,178 @@
+[ 2017-05-22T09:37:41+08:00 ] 119.101.79.161 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 361 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 424 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 438 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014175s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014214s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000347s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000392s ]
+
+[ 2017-05-22T09:37:42+08:00 ] 119.101.79.161 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 361 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 424 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 438 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013814s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013862s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000363s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000401s ]
+
+[ 2017-05-22T09:38:56+08:00 ] 119.101.79.161 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000398s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+NOTIC: [8] Undefined index: id /data/wwwroot/blog/Application/Admin/Controller/AjaxController.class.php 第 53 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: INSERT INTO `z_post` (`title`,`category`,`tag`,`summary`,`content`,`pubtime`,`mtime`,`ctime`) VALUES ('回家第六天','生活','心情','现在是凌晨3点22分，鸡正在叫，我刚才仿佛听到楼下父亲的呻吟，我的心跳突然加速，呼吸变得急促，我感觉完全笼罩在恐惧之中了。','<p>我原以为随着回家日子的增多，我的新鲜感会降低，就再无可记录。现在我意识到，只要有一双能发现美的眼睛，再平淡的日子也能过得心满意足。</p><p>这种心满意足来源于一些生活片段和瞬间。每当这样的片段或者瞬间发生，就好像有一股电流在心中经过，让人或感动，或珍惜，或感慨，或惊讶，或幸福。</p><p>这次回家没有带相机，出门也习惯了不带手机。每有拍照的冲动，难免觉得可惜。还好我的脑子能临时的记住一些画面，后来用文字记录下来，竟也能成为永恒。</p><p>现在已过了凌晨，我失眠了，起来写日记，所以这应该算是前天发生的事了。</p><p>吃完晚饭，我和父亲去水田收灌溉工具。迎着落日的余晖，父亲和我一前一后的走在田间小道上。我们说了些什么，我全记不得了。但我清晰地记得我那时的感觉：我觉很幸福，有爸爸在身边。我觉得真的是这样，陪伴最是温情，哪怕两个人在一起什么也不用说。可我给他们的陪伴太少。</p><p>我们才开始工作，妈妈就跟来了。我赶紧把泵上的管子卷起来，把泵往板车上提。</p><p>父亲母亲和我是下午4点多钟去灌的水田。母亲拉着板车走在最前面，父亲和我一前一后地跟着。这一回我们没有拿很多的线和管子，因为供电的地方就在水源旁边，水田离水源也很近。这是另一块水田。</p><p>母亲将泵放入水中，问父亲：“这样行不行？”父亲说：“行了。”</p><p>只接了一根管子就到了我们的田里。插上插头，水就突突地往田里灌了。这一次水管只有一个漏水的地方了，因为下午父亲用胶带把漏水的地方全部缠了一遍。放出水来，母亲就回家了。我和父亲在田埂边上看了大约30分钟。有很多蚯蚓从被淹的土里爬出来，寻找上岸的出路。后来，我们沿着我们田的边沿检查了一遍是否有缺口，就回家了。</p><p>画面回到收水管的场景。我卷着管子，父亲和母亲在前边抖着管子里的水。抖完水，她就来抢我手中的管子。她的动作比我的麻利得多，开始她也像我一样提着管子卷，后来她干脆把管子放到地上，往前推着走。一小会，就卷完了。</p><p>母亲拉着板车在前面走，父亲和我在后面一前一后地跟着。这感觉就像，我又做了一回小孩子。</p><p>小孩子真的来了，远远地，迎着夕阳，喊着：“奶奶，奶奶”，奋力地朝我们跑过来。这是我这两天觉得最美的第一个画面。</p><p>母亲要把她放在板车的头上坐着，起初她还有点害怕，拒绝上去，坐上去之后就恢复了平时的开心。我跟她说：“爸爸小时候就喜欢这样坐在板车上。”这是我这两天觉得最美的又一个画面，母亲拉着她，我和父亲一前一后地走着。</p><p>昨天晚上我们一家人在阳台聊天。我终于对父亲说了病的事。我尽量让自己听起来“不经意”一些。我说：“听亚姐说你的膀胱里有阴影。”“结石。”父亲斩钉截铁地说。我看过诊断书，上面并没有给出结论。于是我明白父亲的意思了。我们说这个话题，让他变得非常急躁。他说：“不要谈论这个话题。”我想，他是不愿意和我一起去医院的。他的话里也有对住院做手术的恐惧。我不忍心逼他，他所说的感受我听着都很痛苦，何况他是亲身经历。</p><p>疾病的话题让大家感到沉重，今天的夜聊早早地散了。我仍和妻子在二楼的阳台聊着天。</p><p>我跟她说：“我想骑自行车去西藏。”</p><p>她很反对：“哪里有你这么大年纪还去的。再说，你去西藏玩去了，我们生活怎么办。我还想去玩呢！”</p><p>“我会在能保证你们正常生活的前提下去的。可能是换工作的时候。况且我不是去玩的。去玩也不选择骑自行车了。”</p><p>“你不换工作了？”</p><p>“暂时不换。”</p><p>“你为什么不换。你之前不是说要换的吗？”</p><p>“现在不适合换。况且在这里我还能接触到新的，感兴趣的东西。在这里我也没有做到最好。”说到这里，我想：“不走的原因里，还有一点是，不舍得这么快就和朋友说分别。”我没有和妻子说明这一点，免得她误会或者不理解。</p><p>“那你觉得你在这里有上升的空间？”</p><p>“有啊。”</p><p>“如果你们主管，总监不走你能有机会？”</p><p>“你这种想法在职场是很要不得的。如果你这么想，在哪里都是没有机会的。”</p><p>“但是你换个工作肯定不是换普通的，肯定是高级的。高级的就可以带人啊，管理啊。”</p><p>“我们组里就有高级程序员。大家都干一样的活。”</p><p>“那你换个工作，工资高很多。你看看招聘要求，看看那些3万的工作你都干不干得了？”她有些急，说着就去屋里拿手机去了。</p><p>我看了几条招聘信息，还真干得了。</p><p>“干得了”，我说：“但是我们得想得长远一点吧？今年跳，明年跳，以后还有得跳吗？还有竞争力吗？况且我还真没打算要走。”</p><p>“你之前不是打算吗？”</p><p>“人的想法会变的，之前的想法就不要管它了吧。”</p><p>“你要是不换工作，我就不找工作了。”</p><p>“你这是很消极的想法。我换不换工作，跟你找不着工作有什么关系？”</p><p>“你明明可以赚更多的钱，干嘛要我承担更多的压力？”</p><p>“在这里也有加薪的机会啊。”</p><p>“那能加多少？”</p><p>“如果你不想工作，那就不要出来找工作了。”</p><p>“我不工作，你挣得刚好够我们开支。”</p><p>“我们开支有那么多了吗？”</p><p>于是我们开始计算每个月的开支，果真每个月少说也要8000块。我有些惊讶。</p><p>我叹了一口气：“工作，挣钱的事就交给我，让我自己处理吧。只是不要把你的思想强加给我了。”</p><p>“我哪里强加给你了？”</p><p>“你在说‘我希望’的时候。这听起来不像强加，但实际上却是一种心理暗示。意思就是我要你怎样怎样。我问你，你关心我吗？”</p><p>“关心。”</p><p>“关心就应该关心对方想要的什么，尊重对方的决定。比如说你想呆家里看孩子，我尊重你的决定，我同意。”</p><p>“如果意见不一致呢？”</p><p>“那另一方必须做出妥协。”</p><p>“你知道我为什么想去骑车去西藏吗？”我看着星空，语气放慢下来。</p><p>“为什么？”</p><p>“因为我想考验一下我自己。”</p><p>“那为什么不从湖北骑到北京？”</p><p>“因为不够难。”</p><p>“我觉得已经很难了。”</p><p>“但是没什么风景。”</p><p>“还是为了看风景。”</p><p>“你能理解那种很想去做一件事的心情吗？你有没有特别想做的事情？”</p><p>“有很多啊。我想去巴黎，加拿大……”妻子微微笑着，慢慢地说，45度角仰望着星空，眼角有泪流出来。</p><p>我帮她擦着眼泪，说：“你在说这段话的时候感觉特别美好。这种状态特别好，是我从来没有认识的你。”</p><p>我还记得我们开过的玩笑。我问她：“你想多久去玩一次？”</p><p>“一个月一次。”</p><p>“一个月一次，一次一个月？”</p><p>现在是凌晨3点22分，鸡正在叫，我刚才仿佛听到楼下父亲的呻吟，我的心跳突然加速，呼吸变得急促，我感觉完全笼罩在恐惧之中了。</p><p>我要尽快完成我和妻子的这段对话，好去休息一会。但是这段对话是我认为我们认识以来最重要的一次对话，所以可能我会尽量去还原，不会那么快了。</p><p>“我的梦想只有一个。而你的那么多。现在你的梦想，也是我的梦想。我们一个一个来完成。”</p><p>“我想先去巴黎。”</p><p>“为什么是巴黎呢？”</p><p>“因为小时候看电视，好多都是在巴黎的，觉得特别浪漫。”</p><p>“好，就巴黎。今年我们实现这个梦想，就在十一！”</p><p>话说到这里，我们之间好像又重新认识了。我跟她说：“你有没有发现，当我们在谈论一些精神上的东西的时候，我们变得没那么尖锐了。”是的，那是我们心的归宿，那些我们最渴望做的事。我说：“当我们老了，不是我们有几套房，有几台车，值得我们骄傲和回忆的，永远是我们做过的事。生命中最重要的是去体验。”</p><p>我们一起简单地看了去巴黎的行程，估算了费用。我们都很高兴。妻子说：“今天这场谈话还很高兴。”</p><p>这场谈话太长了，我漏了很多，有很多我也记不起来了。先后顺序可能也是有误差的。但是表达我的心情应是足够了。</p><p>“我真正关心的那一节”我想是受了朋友a的启发。我们只需做更好的自己，又何必强求别人根据自己的喜好去改变呢？现在想想，我在对话中和妻子也谈到了。我说：“我老觉得你不够温柔。可是我没有想过什么导致的。是不是受你父亲的影响呢？我不够关心你，却要求你去改变。”妻子听了也动容。人都是“吃软不吃硬”的吧。</p><p>说起体验，这两天，我学了骑摩托车：启动时要拉着离合器。起步时，给点油，必须慢慢松离合，否则会熄火。刹车时必须拉离合，否则也会熄火。我还学着做了两道菜。一道猪肝汤，一道炒米粉。</p><p>猪肝汤：猪肝和里脊肉切成片，放入碗中。加少许食盐，水，然后放入适量淀粉，将猪肝捏成糊状。油锅烧开，加入葱姜，炒香，倒入水。大火烧开后，放鸡精，盐调味，然后放入猪肝，烧开，打入鸡蛋花即可。</p><p>炒米粉：最好使用东莞米粉。炒之前用水泡开，一般30分钟至40分钟。准备调料：不要用油。锅里放适量清水，加入酱油，盐，鸡精，加热少许即可起锅。因为粉中不加汤，如果直接放入调料，调料会化不开，炒不匀，所有就有了制作调料这一步。炒：锅烧热，放油炒热，加入葱姜蒜爆香。打入一个鸡蛋，炒散。放入喜欢的青菜，炒蔫，放入粉丝，适量翻炒后加入事先制作好的调料汁，迅速翻炒，起锅。</p><p><br/></p>','1495417136','1495417136','1495417136') [ RunTime:0.0209s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_category` WHERE `name` = '生活' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag` WHERE `name` = '心情' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2017-05-22T09:38:57+08:00 ] 119.101.79.161 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013725s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013767s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000123s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000337s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000377s ]
+
+[ 2017-05-22T09:38:58+08:00 ] 119.101.79.161 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000391s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013948s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013987s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000367s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000407s ]
+
+[ 2017-05-22T22:28:44+08:00 ] 119.101.79.161 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000393s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 361 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 424 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 438 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015525s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015569s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000358s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000398s ]
+
+[ 2017-05-22T22:28:46+08:00 ] 119.101.79.161 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 361 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 424 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 438 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013453s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013491s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000367s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000404s ]
+
