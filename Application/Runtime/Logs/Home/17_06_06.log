@@ -1,0 +1,2068 @@
+[ 2017-06-06T00:01:37+08:00 ] 42.156.138.67 /blog/136.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000392s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: userinfo /data/wwwroot/blog/Application/Home/Controller/IndexController.class.php 第 93 行.
+SQL: UPDATE `z_post` SET `pv`=pv+1 WHERE `id` = 136 [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 136 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `z_post` WHERE ( id < 136 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `z_post` WHERE ( id > 136 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `z_comment` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_comment` WHERE `postid` = 136 AND `status` = 1  [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_comment` WHERE `postid` = 136 AND `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+NOTIC: [8] Undefined variable: archive_current /data/wwwroot/blog/Application/Runtime/Cache/Home/1223f42a89e823bf89547594651162de.php 第 79 行.
+NOTIC: [8] Undefined variable: about_current /data/wwwroot/blog/Application/Runtime/Cache/Home/1223f42a89e823bf89547594651162de.php 第 81 行.
+NOTIC: [8] Undefined variable: userinfo /data/wwwroot/blog/Application/Runtime/Cache/Home/1223f42a89e823bf89547594651162de.php 第 115 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000017s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.003841s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001440s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001520s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000144s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000017s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.006045s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001357s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000825s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002069s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000017s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.008052s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001368s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002778s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.004032s ]
+SQL: SELECT * FROM `z_comment` WHERE `status` = 1 ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.009790s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001333s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.004502s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.005719s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.010860s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000806s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006026s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006716s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000909s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006026s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006859s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000330s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000367s ]
+
+[ 2017-06-06T00:01:37+08:00 ] 42.120.161.67 /blog/tag/facebook/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` WHERE `tag` = 'facebook' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` WHERE `tag` = 'facebook' AND `status` = 1 ORDER BY ctime desc LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000069s ]
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/ade7d4477fc643e9340d31bf3970044f.php 第 12 行.
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/ade7d4477fc643e9340d31bf3970044f.php 第 13 行.
+NOTIC: [8] Undefined variable: index_current /data/wwwroot/blog/Application/Runtime/Cache/Home/ade7d4477fc643e9340d31bf3970044f.php 第 32 行.
+NOTIC: [8] Undefined variable: about_current /data/wwwroot/blog/Application/Runtime/Cache/Home/ade7d4477fc643e9340d31bf3970044f.php 第 36 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.002801s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001630s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001667s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000141s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005117s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001332s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000879s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002107s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.006874s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001398s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002592s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003881s ]
+SQL: SHOW COLUMNS FROM `z_comment` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_comment` WHERE `status` = 1 ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.009161s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001342s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.004883s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006116s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.010294s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000882s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006399s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007181s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000984s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006399s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000006s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007276s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000475s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000514s ]
+
+[ 2017-06-06T00:05:15+08:00 ] 123.125.71.94 /blog/page/1/name/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000390s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_post` WHERE `status` = 1 ORDER BY ctime desc LIMIT 0,10   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000075s ]
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 12 行.
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 13 行.
+NOTIC: [8] Undefined variable: archive_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 34 行.
+NOTIC: [8] Undefined variable: about_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 36 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.002851s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001491s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001529s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000191s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005119s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001371s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000893s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002106s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.006904s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001332s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002649s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003864s ]
+SQL: SHOW COLUMNS FROM `z_comment` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_comment` WHERE `status` = 1 ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.009158s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001418s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.004874s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006133s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000022s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.010245s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000881s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006438s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007169s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000993s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006438s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007264s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000382s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000431s ]
+
+[ 2017-06-06T00:07:57+08:00 ] 42.156.138.67 /blog/tag/%E5%BF%83%E5%A2%83/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` WHERE `tag` = '心境' AND `status` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_post` WHERE `tag` = '心境' AND `status` = 1 ORDER BY ctime desc LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000074s ]
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/ade7d4477fc643e9340d31bf3970044f.php 第 12 行.
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/ade7d4477fc643e9340d31bf3970044f.php 第 13 行.
+NOTIC: [8] Undefined variable: index_current /data/wwwroot/blog/Application/Runtime/Cache/Home/ade7d4477fc643e9340d31bf3970044f.php 第 32 行.
+NOTIC: [8] Undefined variable: about_current /data/wwwroot/blog/Application/Runtime/Cache/Home/ade7d4477fc643e9340d31bf3970044f.php 第 36 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.002970s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001561s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001597s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000144s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005223s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001357s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000927s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002180s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000017s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.007051s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001362s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002671s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003921s ]
+SQL: SHOW COLUMNS FROM `z_comment` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_comment` WHERE `status` = 1 ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.009262s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001403s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.004913s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000013s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006226s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.010413s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000850s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006514s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007251s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000948s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006514s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000006s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007343s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000349s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000387s ]
+
+[ 2017-06-06T00:14:58+08:00 ] 42.156.138.67 /blog/category/%E8%AF%BB%E4%B9%A6/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000347s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` WHERE `category` = '读书' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '读书' AND `status` = 1 ORDER BY ctime desc LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/ade7d4477fc643e9340d31bf3970044f.php 第 12 行.
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/ade7d4477fc643e9340d31bf3970044f.php 第 13 行.
+NOTIC: [8] Undefined variable: index_current /data/wwwroot/blog/Application/Runtime/Cache/Home/ade7d4477fc643e9340d31bf3970044f.php 第 32 行.
+NOTIC: [8] Undefined variable: about_current /data/wwwroot/blog/Application/Runtime/Cache/Home/ade7d4477fc643e9340d31bf3970044f.php 第 36 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.002717s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001515s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001556s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000170s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000203s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000024s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005017s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001432s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000886s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002148s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.006882s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001369s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002720s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003961s ]
+SQL: SHOW COLUMNS FROM `z_comment` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_comment` WHERE `status` = 1 ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000023s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.009501s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001406s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.005320s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006555s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000021s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.010630s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000895s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006870s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007593s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000995s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006870s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007686s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000364s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000402s ]
+
+[ 2017-06-06T00:15:37+08:00 ] 107.168.10.184 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` WHERE `status` = 1 ORDER BY ctime desc LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 12 行.
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 13 行.
+NOTIC: [8] Undefined variable: archive_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 34 行.
+NOTIC: [8] Undefined variable: about_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 36 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.003352s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001493s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001531s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000140s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000017s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005569s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001313s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000867s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002073s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.007338s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001322s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002589s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003804s ]
+SQL: SHOW COLUMNS FROM `z_comment` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_comment` WHERE `status` = 1 ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.009564s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001359s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.004782s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006034s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.010641s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000860s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006286s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007038s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000959s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006286s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000006s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007131s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000379s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000416s ]
+
+[ 2017-06-06T00:17:26+08:00 ] 202.108.211.56 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` WHERE `status` = 1 ORDER BY ctime desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 12 行.
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 13 行.
+NOTIC: [8] Undefined variable: archive_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 34 行.
+NOTIC: [8] Undefined variable: about_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 36 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.002762s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001504s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001541s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000141s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005037s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001378s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000858s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002128s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.006795s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001340s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002650s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003884s ]
+SQL: SHOW COLUMNS FROM `z_comment` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_comment` WHERE `status` = 1 ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000017s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.009038s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001346s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.004862s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.010108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000849s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006354s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007094s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000949s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006354s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007189s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000330s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000407s ]
+
+[ 2017-06-06T00:25:57+08:00 ] 98.122.157.242 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` WHERE `status` = 1 ORDER BY ctime desc LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000069s ]
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 12 行.
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 13 行.
+NOTIC: [8] Undefined variable: archive_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 34 行.
+NOTIC: [8] Undefined variable: about_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 36 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.002994s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001726s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001762s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000142s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005229s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001316s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000868s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002074s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.007007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001332s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002598s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003821s ]
+SQL: SHOW COLUMNS FROM `z_comment` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_comment` WHERE `status` = 1 ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000017s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.009216s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001326s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.004812s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006027s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000020s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.010290s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000847s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006294s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007029s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000947s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006294s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000006s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007123s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000338s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000376s ]
+
+[ 2017-06-06T00:26:19+08:00 ] 36.63.30.218 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000339s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` WHERE `status` = 1 ORDER BY ctime desc LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000068s ]
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 12 行.
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 13 行.
+NOTIC: [8] Undefined variable: archive_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 34 行.
+NOTIC: [8] Undefined variable: about_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 36 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.003980s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001483s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001520s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000153s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000184s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000017s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.006213s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001350s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000861s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002060s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.007955s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001316s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002581s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003746s ]
+SQL: SHOW COLUMNS FROM `z_comment` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_comment` WHERE `status` = 1 ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000017s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.010180s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001386s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.004770s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.011244s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000845s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006301s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006995s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000947s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006301s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000006s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007091s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000330s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000368s ]
+
+[ 2017-06-06T00:29:08+08:00 ] 37.49.167.199 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` WHERE `status` = 1 ORDER BY ctime desc LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 12 行.
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 13 行.
+NOTIC: [8] Undefined variable: archive_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 34 行.
+NOTIC: [8] Undefined variable: about_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 36 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.002825s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001421s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001474s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000189s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000221s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000017s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005155s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001297s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000988s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002097s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000017s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.006903s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001306s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002702s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003818s ]
+SQL: SHOW COLUMNS FROM `z_comment` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_comment` WHERE `status` = 1 ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000026s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.009833s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001714s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.005378s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006908s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.011128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000916s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.007259s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007984s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001021s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.007259s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000006s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.008085s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000405s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000452s ]
+
+[ 2017-06-06T00:31:17+08:00 ] 123.125.71.49 /blog/page/8/name/sasa
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 70,10   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 12 行.
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 13 行.
+NOTIC: [8] Undefined variable: archive_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 34 行.
+NOTIC: [8] Undefined variable: about_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 36 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.002985s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001506s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001545s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000145s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005264s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001308s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000875s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002071s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.006972s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001350s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002560s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003797s ]
+SQL: SHOW COLUMNS FROM `z_comment` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_comment` WHERE `status` = 1 ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.009246s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001348s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.004797s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006032s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.010321s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000851s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006289s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007027s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000951s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006289s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007122s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000401s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000441s ]
+
+[ 2017-06-06T00:36:52+08:00 ] 184.163.121.249 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` WHERE `status` = 1 ORDER BY ctime desc LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 12 行.
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 13 行.
+NOTIC: [8] Undefined variable: archive_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 34 行.
+NOTIC: [8] Undefined variable: about_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 36 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.002788s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001482s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001520s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000126s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000159s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005043s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001299s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000882s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002055s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000017s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.006764s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001353s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002564s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003791s ]
+SQL: SHOW COLUMNS FROM `z_comment` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_comment` WHERE `status` = 1 ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.009043s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001337s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.004812s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006024s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.010119s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000864s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006294s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007031s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000964s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006294s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000006s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007125s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000374s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000413s ]
+
+[ 2017-06-06T00:40:58+08:00 ] 203.208.60.215 /blog/104.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000393s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: userinfo /data/wwwroot/blog/Application/Home/Controller/IndexController.class.php 第 93 行.
+SQL: UPDATE `z_post` SET `pv`=pv+1 WHERE `id` = 104 [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 104 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `z_post` WHERE ( id < 104 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `z_post` WHERE ( id > 104 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `z_comment` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_comment` WHERE `postid` = 104 AND `status` = 1  [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_comment` WHERE `postid` = 104 AND `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+NOTIC: [8] Undefined variable: archive_current /data/wwwroot/blog/Application/Runtime/Cache/Home/1223f42a89e823bf89547594651162de.php 第 79 行.
+NOTIC: [8] Undefined variable: about_current /data/wwwroot/blog/Application/Runtime/Cache/Home/1223f42a89e823bf89547594651162de.php 第 81 行.
+NOTIC: [8] Undefined variable: userinfo /data/wwwroot/blog/Application/Runtime/Cache/Home/1223f42a89e823bf89547594651162de.php 第 115 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.003920s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001490s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001528s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000143s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000017s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.006160s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001292s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000884s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002065s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.008157s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001334s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002815s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.004037s ]
+SQL: SELECT * FROM `z_comment` WHERE `status` = 1 ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000017s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.009842s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001383s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.004504s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.005776s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000020s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.010986s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000884s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006035s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006806s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000985s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006035s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006902s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000371s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000409s ]
+
+[ 2017-06-06T00:48:22+08:00 ] 193.201.224.225 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000371s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `z_post` WHERE `status` = 1 ORDER BY ctime desc LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000069s ]
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 12 行.
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 13 行.
+NOTIC: [8] Undefined variable: archive_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 34 行.
+NOTIC: [8] Undefined variable: about_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 36 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.002721s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001472s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001509s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000141s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005051s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001347s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000908s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002147s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.006756s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001343s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002637s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003871s ]
+SQL: SHOW COLUMNS FROM `z_comment` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_comment` WHERE `status` = 1 ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.009024s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001325s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.004874s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000020s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.010099s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000852s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006343s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007096s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000951s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006343s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000006s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007188s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000383s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000420s ]
+
+[ 2017-06-06T00:53:17+08:00 ] 123.125.71.71 /blog/page/9/name/sasa
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000368s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 80,10   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000075s ]
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 12 行.
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 13 行.
+NOTIC: [8] Undefined variable: archive_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 34 行.
+NOTIC: [8] Undefined variable: about_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 36 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.002867s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001705s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001743s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000151s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005952s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002258s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000884s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003044s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.009021s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002516s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.003737s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000014s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006168s ]
+SQL: SHOW COLUMNS FROM `z_comment` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `z_comment` WHERE `status` = 1 ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000024s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.012662s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001971s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.007740s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.009605s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000020s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.014024s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000963s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.009900s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.010743s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001068s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.009900s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.010844s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000449s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000489s ]
+
+[ 2017-06-06T00:56:59+08:00 ] 39.32.27.107 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000339s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` WHERE `status` = 1 ORDER BY ctime desc LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000069s ]
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 12 行.
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 13 行.
+NOTIC: [8] Undefined variable: archive_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 34 行.
+NOTIC: [8] Undefined variable: about_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 36 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.002860s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001553s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001591s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000140s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005075s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001352s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000818s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002062s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.006832s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001348s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002541s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003784s ]
+SQL: SHOW COLUMNS FROM `z_comment` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_comment` WHERE `status` = 1 ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000027s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.009343s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001803s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.004735s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006449s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.011126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001500s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006758s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000013s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.008181s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001672s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006758s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.008346s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000626s ]
+
+[ 2017-06-06T00:58:53+08:00 ] 36.63.31.25 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` WHERE `status` = 1 ORDER BY ctime desc LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 12 行.
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 13 行.
+NOTIC: [8] Undefined variable: archive_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 34 行.
+NOTIC: [8] Undefined variable: about_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 36 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.002843s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001449s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001486s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000157s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000189s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000017s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005034s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001503s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000871s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002218s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000017s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.006948s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001312s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002741s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003940s ]
+SQL: SHOW COLUMNS FROM `z_comment` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_comment` WHERE `status` = 1 ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000027s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.009756s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002125s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.004928s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000013s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006978s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000023s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.011706s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001412s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.007352s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.008617s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001519s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.007352s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.008716s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000347s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000385s ]
+
+[ 2017-06-06T01:15:17+08:00 ] 123.125.71.82 /blog/tag/%E4%B8%80%E7%A7%8D%E7%AE%80%E5%8D%95%E7%9A%84%E7%94%9F%E6%88%90excel%E7%9A%84%E6%96%B9%E5%BC%8F/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000347s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` WHERE `tag` = '一种简单的生成excel的方式' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` WHERE `tag` = '一种简单的生成excel的方式' AND `status` = 1 ORDER BY ctime desc LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000075s ]
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/ade7d4477fc643e9340d31bf3970044f.php 第 12 行.
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/ade7d4477fc643e9340d31bf3970044f.php 第 13 行.
+NOTIC: [8] Undefined variable: index_current /data/wwwroot/blog/Application/Runtime/Cache/Home/ade7d4477fc643e9340d31bf3970044f.php 第 32 行.
+NOTIC: [8] Undefined variable: about_current /data/wwwroot/blog/Application/Runtime/Cache/Home/ade7d4477fc643e9340d31bf3970044f.php 第 36 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.002846s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001543s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001582s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000188s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001398s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000909s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002152s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000020s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.007025s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001384s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002732s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.004004s ]
+SQL: SHOW COLUMNS FROM `z_comment` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_comment` WHERE `status` = 1 ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.009343s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001419s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.005058s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006321s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000020s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.010473s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000860s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006621s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007323s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000956s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006621s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000006s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007412s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000340s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000378s ]
+
+[ 2017-06-06T01:18:57+08:00 ] 36.63.30.52 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` WHERE `status` = 1 ORDER BY ctime desc LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 12 行.
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 13 行.
+NOTIC: [8] Undefined variable: archive_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 34 行.
+NOTIC: [8] Undefined variable: about_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 36 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.002745s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001499s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001536s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000141s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.004987s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001312s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000861s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002066s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.006691s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001339s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002542s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003773s ]
+SQL: SHOW COLUMNS FROM `z_comment` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_comment` WHERE `status` = 1 ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.008895s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001362s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.004728s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.005982s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.010007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000853s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006235s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006979s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000954s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006235s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000006s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007076s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000316s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000354s ]
+
+[ 2017-06-06T01:29:12+08:00 ] 203.208.60.217 /blog/129.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000398s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: userinfo /data/wwwroot/blog/Application/Home/Controller/IndexController.class.php 第 93 行.
+SQL: UPDATE `z_post` SET `pv`=pv+1 WHERE `id` = 129 [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 129 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `z_post` WHERE ( id < 129 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `z_post` WHERE ( id > 129 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `z_comment` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_comment` WHERE `postid` = 129 AND `status` = 1  [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_comment` WHERE `postid` = 129 AND `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+NOTIC: [8] Undefined variable: archive_current /data/wwwroot/blog/Application/Runtime/Cache/Home/1223f42a89e823bf89547594651162de.php 第 79 行.
+NOTIC: [8] Undefined variable: about_current /data/wwwroot/blog/Application/Runtime/Cache/Home/1223f42a89e823bf89547594651162de.php 第 81 行.
+NOTIC: [8] Undefined variable: userinfo /data/wwwroot/blog/Application/Runtime/Cache/Home/1223f42a89e823bf89547594651162de.php 第 115 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.003877s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001418s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001456s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000154s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000186s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000017s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.006077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001340s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000883s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002070s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.008093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001372s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002835s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.004054s ]
+SQL: SELECT * FROM `z_comment` WHERE `status` = 1 ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000017s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.009820s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001326s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.004564s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.005734s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.010898s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000858s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006037s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006738s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000961s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006037s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006836s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000348s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000385s ]
+
+[ 2017-06-06T01:35:44+08:00 ] 115.239.212.197 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000397s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `z_post` WHERE `status` = 1 ORDER BY ctime desc LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 12 行.
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 13 行.
+NOTIC: [8] Undefined variable: archive_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 34 行.
+NOTIC: [8] Undefined variable: about_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 36 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000026s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.003430s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001788s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001829s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000145s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.006148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001388s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.001197s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002472s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.008024s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001366s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.003019s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.004269s ]
+SQL: SHOW COLUMNS FROM `z_comment` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_comment` WHERE `status` = 1 ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.010311s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001406s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.005309s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006622s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.011421s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000884s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006887s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000013s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007667s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001021s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006887s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007789s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000378s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000417s ]
+
+[ 2017-06-06T01:37:17+08:00 ] 123.125.71.51 /blog/page/3/name/sasa
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 20,10   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000074s ]
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 12 行.
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 13 行.
+NOTIC: [8] Undefined variable: archive_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 34 行.
+NOTIC: [8] Undefined variable: about_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 36 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.002900s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001469s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001547s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000148s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005201s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001359s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000914s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002159s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.006990s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001357s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002688s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003930s ]
+SQL: SHOW COLUMNS FROM `z_comment` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_comment` WHERE `status` = 1 ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000017s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.009358s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001391s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.005032s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006351s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.010477s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000866s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006636s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007388s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000965s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006636s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000006s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007479s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000363s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000403s ]
+
+[ 2017-06-06T01:44:17+08:00 ] 42.156.138.67 /blog/archive/9/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000390s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: where /data/wwwroot/blog/Application/Home/Controller/IndexController.class.php 第 64 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: where /data/wwwroot/blog/Application/Home/Controller/IndexController.class.php 第 76 行.
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 80,10   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/ade7d4477fc643e9340d31bf3970044f.php 第 12 行.
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/ade7d4477fc643e9340d31bf3970044f.php 第 13 行.
+NOTIC: [8] Undefined variable: index_current /data/wwwroot/blog/Application/Runtime/Cache/Home/ade7d4477fc643e9340d31bf3970044f.php 第 32 行.
+NOTIC: [8] Undefined variable: about_current /data/wwwroot/blog/Application/Runtime/Cache/Home/ade7d4477fc643e9340d31bf3970044f.php 第 36 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.003091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001462s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001499s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000152s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005331s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001369s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000883s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002093s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.007136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001346s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002636s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003867s ]
+SQL: SHOW COLUMNS FROM `z_comment` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_comment` WHERE `status` = 1 ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000017s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.009356s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001393s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.004870s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006409s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.010811s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000852s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006732s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007422s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000950s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006732s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000006s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007513s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000394s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000432s ]
+
+[ 2017-06-06T01:59:17+08:00 ] 220.181.108.171 /blog/page/4/name/sasa
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 30,10   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 12 行.
+NOTIC: [8] Undefined variable: detail /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 13 行.
+NOTIC: [8] Undefined variable: archive_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 34 行.
+NOTIC: [8] Undefined variable: about_current /data/wwwroot/blog/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 36 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.003243s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001772s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001809s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000146s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005463s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001308s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000874s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002069s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.007413s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001498s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002594s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003979s ]
+SQL: SHOW COLUMNS FROM `z_comment` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_comment` WHERE `status` = 1 ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.009715s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001416s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.004981s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006284s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.010788s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000813s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006589s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007290s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000959s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006589s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007429s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000348s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000387s ]
+
+[ 2017-06-06T02:00:58+08:00 ] 42.156.138.67 /blog/51.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_post` WHERE `category` = '说说' ORDER BY id desc LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: userinfo /data/wwwroot/blog/Application/Home/Controller/IndexController.class.php 第 93 行.
+SQL: UPDATE `z_post` SET `pv`=pv+1 WHERE `id` = 51 [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 51 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `z_post` WHERE ( id < 51 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `z_post` WHERE ( id > 51 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `z_comment` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_comment` WHERE `postid` = 51 AND `status` = 1  [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_comment` WHERE `postid` = 51 AND `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+NOTIC: [8] Undefined variable: archive_current /data/wwwroot/blog/Application/Runtime/Cache/Home/1223f42a89e823bf89547594651162de.php 第 79 行.
+NOTIC: [8] Undefined variable: about_current /data/wwwroot/blog/Application/Runtime/Cache/Home/1223f42a89e823bf89547594651162de.php 第 81 行.
+NOTIC: [8] Undefined variable: userinfo /data/wwwroot/blog/Application/Runtime/Cache/Home/1223f42a89e823bf89547594651162de.php 第 115 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000028s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.004194s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001980s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002018s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000130s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000163s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.007107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001454s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.001236s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002559s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000020s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.009382s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001570s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.003405s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.004843s ]
+SQL: SELECT * FROM `z_comment` WHERE `status` = 1 ORDER BY id desc LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000018s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.011262s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001374s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.005435s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006675s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000019s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.012349s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000858s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006960s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007682s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000966s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006960s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000006s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007785s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000385s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000424s ]
+
