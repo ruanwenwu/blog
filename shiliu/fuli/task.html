@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <title>任务</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src='js/flex.js'></script>
+    <script>
+        if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+            if (parseFloat(RegExp.$1) > 2.3) {
+                var phoneScale = parseInt(window.screen.width) / 750;
+                document.write('<meta name="viewport" content="width=750, minimum-scale=' + phoneScale + ', maximum-scale=' + phoneScale + ', target-densitydpi=device-dpi" />');
+            } else {
+                document.write('<meta name="viewport" content="width=750, target-densitydpi=device-dpi" />');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=750,user-scalable=no, target-densitydpi=device-dpi" />');
+        }
+    </script>
+</head>
+<body>
+    <div class="body">
+        <div class="task-section">
+            <ul id="tab">
+                <li class="active" data-id="1">APP下载</li>
+                <li data-id="2">优惠券</li>
+                <li data-id="3">游戏下载</li>
+            </ul>
+            <div class="task-border">
+                <div class="content" style="display:block">
+                   <ul>
+                       <li>
+                          <div class="task-lt lt">
+                              <img src="images/game.png"/>
+                          </div>
+                          <div class="main lt">
+                                <div class="main-wrap">
+                                    <div class="desc">
+                                        魔域沙城－决战前夕全服 国战掌控战场
+                                    </div>
+                                    <p class="type">游戏</p>
+                                    <div class="start-list">
+                                        <span>★</span>
+                                        <span>★</span>
+                                        <span>★</span>
+                                        <span>★</span>
+                                        <span>★</span>
+                                        <span class="num">(40)</span>
+                                    </div>
+                                </div>
+                          </div>
+                           <div class="task-rt lt">
+                               <p>任务奖励</p>
+                               <p class="green on">10积分</p>
+                               <a href="./taskItem.html">立即开始</a>
+                           </div>
+                       </li>
+                       <li>
+                          <div class="task-lt lt">
+                              <img src="images/game.png"/>
+                          </div>
+                          <div class="main lt">
+                                <div class="main-wrap">
+                                    <div class="desc">
+                                        魔域沙城－决战前夕全服 国战掌控战场
+                                    </div>
+                                    <p class="type">游戏</p>
+                                    <div class="start-list">
+                                        <span>★</span>
+                                        <span>★</span>
+                                        <span>★</span>
+                                        <span>★</span>
+                                        <span>★</span>
+                                        <span class="num">(40)</span>
+                                    </div>
+                                </div>
+                          </div>
+                           <div class="task-rt lt">
+                               <p>任务奖励</p>
+                               <p class="green on">10积分</p>
+                               <a href="./taskItem.html">立即开始</a>
+                           </div>
+                       </li>
+                       <li>
+                          <div class="task-lt lt">
+                              <img src="images/game.png"/>
+                          </div>
+                          <div class="main lt">
+                                <div class="main-wrap">
+                                    <div class="desc">
+                                        魔域沙城－决战前夕全服 国战掌控战场
+                                    </div>
+                                    <p class="type">游戏</p>
+                                    <div class="start-list">
+                                        <span>★</span>
+                                        <span>★</span>
+                                        <span>★</span>
+                                        <span>★</span>
+                                        <span>★</span>
+                                        <span class="num">(40)</span>
+                                    </div>
+                                </div>
+                          </div>
+                           <div class="task-rt lt">
+                               <p>任务奖励</p>
+                               <p class="green on">10积分</p>
+                               <a href="./taskItem.html">立即开始</a>
+                           </div>
+                       </li>
+                   </ul>
+                </div>
+                <div class="content">
+                    coupon
+                </div>
+                <div class="content">
+                    game
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="js/jquery.min.js"></script>
+<script>
+    $('#tab li').click(function(){
+        $(this).addClass('active').siblings().removeClass('active');
+        var id = $(this).data('id');
+        $('.content').eq(id-1).show().siblings().hide();
+    });
+</script>
+</body>
+</html>

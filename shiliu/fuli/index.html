@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <title>任务福利</title>
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src='js/flex.js'></script>
+    <script>
+        if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+            if (parseFloat(RegExp.$1) > 2.3) {
+                var phoneScale = parseInt(window.screen.width) / 750;
+                document.write('<meta name="viewport" content="width=750, minimum-scale=' + phoneScale + ', maximum-scale=' + phoneScale + ', target-densitydpi=device-dpi" />');
+            } else {
+                document.write('<meta name="viewport" content="width=750, target-densitydpi=device-dpi" />');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=750,user-scalable=no, target-densitydpi=device-dpi" />');
+        }
+    </script>
+</head>
+<body>
+    <div class="body">
+        <div class="banner">
+            <img src="images/banner.png"/>
+        </div>
+        <div class="tab">
+           <ul>
+               <li>
+                   <a href="./task.html">任务</a>
+               </li>
+               <li>
+                   <a href="./convert.html">兑换</a>
+               </li>
+               <li>
+                   <a href="./my.html">我的</a>
+               </li>
+               <div class="clear"></div>
+           </ul>
+        </div>
+        <div class="section">
+            <h2>热门任务</h2>
+            <div class="renwu">
+                <div class="rw-lt lt">
+                    <img src="images/xiecheng.png"/>
+                    <a href="#">立即前往</a>
+                </div>
+                <div class=" rw-rt lt">
+                    <div class="rw-top">
+                        <p>下载即<span class="red">送100积分</span></p>
+                        <a href="#">立即前往</a>
+                    </div>
+                    <div class="rw-bottom">
+                        <div class="rw-bottom-con">首冲即<span class="red">送游戏礼包+50积分</span></div>
+                        <a href="#">立即前往</a>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <h2>精品兑换</h2>
+            <div class="duihuan">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <ul>
+                                <li>
+                                    <p>Mac Pro</p>
+                                    <a href="#">兑换</a>
+                                </li>
+                                <li>
+                                    <p>iPhone 7</p>
+                                    <a href="#">兑换</a>
+                                </li>
+                                <li>
+                                    <p>iPad Air</p>
+                                    <a href="#">兑换</a>
+                                </li>
+                                <li>
+                                    <p>iWatch</p>
+                                    <a href="#">兑换</a>
+                                </li>
+                                <div class="clear"></div>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide">
+                            <ul>
+                                <li>
+                                    <p>Mac Pro</p>
+                                    <a href="#">兑换</a>
+                                </li>
+                                <li>
+                                    <p>iPhone 7</p>
+                                    <a href="#">兑换</a>
+                                </li>
+                                <li>
+                                    <p>iPad Air</p>
+                                    <a href="#">兑换</a>
+                                </li>
+                                <li>
+                                    <p>iWatch</p>
+                                    <a href="#">兑换</a>
+                                </li>
+                                <div class="clear"></div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pagination"></div>
+                </div>
+            </div>
+            <!--<h2>劲爆活动</h2>
+            <div class="activity">
+                <a href="./wheel/index.html">
+                    <img src="images/fuli.png"/>
+                </a>
+            </div>-->
+        </div>
+    </div>
+<script src="js/jquery.min.js"></script>
+<script src="js/swiper-3.4.2.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container',{
+        pagination: '.pagination',
+        paginationClickable: true
+    })
+</script>
+</body>
+</html>

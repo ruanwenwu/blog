@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <script>
+        if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+            if (parseFloat(RegExp.$1) > 2.3) {
+                var phoneScale = parseInt(window.screen.width) / 750;
+                document.write('<meta name="viewport" content="width=750, minimum-scale=' + phoneScale + ', maximum-scale=' + phoneScale + ', target-densitydpi=device-dpi" />');
+            } else {
+                document.write('<meta name="viewport" content="width=750, target-densitydpi=device-dpi" />');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=750,user-scalable=no, target-densitydpi=device-dpi" />');
+        }
+    </script>
+    <title>我的</title>
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+    <div class="body">
+        <div class="bj">
+            <div class="my-main">
+                <div class="personal">
+                    <div class="pic">
+                        <img src="images/my_icon.png" />
+                    </div>
+                    <div class="info">
+                        <p class="on">Lee</p>
+                        <p>13800001111</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="my-list">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="images/my_icon_sm1.png" />
+                                <span>积分记录</span>
+                                <b>></b>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/my_icon_sm2.png" />
+                                <span>我的优惠券</span>
+                                <b>></b>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <img src="images/my_icon_sm3.png" />
+                                <span>兑换记录</span>
+                                <b>></b>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/my_icon_sm4.png" />
+                                <span style="margin-left:6px">收货地址</span>
+                                <b>></b>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="about-list">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="images/my_icon_sm5.png" />
+                                <span>常见问题</span><b>></b>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/my_icon_sm6.png" />
+                                <span>意见反馈</span><b>></b>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/my_icon_sm7.png" />
+                                <span>关于我们</span><b>></b>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

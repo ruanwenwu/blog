@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <script>
+        if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+            if (parseFloat(RegExp.$1) > 2.3) {
+                var phoneScale = parseInt(window.screen.width) / 750;
+                document.write('<meta name="viewport" content="width=750, minimum-scale=' + phoneScale + ', maximum-scale=' + phoneScale + ', target-densitydpi=device-dpi" />');
+            } else {
+                document.write('<meta name="viewport" content="width=750, target-densitydpi=device-dpi" />');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=750,user-scalable=no, target-densitydpi=device-dpi" />');
+        }
+    </script>
+    <title>兑换</title>
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+    <div class="body">
+        <div class="convert-section">
+            <ul id="tab">
+                <li class="active" data-id="1">热门兑换</li>
+                <li data-id="2">最新上架</li>
+                <li data-id="3">积分排序</li>
+            </ul>
+            <div class="convert-border">
+                <div class="covert-catelog" style="display: block">
+                    <ul>
+                        <li>
+                            <div class="covert-left lt">
+                                <img src="images/list1.jpg"/>
+                            </div>
+                            <div class="main lt">
+                                <div class="main-wrap">
+                                    <p class="on">Mac Pro</p>
+                                    <p>即将推出只为成就无限创举... </p>
+                                </div>
+                            </div>
+                            <div class="covert-right lt">
+                                <p class="green">6800积分</p>
+                                <a href="./covertItem.html">立即兑换</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="covert-left lt">
+                                <img src="images/list2.jpg"/>
+                            </div>
+                            <div class="main lt">
+                                <div class="main-wrap">
+                                    <p class="on">Mac Pro</p>
+                                    <p>即将推出只为成就无限创举额微软微软 </p>
+                                </div>
+                            </div>
+                            <div class="covert-right lt">
+                                <p class="green">3460积分</p>
+                                <a href="./covertItem.html">立即兑换</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="covert-left lt">
+                                <img src="images/list3.jpg"/>
+                            </div>
+                            <div class="main lt">
+                                <div class="main-wrap">
+                                    <p class="on">iPhone 7</p>
+                                    <p>Apple（苹果公司）第10代手机的三分到手</p>
+                                </div>
+                            </div>
+                            <div class="covert-right lt">
+                                <p class="green">4500积分</p>
+                                <a href="./covertItem.html">立即兑换</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="covert-left lt">
+                                <img src="images/list4.jpg"/>
+                            </div>
+                            <div class="main lt">
+                                <div class="main-wrap">
+                                    <p class="on">iWatch Nike+</p>
+                                    <p>初代运动版Watch的继任者... </p>
+                                </div>
+                            </div>
+                            <div class="covert-right lt">
+                                <p class="green">300积分</p>
+                                <a href="./covertItem.html">立即兑换</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="covert-catelog">
+                    最新上架
+                </div>
+                <div class="covert-catelog">
+                    所需积分
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+<script>
+    $('#tab li').click(function(){
+        $(this).addClass('active').siblings().removeClass('active');
+        var id = $(this).data('id');
+        $('.covert-catelog').eq(id-1).show().siblings().hide();
+    });
+</script>
+</body>
+</html>

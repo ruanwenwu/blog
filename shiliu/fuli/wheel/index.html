@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大转盘</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/lottery.css">
+</head>
+
+<body>
+	<div class="header">
+        <a href="javascript:history.go(-1)"><&nbsp;返回</a>
+        小积分撞大运
+    </div>
+    <div class="main">
+        <span class="jilu">抽奖记录</span>
+        <p>积分余额:3423</p>
+        <div id="box" class="box">
+            <div class="outer KinerLottery KinerLotteryContent"><img src="./imgs/lottery.png"></div>
+            <!-- 大专盘分为三种状态：活动未开始（no-start）、活动进行中(start)、活动结束(completed),可通过切换class进行切换状态，js会根据这3个class进行匹配状态 -->
+            <div class="inner KinerLotteryBtn start"></div>
+        </div>
+        <img src="imgs/per_03.png" class="per"/>
+    </div>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/lottery.js"></script>
+    <script>
+    /**
+     * 根据转盘旋转角度判断获得什么奖品
+     * @param deg
+     * @returns {*}
+     */
+    var whichAward = function(deg) {
+        console.log(deg);
+        if(deg == 315){
+            return "滴滴"
+        }else if(deg == 270){
+            return "谢谢";
+        }else if(deg == 225){
+            return "80元酒店券"
+        }
+    }
+
+    var KinerLottery = new KinerLottery({
+        rotateNum: 8, //转盘转动圈数
+        body: "#box", //大转盘整体的选择符或zepto对象
+        direction: 0, //0为顺时针转动,1为逆时针转动
+
+        disabledHandler: function(key) {
+            switch (key) {
+                case "noStart":
+                    alert("活动尚未开始");
+                    break;
+                case "completed":
+                    alert("活动已结束");
+                    break;
+            }
+
+        }, //禁止抽奖时回调
+
+        clickCallback: function() {
+            //此处调用接口获取奖品
+           /* $.post("http://www.aihuishou.com/api/activity/common/newReceiveCoupon", {
+                "methodName": "newReceiveCoupon",
+                "timestamp": Date.parse(new Date()),
+                "version": "1.0",
+                "token":"",
+                "sign": "",
+                "channelCode": "",
+                "clientType": "mobile",
+                "data": data
+            }).success(function (data) {
+                if(data.code == 0){
+                    //拿到结果计算转盘转动的角度
+                    if(prizeName=='20M流量'){
+                        prizeDeg=0;
+                    }else if(prizeName=='40M流量'){
+                        prizeDeg=36;
+                    }else if(prizeName=='100M流量'){
+                        prizeDeg=72;
+                    }else if(prizeName=='iPhone7'){
+                        prizeDeg=108;
+                    }else if(prizeName=='10元A码'){
+                        prizeDeg=144;
+                    }else if(prizeName=='20元A码'){
+                        prizeDeg=180;
+                    }
+                    this.goKinerLottery(prizeDeg);
+                }
+            })*/
+
+            this.goKinerLottery(315);
+
+        }, //点击抽奖按钮,再次回调中实现访问后台获取抽奖结果,拿到抽奖结果后显示抽奖画面
+
+        KinerLotteryHandler: function(deg) {
+            console.log(deg);
+                alert("恭喜您获得:" + whichAward(deg));
+            } //抽奖结束回调
+    });
+    </script>
+</body>
+
+</html>

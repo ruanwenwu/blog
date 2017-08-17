@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <title>任务详情</title>
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/flex.js"></script>
+    <script>
+        if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+            if (parseFloat(RegExp.$1) > 2.3) {
+                var phoneScale = parseInt(window.screen.width) / 750;
+                document.write('<meta name="viewport" content="width=750, minimum-scale=' + phoneScale + ', maximum-scale=' + phoneScale + ', target-densitydpi=device-dpi" />');
+            } else {
+                document.write('<meta name="viewport" content="width=750, target-densitydpi=device-dpi" />');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=750,user-scalable=no, target-densitydpi=device-dpi" />');
+        }
+    </script>
+</head>
+<body>
+    <div class="body">
+        <div class="taskItem-section">
+            <div class="taskItem-bor">
+                <div class="item">
+                    <img src="images/game.png" class="lt"/>
+                    <div class="rt-item lt">
+                        <p class="on">酷吧-最时尚的手机KTV</p>
+                        <p>Zuitao,inc&nbsp;></p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <p class="apply">应用截图</p>
+                <div class="pic-list">
+                    <div class="swiper-container task-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="images/detail.png"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/detail.png"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/detail.png"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/detail.png"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="apply">内容提要</p>
+                <div class="zhaiyao">
+                    <p>酷吧-最时尚的手机KTV</p>
+                    <p>人气最高的手机k个社区</p>
+                </div>
+                <a href="javascript:;" class="deails">详情</a>
+            </div>
+        </div>
+        <div class="btn">
+            <a href="#" class="covert-btn">立即下载</a>
+        </div>
+    </div>
+<script src="js/jquery.min.js"></script>
+<script src="js/swiper-3.4.2.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container',{
+        slidesPerView: 2
+    })
+</script>
+</body>
+</html>

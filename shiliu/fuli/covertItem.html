@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <script>
+        if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+            if (parseFloat(RegExp.$1) > 2.3) {
+                var phoneScale = parseInt(window.screen.width) / 750;
+                document.write('<meta name="viewport" content="width=750, minimum-scale=' + phoneScale + ', maximum-scale=' + phoneScale + ', target-densitydpi=device-dpi" />');
+            } else {
+                document.write('<meta name="viewport" content="width=750, target-densitydpi=device-dpi" />');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=750,user-scalable=no, target-densitydpi=device-dpi" />');
+        }
+    </script>
+    <title>商品详情</title>
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+    <div class="body">
+        <div class="covertItem-section">
+            <img src="images/shop.png" class="shop-pic">
+            <div class="shop-info">
+                <span>iPhone 7</span>
+                <span>3008积分</span>
+            </div>
+            <div class="covert-shop">
+                <p class="title">商品介绍</p>
+                <div class="covert-info">
+                    iPhone 7 的出现，让 iPhone 的体验在许多重大方面都有了质的飞跃。它带来了先进的新摄像头系统，色彩更明亮丰富的iPhone显示屏它周身的每一处，都闪耀着强大科技的光芒。这，就是iPhone。
+                </div>
+                <p class="title">兑换流程</p>
+                <div class="covert-info">
+                    iPhone 7 的出现，让 iPhone 的体验在许多重大方面都有了质的飞跃。它带来了先进的新摄像头系统，色彩更明亮丰富的iPhone显示屏它周身的每一处，都闪耀着强大科技的光芒。这，就是iPhone。
+                </div>
+                <p class="title">注意事项</p>
+                <div class="covert-info">
+                    <ul>
+                        <li> *只有符合 Apple 指定条件的 iPhone 才可参与本计划。</li>
+                        <li> *实际折抵的价值取决于你设备的型号和状况，并可能根据时间变</li>
+                    </ul>
+                </div>
+                <p class="title">免责声明</p>
+                <div class="covert-info">
+                    <ul>
+                        <li> 某些功能仅适用于部分国家或地区。点击此处查看完整列表。</li>
+                        <li> 双镜头摄像头仅于 iPhone 7 Plus 提供。亮黑色和红色外观仅</li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="btn">
+                <a href="#" class="covert-btn">立即兑换</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
