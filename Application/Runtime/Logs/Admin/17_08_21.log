@@ -1,0 +1,95 @@
+[ 2017-08-21T00:09:43+08:00 ] 101.27.215.105 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+NOTIC: [8] Undefined index: id /data/wwwroot/blog/Application/Admin/Controller/AjaxController.class.php 第 53 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: INSERT INTO `z_post` (`title`,`category`,`tag`,`summary`,`content`,`pubtime`,`mtime`,`ctime`) VALUES ('laravel5.2入门（五）——数据库（MAMP环境）','laravel5.2入门','laravel','这一节讲数据库的配置（包括主从）、数据库的raw查询（原生sql）、查询构造器查询','<p>这一节我不打算记录的很详细了，毕竟主要是给自己看，记录一下自己的学习过程。感兴趣的可以留言和我讨论哦。</p><p>一、配置</p><p>前面我已经讲过了数据库的配置，这里补充一下主从的配置。<br/></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px; vertical-align: middle; text-size-adjust: auto;\">&#39;mysql&#39;&nbsp;=&gt;&nbsp;[
+&nbsp;&nbsp;&nbsp;&nbsp;&#39;read&#39;&nbsp;=&gt;&nbsp;[
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;host&#39;&nbsp;=&gt;&nbsp;&#39;192.168.1.1&#39;,
+&nbsp;&nbsp;&nbsp;&nbsp;],
+&nbsp;&nbsp;&nbsp;&nbsp;&#39;write&#39;&nbsp;=&gt;&nbsp;[
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;host&#39;&nbsp;=&gt;&nbsp;&#39;196.168.1.2&#39;
+&nbsp;&nbsp;&nbsp;&nbsp;],
+&nbsp;&nbsp;&nbsp;&nbsp;&#39;driver&#39;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;&#39;mysql&#39;,
+&nbsp;&nbsp;&nbsp;&nbsp;&#39;database&#39;&nbsp;&nbsp;=&gt;&nbsp;&#39;database&#39;,
+&nbsp;&nbsp;&nbsp;&nbsp;&#39;username&#39;&nbsp;&nbsp;=&gt;&nbsp;&#39;root&#39;,
+&nbsp;&nbsp;&nbsp;&nbsp;&#39;password&#39;&nbsp;&nbsp;=&gt;&nbsp;&#39;&#39;,
+&nbsp;&nbsp;&nbsp;&nbsp;&#39;charset&#39;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;&#39;utf8&#39;,
+&nbsp;&nbsp;&nbsp;&nbsp;&#39;collation&#39;&nbsp;=&gt;&nbsp;&#39;utf8_unicode_ci&#39;,
+&nbsp;&nbsp;&nbsp;&nbsp;&#39;prefix&#39;&nbsp;&nbsp;&nbsp;&nbsp;=&gt;&nbsp;&#39;&#39;,],</pre><p>laravel会自动根据不同的查询语句选择适当的数据库连接。<br/></p><p>二、运行原生sql语句</p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px; vertical-align: middle; text-size-adjust: auto;\">&lt;?php
+namespace&nbsp;App\\Http\\Controllers;
+use&nbsp;DB;
+use&nbsp;App\\Http\\Controllers\\Controller;
+class&nbsp;UserController&nbsp;extends&nbsp;Controller{
+&nbsp;&nbsp;&nbsp;&nbsp;/**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Show&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;of&nbsp;the&nbsp;application&#39;s&nbsp;users.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@return&nbsp;Response
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/
+&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;function&nbsp;index()
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$users&nbsp;=&nbsp;DB::select(&#39;select&nbsp;*&nbsp;from&nbsp;users&nbsp;where&nbsp;active&nbsp;=&nbsp;?&#39;,&nbsp;[1]);
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;view(&#39;user.index&#39;,&nbsp;[&#39;users&#39;&nbsp;=&gt;&nbsp;$users]);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</pre><p>三、查询构造器</p><p>四、eloquent</p><p><br/></p><p>具体的东西我也不想细写了，准备写一个项目练手，这样来得还更实在。在通过阅读文档之后，发现laravel操作数据库还是非常方便的。</p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p>','1503245383','1503245383','1503245383') [ RunTime:0.0299s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_category` WHERE `name` = 'laravel5.2入门' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag` WHERE `name` = 'laravel' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2017-08-21T00:09:45+08:00 ] 101.27.215.105 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013294s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013376s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000126s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000159s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000346s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000388s ]
+
+[ 2017-08-21T00:09:45+08:00 ] 101.27.215.105 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014326s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014366s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000161s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000195s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000339s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000385s ]
+

@@ -1,0 +1,1390 @@
+[ 2017-08-20T09:15:30+08:00 ] 101.27.215.105 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+NOTIC: [8] Undefined index: id /data/wwwroot/blog/Application/Admin/Controller/AjaxController.class.php 第 53 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: INSERT INTO `z_post` (`title`,`category`,`tag`,`summary`,`content`,`pubtime`,`mtime`,`ctime`) VALUES ('laravel5.2入门（三）——laravel的目录结构和mvc（MAMP环境）','laravel5.2入','laravel','这一节对laravel的目录结构和Mvc实现有个大概的认识。','<h3>一、目录概览</h3><p><img src=\"/ueditor/php/upload/image/20170820/1503191050731872.png\" title=\"1503191050731872.png\" alt=\"image.png\" width=\"736\" height=\"743\"/></p><p>上图基本上画出了laravel的Mvc结构。感兴趣的同学可以把环境搭好，然后仔细看看。对了，数据库的配置在这个地方。配置起来也很方便，以我们一般使用的Mysql为例。</p><p>1.打开文件：config/database.php<br/></p><p>2.配置数据库类型为mysql</p><pre class=\"brush:as3;toolbar:false\">&nbsp;&nbsp;&nbsp;&nbsp;&#39;default&#39;&nbsp;=&gt;&nbsp;env(&#39;DB_CONNECTION&#39;,&nbsp;&#39;mysql&#39;),</pre><p>3.链接数据库<br/></p><pre class=\"brush:as3;toolbar:false\">&#39;connections&#39;&nbsp;=&gt;&nbsp;[
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;sqlite&#39;&nbsp;=&gt;&nbsp;[
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;driver&#39;&nbsp;=&gt;&nbsp;&#39;sqlite&#39;,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;database&#39;&nbsp;=&gt;&nbsp;env(&#39;DB_DATABASE&#39;,&nbsp;database_path(&#39;database.sqlite&#39;)),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;prefix&#39;&nbsp;=&gt;&nbsp;&#39;&#39;,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;mysql&#39;&nbsp;=&gt;&nbsp;[
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;driver&#39;&nbsp;=&gt;&nbsp;&#39;mysql&#39;,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;host&#39;&nbsp;=&gt;&nbsp;env(&#39;DB_HOST&#39;,&nbsp;&#39;localhost&#39;),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;port&#39;&nbsp;=&gt;&nbsp;env(&#39;DB_PORT&#39;,&nbsp;&#39;3306&#39;),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;database&#39;&nbsp;=&gt;&nbsp;env(&#39;DB_DATABASE&#39;,&nbsp;&#39;test&#39;),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;username&#39;&nbsp;=&gt;&nbsp;env(&#39;DB_USERNAME&#39;,&nbsp;&#39;root&#39;),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;password&#39;&nbsp;=&gt;&nbsp;env(&#39;DB_PASSWORD&#39;,&nbsp;&#39;&#39;),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;charset&#39;&nbsp;=&gt;&nbsp;&#39;utf8&#39;,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;collation&#39;&nbsp;=&gt;&nbsp;&#39;utf8_unicode_ci&#39;,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;prefix&#39;&nbsp;=&gt;&nbsp;&#39;&#39;,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;strict&#39;&nbsp;=&gt;&nbsp;false,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;engine&#39;&nbsp;=&gt;&nbsp;null,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;pgsql&#39;&nbsp;=&gt;&nbsp;[
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;driver&#39;&nbsp;=&gt;&nbsp;&#39;pgsql&#39;,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;host&#39;&nbsp;=&gt;&nbsp;env(&#39;DB_HOST&#39;,&nbsp;&#39;localhost&#39;),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;port&#39;&nbsp;=&gt;&nbsp;env(&#39;DB_PORT&#39;,&nbsp;&#39;5432&#39;),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;database&#39;&nbsp;=&gt;&nbsp;env(&#39;DB_DATABASE&#39;,&nbsp;&#39;forge&#39;),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;username&#39;&nbsp;=&gt;&nbsp;env(&#39;DB_USERNAME&#39;,&nbsp;&#39;forge&#39;),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;password&#39;&nbsp;=&gt;&nbsp;env(&#39;DB_PASSWORD&#39;,&nbsp;&#39;&#39;),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;charset&#39;&nbsp;=&gt;&nbsp;&#39;utf8&#39;,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;prefix&#39;&nbsp;=&gt;&nbsp;&#39;&#39;,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;schema&#39;&nbsp;=&gt;&nbsp;&#39;public&#39;,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],
+&nbsp;&nbsp;&nbsp;&nbsp;],</pre><p>主要看mysql部分。</p><h3>二、下节预告<br/></h3><p>了解了框架的基本目录结构和Mvc构成，接下来我们看laravel的路由。laravel的路由很强大，比起传统的rewrite方法节省很多功夫，很有必要学好哦。</p>','1503191730','1503191730','1503191730') [ RunTime:0.0935s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_category` WHERE `name` = 'laravel5.2入' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag` WHERE `name` = 'laravel' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2017-08-20T09:15:33+08:00 ] 101.27.215.105 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013841s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013883s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000391s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000887s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000971s ]
+
+[ 2017-08-20T09:15:33+08:00 ] 101.27.215.105 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013575s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013617s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000328s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000366s ]
+
+[ 2017-08-20T10:23:39+08:00 ] 101.27.215.105 /admin.php/Post/updatePost/id/161
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000394s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 161 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b94d69ac1621e983387ec69783f12599.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013854s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013892s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000122s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000155s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000342s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000382s ]
+
+[ 2017-08-20T10:23:40+08:00 ] 101.27.215.105 /admin.php/Post/updatePost/id/161
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 161 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b94d69ac1621e983387ec69783f12599.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014161s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014201s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000343s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000382s ]
+
+[ 2017-08-20T10:26:14+08:00 ] 101.27.215.105 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: UPDATE `z_post` SET `title`='laravel5.2入门（三）——laravel的目录结构和mvc（MAMP环境）',`category`='laravel5.2入',`tag`='laravel',`summary`='这一节对laravel的目录结构和Mvc实现有个大概的认识。',`content`='<p>								</p><h3>一、目录概览</h3><p><img src=\"/ueditor/php/upload/image/20170820/1503191050731872.png\" title=\"1503191050731872.png\" alt=\"image.png\" width=\"736\" height=\"743\"/></p><p>上图基本上画出了laravel的Mvc结构。感兴趣的同学可以把环境搭好，然后仔细看看。对了，数据库的配置在这个地方。配置起来也很方便，以我们一般使用的Mysql为例。</p><p>1.打开文件：config/database.php<br/></p><p>2.配置数据库类型为mysql</p><pre class=\"brush:as3;toolbar:false\">&nbsp;&nbsp;&nbsp;&nbsp;&#39;default&#39;&nbsp;=&gt;&nbsp;env(&#39;DB_CONNECTION&#39;,&nbsp;&#39;mysql&#39;),</pre><p>3.链接数据库<br/></p><p>修改项目目录下的.env文件的DB配置部分</p><p class=\"p1\"><span class=\"s1\"></span></p><pre class=\"brush:as3;toolbar:false\">DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=test
+DB_USERNAME=root
+DB_PASSWORD=</pre><h3>二、下节预告<br/></h3><p>了解了框架的基本目录结构和Mvc构成，接下来我们看laravel的路由。laravel的路由很强大，比起传统的rewrite方法节省很多功夫，很有必要学好哦。</p><p>							</p>',`mtime`='1503195974' WHERE `id` = 161 [ RunTime:0.0208s ]
+NOTIC: [8] Undefined variable: id /data/wwwroot/blog/Application/Admin/Controller/AjaxController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_category` WHERE `name` = 'laravel5.2入' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag` WHERE `name` = 'laravel' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2017-08-20T10:26:16+08:00 ] 101.27.215.105 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000399s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012962s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000325s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000365s ]
+
+[ 2017-08-20T10:26:16+08:00 ] 101.27.215.105 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013125s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013163s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000379s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000418s ]
+
+[ 2017-08-20T10:26:25+08:00 ] 101.27.215.105 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000400s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 361 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 424 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 438 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013802s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013867s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000166s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000351s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000390s ]
+
+[ 2017-08-20T10:26:25+08:00 ] 101.27.215.105 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000422s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 361 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 424 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 438 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013760s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013797s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000336s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000376s ]
+
+[ 2017-08-20T11:23:03+08:00 ] 101.27.215.105 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+NOTIC: [8] Undefined index: id /data/wwwroot/blog/Application/Admin/Controller/AjaxController.class.php 第 53 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: INSERT INTO `z_post` (`title`,`category`,`tag`,`summary`,`content`,`pubtime`,`mtime`,`ctime`) VALUES ('laravel5.2入门（四）——laravel的路由（MAMP环境）','laravel5.2入门','laravel','laravel的路由很强大，很好用，好好学习一下吧。','<h2>一、什么是路由</h2><p>路由就是给你一个url，给我找到对应的控制器的方法，运行相应的程序。</p><h2>二、路由</h2><h3>基础路由</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;foo&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;&#39;Hello&nbsp;World&#39;;
+});</pre><h3>路由配置文件</h3><p>http/routes.php</p><h3>路由的请求类型</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get($uri,&nbsp;$callback);
+Route::post($uri,&nbsp;$callback);
+Route::put($uri,&nbsp;$callback);
+Route::patch($uri,&nbsp;$callback);
+Route::delete($uri,&nbsp;$callback);
+Route::options($uri,&nbsp;$callback);</pre><h3>满足多种请求方式<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::match([&#39;get&#39;,&nbsp;&#39;post&#39;],&nbsp;&#39;/&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+});
+Route::any(&#39;foo&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+});</pre><h3>在路由中传参<br/></h3><p>一个参数：</p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/{id}&#39;,&nbsp;function&nbsp;($id)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;&#39;User&nbsp;&#39;.$id;
+});</pre><p>多个参数：</p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;posts/{post}/comments/{comment}&#39;,&nbsp;function&nbsp;($postId,&nbsp;$commentId)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+});</pre><p>可选参数和默认参数<br/></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/{name?}&#39;,&nbsp;function&nbsp;($name&nbsp;=&nbsp;null)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;$name;
+});
+Route::get(&#39;user/{name?}&#39;,&nbsp;function&nbsp;($name&nbsp;=&nbsp;&#39;John&#39;)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;$name;
+});</pre><h3>使用正则对参数进行限制<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/{name}&#39;,&nbsp;function&nbsp;($name)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+})-&gt;where(&#39;name&#39;,&nbsp;&#39;[A-Za-z]+&#39;);
+Route::get(&#39;user/{id}&#39;,&nbsp;function&nbsp;($id)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+})-&gt;where(&#39;id&#39;,&nbsp;&#39;[0-9]+&#39;);
+Route::get(&#39;user/{id}/{name}&#39;,&nbsp;function&nbsp;($id,&nbsp;$name)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+})-&gt;where([&#39;id&#39;&nbsp;=&gt;&nbsp;&#39;[0-9]+&#39;,&nbsp;&#39;name&#39;&nbsp;=&gt;&nbsp;&#39;[a-z]+&#39;]);</pre><h3>全局限定。意思就是说这个规则会应用到所有指定的参数名中。</h3><p>修改<span style=\"color: rgb(244, 100, 95); font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 12px; white-space: pre; background-color: rgb(240, 242, 241);\">RouteServiceProvider：</span></p><p><span style=\"color: rgb(244, 100, 95); font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 12px; white-space: pre; background-color: rgb(240, 242, 241);\"></span></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">public&nbsp;function&nbsp;boot(Router&nbsp;$router){
+&nbsp;&nbsp;&nbsp;&nbsp;$router-&gt;pattern(&#39;id&#39;,&nbsp;&#39;[0-9]+&#39;);
+
+&nbsp;&nbsp;&nbsp;&nbsp;parent::boot($router);
+}</pre><h3><span style=\"color: rgb(244, 100, 95); font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 12px; white-space: pre; background-color: rgb(240, 242, 241);\"></span>路由命名</h3><p>一般命名<br/></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/profile&#39;,&nbsp;[&#39;as&#39;&nbsp;=&gt;&nbsp;&#39;profile&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+}]);</pre><p>命名同时，指定控制器和action</p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/profile&#39;,&nbsp;[
+&nbsp;&nbsp;&nbsp;&nbsp;&#39;as&#39;&nbsp;=&gt;&nbsp;&#39;profile&#39;,&nbsp;&#39;uses&#39;&nbsp;=&gt;&nbsp;&#39;UserController@showProfile&#39;
+]);</pre><p>或者：<br/></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/profile&#39;,&nbsp;&#39;UserController@showProfile&#39;)-&gt;name(&#39;profile&#39;);</pre><p>集体命名<br/></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::group([&#39;as&#39;&nbsp;=&gt;&nbsp;&#39;admin::&#39;],&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;Route::get(&#39;dashboard&#39;,&nbsp;[&#39;as&#39;&nbsp;=&gt;&nbsp;&#39;dashboard&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Route&nbsp;named&nbsp;&quot;admin::dashboard&quot;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]);
+});</pre><p>注意：这个集体路由的访问，比如dashboard的地址为：/dashboard而不是/admin/dashboard。只不过它的别名为：admin::dashboard。这个别名可以用来获取路由的地址，下面我们马上就会讲到。</p><h3>路由地址获取和跳转<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">//&nbsp;Generating&nbsp;URLs...
+$url&nbsp;=&nbsp;route(&#39;profile&#39;);
+//&nbsp;Generating&nbsp;Redirects...
+return&nbsp;redirect()-&gt;route(&#39;profile&#39;);</pre><p><br/></p>','1503199383','1503199383','1503199383') [ RunTime:0.0172s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_category` WHERE `name` = 'laravel5.2入门' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_tag` WHERE `name` = 'laravel' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2017-08-20T11:23:05+08:00 ] 101.27.215.105 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000639s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000678s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014034s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014077s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000172s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000367s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000406s ]
+
+[ 2017-08-20T11:23:05+08:00 ] 101.27.215.105 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013260s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013299s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000318s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000357s ]
+
+[ 2017-08-20T11:23:08+08:00 ] 101.27.215.105 /admin.php/Post/updatePost/id/162
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000417s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 162 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b94d69ac1621e983387ec69783f12599.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014243s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014286s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000418s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000458s ]
+
+[ 2017-08-20T11:23:08+08:00 ] 101.27.215.105 /admin.php/Post/updatePost/id/162
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 162 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b94d69ac1621e983387ec69783f12599.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013652s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013698s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000316s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000355s ]
+
+[ 2017-08-20T11:34:15+08:00 ] 101.27.215.105 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000390s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: UPDATE `z_post` SET `title`='laravel5.2入门（四）——laravel的路由（MAMP环境）',`category`='laravel5.2入',`tag`='laravel',`summary`='laravel的路由很强大，很好用，好好学习一下吧。',`content`='<p>								</p><h2>一、什么是路由</h2><p>路由就是给你一个url，给我找到对应的控制器的方法，运行相应的程序。</p><h2>二、基础路由</h2><h3>基础路由</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;foo&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;&#39;Hello&nbsp;World&#39;;
+});</pre><h3>路由配置文件</h3><p>http/routes.php</p><h3>路由的请求类型</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get($uri,&nbsp;$callback);
+Route::post($uri,&nbsp;$callback);
+Route::put($uri,&nbsp;$callback);
+Route::patch($uri,&nbsp;$callback);
+Route::delete($uri,&nbsp;$callback);
+Route::options($uri,&nbsp;$callback);</pre><h3>满足多种请求方式<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::match([&#39;get&#39;,&nbsp;&#39;post&#39;],&nbsp;&#39;/&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+});
+Route::any(&#39;foo&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+});</pre><h3>在路由中传参<br/></h3><p>一个参数：</p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/{id}&#39;,&nbsp;function&nbsp;($id)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;&#39;User&nbsp;&#39;.$id;
+});</pre><p>多个参数：</p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;posts/{post}/comments/{comment}&#39;,&nbsp;function&nbsp;($postId,&nbsp;$commentId)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+});</pre><p>可选参数和默认参数<br/></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/{name?}&#39;,&nbsp;function&nbsp;($name&nbsp;=&nbsp;null)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;$name;
+});
+Route::get(&#39;user/{name?}&#39;,&nbsp;function&nbsp;($name&nbsp;=&nbsp;&#39;John&#39;)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;$name;
+});</pre><h3>使用正则对参数进行限制<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/{name}&#39;,&nbsp;function&nbsp;($name)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+})-&gt;where(&#39;name&#39;,&nbsp;&#39;[A-Za-z]+&#39;);
+Route::get(&#39;user/{id}&#39;,&nbsp;function&nbsp;($id)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+})-&gt;where(&#39;id&#39;,&nbsp;&#39;[0-9]+&#39;);
+Route::get(&#39;user/{id}/{name}&#39;,&nbsp;function&nbsp;($id,&nbsp;$name)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+})-&gt;where([&#39;id&#39;&nbsp;=&gt;&nbsp;&#39;[0-9]+&#39;,&nbsp;&#39;name&#39;&nbsp;=&gt;&nbsp;&#39;[a-z]+&#39;]);</pre><h3>全局限定。意思就是说这个规则会应用到所有指定的参数名中。</h3><p>修改<span style=\"color: rgb(244, 100, 95); font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 12px; white-space: pre; background-color: rgb(240, 242, 241);\">RouteServiceProvider：</span></p><p><span style=\"color: rgb(244, 100, 95); font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 12px; white-space: pre; background-color: rgb(240, 242, 241);\"></span></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">public&nbsp;function&nbsp;boot(Router&nbsp;$router){
+&nbsp;&nbsp;&nbsp;&nbsp;$router-&gt;pattern(&#39;id&#39;,&nbsp;&#39;[0-9]+&#39;);
+
+&nbsp;&nbsp;&nbsp;&nbsp;parent::boot($router);
+}</pre><h2><span style=\"color: rgb(244, 100, 95); font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 12px; white-space: pre; background-color: rgb(240, 242, 241);\"></span>三、路由命名</h2><h3>一般命名<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/profile&#39;,&nbsp;[&#39;as&#39;&nbsp;=&gt;&nbsp;&#39;profile&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+}]);</pre><h3>命名同时，指定控制器和action</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/profile&#39;,&nbsp;[
+&nbsp;&nbsp;&nbsp;&nbsp;&#39;as&#39;&nbsp;=&gt;&nbsp;&#39;profile&#39;,&nbsp;&#39;uses&#39;&nbsp;=&gt;&nbsp;&#39;UserController@showProfile&#39;
+]);</pre><p>或者：<br/></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/profile&#39;,&nbsp;&#39;UserController@showProfile&#39;)-&gt;name(&#39;profile&#39;);</pre><h3>集体命名<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::group([&#39;as&#39;&nbsp;=&gt;&nbsp;&#39;admin::&#39;],&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;Route::get(&#39;dashboard&#39;,&nbsp;[&#39;as&#39;&nbsp;=&gt;&nbsp;&#39;dashboard&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Route&nbsp;named&nbsp;&quot;admin::dashboard&quot;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]);
+});</pre><p>注意：这个集体路由的访问，比如dashboard的地址为：/dashboard而不是/admin/dashboard。只不过它的别名为：admin::dashboard。这个别名可以用来获取路由的地址，下面我们马上就会讲到。</p><h3>路由地址获取和跳转<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">//&nbsp;Generating&nbsp;URLs...
+$url&nbsp;=&nbsp;route(&#39;profile&#39;);
+//&nbsp;Generating&nbsp;Redirects...
+return&nbsp;redirect()-&gt;route(&#39;profile&#39;);</pre><h3>给命名路由传参</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\"><h3>Route::get(&#39;user/{id}/profile&#39;, [&#39;as&#39; =&gt; &#39;profile&#39;, function ($id) {<br/> &nbsp; &nbsp;//}<br/>]);<br/>$url = route(&#39;profile&#39;, [&#39;id&#39; =&gt; 1]);<br/></h3></pre><p>							</p>',`mtime`='1503200054' WHERE `id` = 162 [ RunTime:0.0110s ]
+NOTIC: [8] Undefined variable: id /data/wwwroot/blog/Application/Admin/Controller/AjaxController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category` WHERE `name` = 'laravel5.2入' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag` WHERE `name` = 'laravel' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2017-08-20T11:34:16+08:00 ] 101.27.215.105 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013427s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013470s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000160s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000194s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000337s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000377s ]
+
+[ 2017-08-20T11:34:16+08:00 ] 101.27.215.105 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000357s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013353s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013393s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000312s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000350s ]
+
+[ 2017-08-20T11:34:18+08:00 ] 101.27.215.105 /admin.php/Post/updatePost/id/162
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000413s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 162 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b94d69ac1621e983387ec69783f12599.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013785s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013824s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000319s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000356s ]
+
+[ 2017-08-20T11:34:19+08:00 ] 101.27.215.105 /admin.php/Post/updatePost/id/162
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000356s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 162 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b94d69ac1621e983387ec69783f12599.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013595s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013636s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000324s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000363s ]
+
+[ 2017-08-20T11:36:39+08:00 ] 101.27.215.105 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000409s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: UPDATE `z_post` SET `title`='laravel5.2入门（四）——laravel的路由（MAMP环境）',`category`='laravel5.2入',`tag`='laravel',`summary`='laravel的路由很强大，很好用，好好学习一下吧。',`content`='<p>								</p><p><br/></p><h2>一、什么是路由</h2><p>路由就是给你一个url，给我找到对应的控制器的方法，运行相应的程序。</p><h2>二、基础路由</h2><h3>基础路由</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;foo&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;&#39;Hello&nbsp;World&#39;;
+});</pre><h3>路由配置文件</h3><p>http/routes.php</p><h3>路由的请求类型</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get($uri,&nbsp;$callback);
+Route::post($uri,&nbsp;$callback);
+Route::put($uri,&nbsp;$callback);
+Route::patch($uri,&nbsp;$callback);
+Route::delete($uri,&nbsp;$callback);
+Route::options($uri,&nbsp;$callback);</pre><h3>满足多种请求方式<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::match([&#39;get&#39;,&nbsp;&#39;post&#39;],&nbsp;&#39;/&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+});
+Route::any(&#39;foo&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+});</pre><h3>在路由中传参<br/></h3><p>一个参数：</p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/{id}&#39;,&nbsp;function&nbsp;($id)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;&#39;User&nbsp;&#39;.$id;
+});</pre><p>多个参数：</p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;posts/{post}/comments/{comment}&#39;,&nbsp;function&nbsp;($postId,&nbsp;$commentId)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+});</pre><p>可选参数和默认参数<br/></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/{name?}&#39;,&nbsp;function&nbsp;($name&nbsp;=&nbsp;null)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;$name;
+});
+Route::get(&#39;user/{name?}&#39;,&nbsp;function&nbsp;($name&nbsp;=&nbsp;&#39;John&#39;)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;$name;
+});</pre><h3>使用正则对参数进行限制<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/{name}&#39;,&nbsp;function&nbsp;($name)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+})-&gt;where(&#39;name&#39;,&nbsp;&#39;[A-Za-z]+&#39;);
+Route::get(&#39;user/{id}&#39;,&nbsp;function&nbsp;($id)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+})-&gt;where(&#39;id&#39;,&nbsp;&#39;[0-9]+&#39;);
+Route::get(&#39;user/{id}/{name}&#39;,&nbsp;function&nbsp;($id,&nbsp;$name)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+})-&gt;where([&#39;id&#39;&nbsp;=&gt;&nbsp;&#39;[0-9]+&#39;,&nbsp;&#39;name&#39;&nbsp;=&gt;&nbsp;&#39;[a-z]+&#39;]);</pre><h3>全局限定。意思就是说这个规则会应用到所有指定的参数名中。</h3><p>修改<span style=\"color: rgb(244, 100, 95); font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 12px; white-space: pre; background-color: rgb(240, 242, 241);\">RouteServiceProvider：</span></p><p><span style=\"color: rgb(244, 100, 95); font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 12px; white-space: pre; background-color: rgb(240, 242, 241);\"></span></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">public&nbsp;function&nbsp;boot(Router&nbsp;$router){
+&nbsp;&nbsp;&nbsp;&nbsp;$router-&gt;pattern(&#39;id&#39;,&nbsp;&#39;[0-9]+&#39;);
+
+&nbsp;&nbsp;&nbsp;&nbsp;parent::boot($router);
+}</pre><h2><span style=\"color: rgb(244, 100, 95); font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 12px; white-space: pre; background-color: rgb(240, 242, 241);\"></span>三、路由命名</h2><h3>一般命名<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/profile&#39;,&nbsp;[&#39;as&#39;&nbsp;=&gt;&nbsp;&#39;profile&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+}]);</pre><h3>命名同时，指定控制器和action</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/profile&#39;,&nbsp;[
+&nbsp;&nbsp;&nbsp;&nbsp;&#39;as&#39;&nbsp;=&gt;&nbsp;&#39;profile&#39;,&nbsp;&#39;uses&#39;&nbsp;=&gt;&nbsp;&#39;UserController@showProfile&#39;
+]);</pre><p>或者：<br/></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/profile&#39;,&nbsp;&#39;UserController@showProfile&#39;)-&gt;name(&#39;profile&#39;);</pre><h3>集体命名<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::group([&#39;as&#39;&nbsp;=&gt;&nbsp;&#39;admin::&#39;],&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;Route::get(&#39;dashboard&#39;,&nbsp;[&#39;as&#39;&nbsp;=&gt;&nbsp;&#39;dashboard&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Route&nbsp;named&nbsp;&quot;admin::dashboard&quot;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]);
+});</pre><p>注意：这个集体路由的访问，比如dashboard的地址为：/dashboard而不是/admin/dashboard。只不过它的别名为：admin::dashboard。这个别名可以用来获取路由的地址，下面我们马上就会讲到。</p><h3>路由地址获取和跳转<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">//&nbsp;Generating&nbsp;URLs...
+$url&nbsp;=&nbsp;route(&#39;profile&#39;);
+//&nbsp;Generating&nbsp;Redirects...
+return&nbsp;redirect()-&gt;route(&#39;profile&#39;);</pre><h3>给命名路由传参</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\"><h3>Route::get(&#39;user/{id}/profile&#39;, [&#39;as&#39; =&gt; &#39;profile&#39;, function ($id) {<br/> &nbsp; &nbsp;//}<br/>]);<br/>$url = route(&#39;profile&#39;, [&#39;id&#39; =&gt; 1]);<br/></h3></pre><h2>四、集体路由</h2><p>集体路由主要用来分享一些属性，避免不必要的重复，比如：middleware,namespace。</p><h3>中间件</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\"><h3>Route::group([&#39;middleware&#39; =&gt; &#39;auth&#39;], function () {<br/> &nbsp; &nbsp;Route::get(&#39;/&#39;, function () &nbsp; &nbsp;{<br/> &nbsp; &nbsp; &nbsp; &nbsp;// Uses Auth Middleware &nbsp; &nbsp;<br/> &nbsp; &nbsp;});<br/><br/> &nbsp; &nbsp;Route::get(&#39;user/profile&#39;, function () {<br/> &nbsp; &nbsp; &nbsp; &nbsp;// Uses Auth Middleware &nbsp; &nbsp;<br/> &nbsp; &nbsp;});<br/>});<br/></h3></pre><p>							</p>',`mtime`='1503200199' WHERE `id` = 162 [ RunTime:0.0149s ]
+NOTIC: [8] Undefined variable: id /data/wwwroot/blog/Application/Admin/Controller/AjaxController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_category` WHERE `name` = 'laravel5.2入' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag` WHERE `name` = 'laravel' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2017-08-20T11:36:41+08:00 ] 101.27.215.105 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000400s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013395s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013436s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000372s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000411s ]
+
+[ 2017-08-20T11:36:41+08:00 ] 101.27.215.105 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000357s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013633s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013674s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000382s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000422s ]
+
+[ 2017-08-20T11:36:43+08:00 ] 101.27.215.105 /admin.php/Post/updatePost/id/162
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000367s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 162 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b94d69ac1621e983387ec69783f12599.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015617s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015662s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000185s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000370s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000409s ]
+
+[ 2017-08-20T11:36:43+08:00 ] 101.27.215.105 /admin.php/Post/updatePost/id/162
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000826s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 162 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b94d69ac1621e983387ec69783f12599.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013815s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013855s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000325s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000363s ]
+
+[ 2017-08-20T11:41:33+08:00 ] 101.27.215.105 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000492s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: UPDATE `z_post` SET `title`='laravel5.2入门（四）——laravel的路由（MAMP环境）',`category`='laravel5.2入',`tag`='laravel',`summary`='laravel的路由很强大，很好用，好好学习一下吧。',`content`='<p>								</p><p><br/></p><p><br/></p><h2>一、什么是路由</h2><p>路由就是给你一个url，给我找到对应的控制器的方法，运行相应的程序。</p><h2>二、基础路由</h2><h3>基础路由</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;foo&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;&#39;Hello&nbsp;World&#39;;
+});</pre><h3>路由配置文件</h3><p>http/routes.php</p><h3>路由的请求类型</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get($uri,&nbsp;$callback);
+Route::post($uri,&nbsp;$callback);
+Route::put($uri,&nbsp;$callback);
+Route::patch($uri,&nbsp;$callback);
+Route::delete($uri,&nbsp;$callback);
+Route::options($uri,&nbsp;$callback);</pre><h3>满足多种请求方式<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::match([&#39;get&#39;,&nbsp;&#39;post&#39;],&nbsp;&#39;/&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+});
+Route::any(&#39;foo&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+});</pre><h3>在路由中传参<br/></h3><p>一个参数：</p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/{id}&#39;,&nbsp;function&nbsp;($id)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;&#39;User&nbsp;&#39;.$id;
+});</pre><p>多个参数：</p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;posts/{post}/comments/{comment}&#39;,&nbsp;function&nbsp;($postId,&nbsp;$commentId)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+});</pre><p>可选参数和默认参数<br/></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/{name?}&#39;,&nbsp;function&nbsp;($name&nbsp;=&nbsp;null)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;$name;
+});
+Route::get(&#39;user/{name?}&#39;,&nbsp;function&nbsp;($name&nbsp;=&nbsp;&#39;John&#39;)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;$name;
+});</pre><h3>使用正则对参数进行限制<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/{name}&#39;,&nbsp;function&nbsp;($name)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+})-&gt;where(&#39;name&#39;,&nbsp;&#39;[A-Za-z]+&#39;);
+Route::get(&#39;user/{id}&#39;,&nbsp;function&nbsp;($id)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+})-&gt;where(&#39;id&#39;,&nbsp;&#39;[0-9]+&#39;);
+Route::get(&#39;user/{id}/{name}&#39;,&nbsp;function&nbsp;($id,&nbsp;$name)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+})-&gt;where([&#39;id&#39;&nbsp;=&gt;&nbsp;&#39;[0-9]+&#39;,&nbsp;&#39;name&#39;&nbsp;=&gt;&nbsp;&#39;[a-z]+&#39;]);</pre><h3>全局限定。意思就是说这个规则会应用到所有指定的参数名中。</h3><p>修改<span style=\"color: rgb(244, 100, 95); font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 12px; white-space: pre; background-color: rgb(240, 242, 241);\">RouteServiceProvider：</span></p><p><span style=\"color: rgb(244, 100, 95); font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 12px; white-space: pre; background-color: rgb(240, 242, 241);\"></span></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">public&nbsp;function&nbsp;boot(Router&nbsp;$router){
+&nbsp;&nbsp;&nbsp;&nbsp;$router-&gt;pattern(&#39;id&#39;,&nbsp;&#39;[0-9]+&#39;);
+
+&nbsp;&nbsp;&nbsp;&nbsp;parent::boot($router);
+}</pre><h2><span style=\"color: rgb(244, 100, 95); font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 12px; white-space: pre; background-color: rgb(240, 242, 241);\"></span>三、路由命名</h2><h3>一般命名<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/profile&#39;,&nbsp;[&#39;as&#39;&nbsp;=&gt;&nbsp;&#39;profile&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+}]);</pre><h3>命名同时，指定控制器和action</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/profile&#39;,&nbsp;[
+&nbsp;&nbsp;&nbsp;&nbsp;&#39;as&#39;&nbsp;=&gt;&nbsp;&#39;profile&#39;,&nbsp;&#39;uses&#39;&nbsp;=&gt;&nbsp;&#39;UserController@showProfile&#39;
+]);</pre><p>或者：<br/></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/profile&#39;,&nbsp;&#39;UserController@showProfile&#39;)-&gt;name(&#39;profile&#39;);</pre><h3>集体命名<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::group([&#39;as&#39;&nbsp;=&gt;&nbsp;&#39;admin::&#39;],&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;Route::get(&#39;dashboard&#39;,&nbsp;[&#39;as&#39;&nbsp;=&gt;&nbsp;&#39;dashboard&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Route&nbsp;named&nbsp;&quot;admin::dashboard&quot;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]);
+});</pre><p>注意：这个集体路由的访问，比如dashboard的地址为：/dashboard而不是/admin/dashboard。只不过它的别名为：admin::dashboard。这个别名可以用来获取路由的地址，下面我们马上就会讲到。</p><h3>路由地址获取和跳转<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">//&nbsp;Generating&nbsp;URLs...
+$url&nbsp;=&nbsp;route(&#39;profile&#39;);
+//&nbsp;Generating&nbsp;Redirects...
+return&nbsp;redirect()-&gt;route(&#39;profile&#39;);</pre><h3>给命名路由传参</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\"><h3>Route::get(&#39;user/{id}/profile&#39;, [&#39;as&#39; =&gt; &#39;profile&#39;, function ($id) {<br/> &nbsp; &nbsp;//}<br/>]);<br/>$url = route(&#39;profile&#39;, [&#39;id&#39; =&gt; 1]);<br/></h3></pre><h2>四、集体路由</h2><p>集体路由主要用来分享一些属性，避免不必要的重复，比如：middleware,namespace。</p><h3>中间件</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\"><h3>Route::group([&#39;middleware&#39; =&gt; &#39;auth&#39;], function () {<br/> &nbsp; &nbsp;Route::get(&#39;/&#39;, function () &nbsp; &nbsp;{<br/> &nbsp; &nbsp; &nbsp; &nbsp;// Uses Auth Middleware &nbsp; &nbsp;<br/> &nbsp; &nbsp;});<br/><br/> &nbsp; &nbsp;Route::get(&#39;user/profile&#39;, function () {<br/> &nbsp; &nbsp; &nbsp; &nbsp;// Uses Auth Middleware &nbsp; &nbsp;<br/> &nbsp; &nbsp;});<br/>});<br/></h3></pre><p>指定命名空间<br/></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::group([&#39;namespace&#39;&nbsp;=&gt;&nbsp;&#39;Admin&#39;],&nbsp;function(){
+&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Controllers&nbsp;Within&nbsp;The&nbsp;&quot;App\\Http\\Controllers\\Admin&quot;&nbsp;Namespace
+&nbsp;&nbsp;&nbsp;&nbsp;Route::group([&#39;namespace&#39;&nbsp;=&gt;&nbsp;&#39;User&#39;],&nbsp;function()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Controllers&nbsp;Within&nbsp;The&nbsp;&quot;App\\Http\\Controllers\\Admin\\User&quot;&nbsp;Namespace&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;});
+});</pre><p>							</p>',`mtime`='1503200493' WHERE `id` = 162 [ RunTime:0.0114s ]
+NOTIC: [8] Undefined variable: id /data/wwwroot/blog/Application/Admin/Controller/AjaxController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category` WHERE `name` = 'laravel5.2入' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag` WHERE `name` = 'laravel' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2017-08-20T11:41:35+08:00 ] 101.27.215.105 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014090s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014132s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000141s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000174s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000412s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000452s ]
+
+[ 2017-08-20T11:41:35+08:00 ] 101.27.215.105 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013909s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013949s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000384s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000423s ]
+
+[ 2017-08-20T11:47:50+08:00 ] 101.27.215.105 /admin.php/Post/updatePost/id/162
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000371s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 162 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b94d69ac1621e983387ec69783f12599.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014032s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014072s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000370s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000409s ]
+
+[ 2017-08-20T11:47:51+08:00 ] 101.27.215.105 /admin.php/Post/updatePost/id/162
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 162 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b94d69ac1621e983387ec69783f12599.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014404s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014446s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000155s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000332s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000372s ]
+
+[ 2017-08-20T17:03:37+08:00 ] 101.27.215.105 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0007s ]
+SQL: UPDATE `z_post` SET `title`='laravel5.2入门（四）——laravel的路由（MAMP环境）',`category`='laravel5.2入',`tag`='laravel',`summary`='laravel的路由很强大，很好用，好好学习一下吧。',`content`='<p>								</p><p><br/></p><p><br/></p><p><br/></p><h2>一、什么是路由</h2><p>路由就是给你一个url，给我找到对应的控制器的方法，运行相应的程序。</p><h2>二、基础路由</h2><h3>基础路由</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;foo&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;&#39;Hello&nbsp;World&#39;;
+});</pre><h3>路由配置文件</h3><p>http/routes.php</p><h3>路由的请求类型</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get($uri,&nbsp;$callback);
+Route::post($uri,&nbsp;$callback);
+Route::put($uri,&nbsp;$callback);
+Route::patch($uri,&nbsp;$callback);
+Route::delete($uri,&nbsp;$callback);
+Route::options($uri,&nbsp;$callback);</pre><h3>满足多种请求方式<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::match([&#39;get&#39;,&nbsp;&#39;post&#39;],&nbsp;&#39;/&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+});
+Route::any(&#39;foo&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+});</pre><h3>在路由中传参<br/></h3><p>一个参数：</p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/{id}&#39;,&nbsp;function&nbsp;($id)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;&#39;User&nbsp;&#39;.$id;
+});</pre><p>多个参数：</p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;posts/{post}/comments/{comment}&#39;,&nbsp;function&nbsp;($postId,&nbsp;$commentId)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+});</pre><p>可选参数和默认参数<br/></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/{name?}&#39;,&nbsp;function&nbsp;($name&nbsp;=&nbsp;null)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;$name;
+});
+Route::get(&#39;user/{name?}&#39;,&nbsp;function&nbsp;($name&nbsp;=&nbsp;&#39;John&#39;)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;$name;
+});</pre><h3>使用正则对参数进行限制<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/{name}&#39;,&nbsp;function&nbsp;($name)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+})-&gt;where(&#39;name&#39;,&nbsp;&#39;[A-Za-z]+&#39;);
+Route::get(&#39;user/{id}&#39;,&nbsp;function&nbsp;($id)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+})-&gt;where(&#39;id&#39;,&nbsp;&#39;[0-9]+&#39;);
+Route::get(&#39;user/{id}/{name}&#39;,&nbsp;function&nbsp;($id,&nbsp;$name)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+})-&gt;where([&#39;id&#39;&nbsp;=&gt;&nbsp;&#39;[0-9]+&#39;,&nbsp;&#39;name&#39;&nbsp;=&gt;&nbsp;&#39;[a-z]+&#39;]);</pre><h3>全局限定。意思就是说这个规则会应用到所有指定的参数名中。</h3><p>修改<span style=\"color: rgb(244, 100, 95); font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 12px; white-space: pre; background-color: rgb(240, 242, 241);\">RouteServiceProvider：</span></p><p><span style=\"color: rgb(244, 100, 95); font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 12px; white-space: pre; background-color: rgb(240, 242, 241);\"></span></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">public&nbsp;function&nbsp;boot(Router&nbsp;$router){
+&nbsp;&nbsp;&nbsp;&nbsp;$router-&gt;pattern(&#39;id&#39;,&nbsp;&#39;[0-9]+&#39;);
+
+&nbsp;&nbsp;&nbsp;&nbsp;parent::boot($router);
+}</pre><h2><span style=\"color: rgb(244, 100, 95); font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 12px; white-space: pre; background-color: rgb(240, 242, 241);\"></span>三、路由命名</h2><h3>一般命名<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/profile&#39;,&nbsp;[&#39;as&#39;&nbsp;=&gt;&nbsp;&#39;profile&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+}]);</pre><h3>命名同时，指定控制器和action</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/profile&#39;,&nbsp;[
+&nbsp;&nbsp;&nbsp;&nbsp;&#39;as&#39;&nbsp;=&gt;&nbsp;&#39;profile&#39;,&nbsp;&#39;uses&#39;&nbsp;=&gt;&nbsp;&#39;UserController@showProfile&#39;
+]);</pre><p>或者：<br/></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/profile&#39;,&nbsp;&#39;UserController@showProfile&#39;)-&gt;name(&#39;profile&#39;);</pre><h3>集体命名<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::group([&#39;as&#39;&nbsp;=&gt;&nbsp;&#39;admin::&#39;],&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;Route::get(&#39;dashboard&#39;,&nbsp;[&#39;as&#39;&nbsp;=&gt;&nbsp;&#39;dashboard&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Route&nbsp;named&nbsp;&quot;admin::dashboard&quot;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]);
+});</pre><p>注意：这个集体路由的访问，比如dashboard的地址为：/dashboard而不是/admin/dashboard。只不过它的别名为：admin::dashboard。这个别名可以用来获取路由的地址，下面我们马上就会讲到。</p><h3>路由地址获取和跳转<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">//&nbsp;Generating&nbsp;URLs...
+$url&nbsp;=&nbsp;route(&#39;profile&#39;);
+//&nbsp;Generating&nbsp;Redirects...
+return&nbsp;redirect()-&gt;route(&#39;profile&#39;);</pre><h3>给命名路由传参</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\"><h3>Route::get(&#39;user/{id}/profile&#39;, [&#39;as&#39; =&gt; &#39;profile&#39;, function ($id) {<br/> &nbsp; &nbsp;//}<br/>]);<br/>$url = route(&#39;profile&#39;, [&#39;id&#39; =&gt; 1]);<br/></h3></pre><h2>四、集体路由</h2><p>集体路由主要用来分享一些属性，避免不必要的重复，比如：middleware,namespace。</p><h3>中间件</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\"><h3>Route::group([&#39;middleware&#39; =&gt; &#39;auth&#39;], function () {<br/> &nbsp; &nbsp;Route::get(&#39;/&#39;, function () &nbsp; &nbsp;{<br/> &nbsp; &nbsp; &nbsp; &nbsp;// Uses Auth Middleware &nbsp; &nbsp;<br/> &nbsp; &nbsp;});<br/><br/> &nbsp; &nbsp;Route::get(&#39;user/profile&#39;, function () {<br/> &nbsp; &nbsp; &nbsp; &nbsp;// Uses Auth Middleware &nbsp; &nbsp;<br/> &nbsp; &nbsp;});<br/>});<br/></h3></pre><h3>指定命名空间<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::group([&#39;namespace&#39;&nbsp;=&gt;&nbsp;&#39;Admin&#39;],&nbsp;function(){
+&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Controllers&nbsp;Within&nbsp;The&nbsp;&quot;App\\Http\\Controllers\\Admin&quot;&nbsp;Namespace
+&nbsp;&nbsp;&nbsp;&nbsp;Route::group([&#39;namespace&#39;&nbsp;=&gt;&nbsp;&#39;User&#39;],&nbsp;function()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Controllers&nbsp;Within&nbsp;The&nbsp;&quot;App\\Http\\Controllers\\Admin\\User&quot;&nbsp;Namespace&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;});
+});</pre><h3>指定前缀</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\"><h3>Route::group([&#39;prefix&#39; =&gt; &#39;admin&#39;], function () {<br/> &nbsp; &nbsp;Route::get(&#39;users&#39;, function () &nbsp; &nbsp;{<br/> &nbsp; &nbsp; &nbsp; &nbsp;// Matches The &quot;/admin/users&quot; URL &nbsp; &nbsp;<br/> &nbsp; &nbsp;});<br/>});<br/></h3></pre><p>还可以在前缀上传入参数<br/></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::group([&#39;prefix&#39;&nbsp;=&gt;&nbsp;&#39;accounts/{account_id}&#39;],&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;Route::get(&#39;detail&#39;,&nbsp;function&nbsp;($accountId)&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Matches&nbsp;The&nbsp;&quot;/accounts/{account_id}/detail&quot;&nbsp;URL&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;});
+});</pre><h2>五、CSRFtoken</h2><p>csrftoken用来防止外站提交请求。<br/></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">//&nbsp;Vanilla&nbsp;PHP&lt;?php&nbsp;echo&nbsp;csrf_field();&nbsp;?&gt;
+//&nbsp;Blade&nbsp;Template&nbsp;Syntax{{&nbsp;csrf_field()&nbsp;}}</pre><p>上面这段代码，用来在模板中生成一个html的input。</p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">&lt;input&nbsp;type=&quot;hidden&quot;&nbsp;name=&quot;_token&quot;&nbsp;value=&quot;&lt;?php&nbsp;echo&nbsp;csrf_token();&nbsp;?&gt;&quot;&gt;</pre><p>有时候，我们有一些请求不需要验证csrf，我们可以把这些Url排除：<br/></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">&lt;?phpnamespace&nbsp;App\\Http\\Middleware;
+use&nbsp;Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken&nbsp;as&nbsp;BaseVerifier;
+class&nbsp;VerifyCsrfToken&nbsp;extends&nbsp;BaseVerifier{
+&nbsp;&nbsp;&nbsp;&nbsp;/**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;The&nbsp;URIs&nbsp;that&nbsp;should&nbsp;be&nbsp;excluded&nbsp;from&nbsp;CSRF&nbsp;verification.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@var&nbsp;array
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/
+&nbsp;&nbsp;&nbsp;&nbsp;protected&nbsp;$except&nbsp;=&nbsp;[
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;stripe/*&#39;,
+&nbsp;&nbsp;&nbsp;&nbsp;];</pre><p>x-csrf-token<br/></p><p>ajax请求中携带token。</p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">$.ajaxSetup({
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;headers:&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;X-CSRF-TOKEN&#39;:&nbsp;$(&#39;meta[name=&quot;csrf-token&quot;]&#39;).attr(&#39;content&#39;)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+});</pre><h2>六、表单method‘造假&#39;<br/></h2><p>一般form不支持put,delete,patch，那么我们可以通过这样的方式来实现这些请求。</p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">&lt;form&nbsp;action=&quot;/foo/bar&quot;&nbsp;method=&quot;POST&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;hidden&quot;&nbsp;name=&quot;_method&quot;&nbsp;value=&quot;PUT&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;hidden&quot;&nbsp;name=&quot;_token&quot;&nbsp;value=&quot;{{&nbsp;csrf_token()&nbsp;}}&quot;&gt;
+&lt;/form&gt;</pre><p>要生成这个’造假‘input,也可以这样：<br/></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">&lt;?php&nbsp;echo&nbsp;method_field(&#39;PUT&#39;);&nbsp;?&gt;</pre><p>或者：</p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">{{&nbsp;method_field(&#39;PUT&#39;)&nbsp;}}</pre><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p>							</p>',`mtime`='1503219817' WHERE `id` = 162 [ RunTime:0.0211s ]
+NOTIC: [8] Undefined variable: id /data/wwwroot/blog/Application/Admin/Controller/AjaxController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_category` WHERE `name` = 'laravel5.2入' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag` WHERE `name` = 'laravel' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2017-08-20T17:03:39+08:00 ] 101.27.215.105 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000397s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015336s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015389s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000165s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000217s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000548s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000605s ]
+
+[ 2017-08-20T17:03:40+08:00 ] 101.27.215.105 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000363s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000402s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013877s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013917s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000383s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000423s ]
+
+[ 2017-08-20T17:05:16+08:00 ] 101.27.215.105 /admin.php/Post/updatePost/id/162
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000429s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 162 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b94d69ac1621e983387ec69783f12599.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013581s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013620s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000152s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000330s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000370s ]
+
+[ 2017-08-20T17:05:17+08:00 ] 101.27.215.105 /admin.php/Post/updatePost/id/162
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000394s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `z_post` WHERE `id` = 162 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b94d69ac1621e983387ec69783f12599.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013772s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013810s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000368s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000407s ]
+
+[ 2017-08-20T17:07:12+08:00 ] 101.27.215.105 /admin.php/Ajax/addNewPost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000402s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: UPDATE `z_post` SET `title`='laravel5.2入门（四）——laravel的路由（MAMP环境）',`category`='laravel5.2入',`tag`='laravel',`summary`='laravel的路由很强大，很好用，好好学习一下吧。',`content`='<p>								</p><h2>一、什么是路由<br/></h2><p>路由就是给你一个url，给我找到对应的控制器的方法，运行相应的程序。</p><h2>二、基础路由</h2><h3>基础路由</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;foo&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;&#39;Hello&nbsp;World&#39;;
+});</pre><h3>路由配置文件</h3><p>http/routes.php</p><h3>路由的请求类型</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get($uri,&nbsp;$callback);
+Route::post($uri,&nbsp;$callback);
+Route::put($uri,&nbsp;$callback);
+Route::patch($uri,&nbsp;$callback);
+Route::delete($uri,&nbsp;$callback);
+Route::options($uri,&nbsp;$callback);</pre><h3>满足多种请求方式<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::match([&#39;get&#39;,&nbsp;&#39;post&#39;],&nbsp;&#39;/&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+});
+Route::any(&#39;foo&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+});</pre><h3>在路由中传参<br/></h3><p>一个参数：</p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/{id}&#39;,&nbsp;function&nbsp;($id)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;&#39;User&nbsp;&#39;.$id;
+});</pre><p>多个参数：</p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;posts/{post}/comments/{comment}&#39;,&nbsp;function&nbsp;($postId,&nbsp;$commentId)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+});</pre><p>可选参数和默认参数<br/></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/{name?}&#39;,&nbsp;function&nbsp;($name&nbsp;=&nbsp;null)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;$name;
+});
+Route::get(&#39;user/{name?}&#39;,&nbsp;function&nbsp;($name&nbsp;=&nbsp;&#39;John&#39;)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;$name;
+});</pre><h3>使用正则对参数进行限制<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/{name}&#39;,&nbsp;function&nbsp;($name)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+})-&gt;where(&#39;name&#39;,&nbsp;&#39;[A-Za-z]+&#39;);
+Route::get(&#39;user/{id}&#39;,&nbsp;function&nbsp;($id)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+})-&gt;where(&#39;id&#39;,&nbsp;&#39;[0-9]+&#39;);
+Route::get(&#39;user/{id}/{name}&#39;,&nbsp;function&nbsp;($id,&nbsp;$name)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+})-&gt;where([&#39;id&#39;&nbsp;=&gt;&nbsp;&#39;[0-9]+&#39;,&nbsp;&#39;name&#39;&nbsp;=&gt;&nbsp;&#39;[a-z]+&#39;]);</pre><h3>全局限定。意思就是说这个规则会应用到所有指定的参数名中。</h3><p>修改<span style=\"color: rgb(244, 100, 95); font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 12px; white-space: pre; background-color: rgb(240, 242, 241);\">RouteServiceProvider：</span></p><p><span style=\"color: rgb(244, 100, 95); font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 12px; white-space: pre; background-color: rgb(240, 242, 241);\"></span></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">public&nbsp;function&nbsp;boot(Router&nbsp;$router){
+&nbsp;&nbsp;&nbsp;&nbsp;$router-&gt;pattern(&#39;id&#39;,&nbsp;&#39;[0-9]+&#39;);
+
+&nbsp;&nbsp;&nbsp;&nbsp;parent::boot($router);
+}</pre><h2><span style=\"color: rgb(244, 100, 95); font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 12px; white-space: pre; background-color: rgb(240, 242, 241);\"></span>三、路由命名</h2><h3>一般命名<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/profile&#39;,&nbsp;[&#39;as&#39;&nbsp;=&gt;&nbsp;&#39;profile&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;//
+}]);</pre><h3>命名同时，指定控制器和action</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/profile&#39;,&nbsp;[
+&nbsp;&nbsp;&nbsp;&nbsp;&#39;as&#39;&nbsp;=&gt;&nbsp;&#39;profile&#39;,&nbsp;&#39;uses&#39;&nbsp;=&gt;&nbsp;&#39;UserController@showProfile&#39;
+]);</pre><p>或者：<br/></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::get(&#39;user/profile&#39;,&nbsp;&#39;UserController@showProfile&#39;)-&gt;name(&#39;profile&#39;);</pre><h3>集体命名<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::group([&#39;as&#39;&nbsp;=&gt;&nbsp;&#39;admin::&#39;],&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;Route::get(&#39;dashboard&#39;,&nbsp;[&#39;as&#39;&nbsp;=&gt;&nbsp;&#39;dashboard&#39;,&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Route&nbsp;named&nbsp;&quot;admin::dashboard&quot;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]);
+});</pre><p>注意：这个集体路由的访问，比如dashboard的地址为：/dashboard而不是/admin/dashboard。只不过它的别名为：admin::dashboard。这个别名可以用来获取路由的地址，下面我们马上就会讲到。</p><h3>路由地址获取和跳转<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">//&nbsp;Generating&nbsp;URLs...
+$url&nbsp;=&nbsp;route(&#39;profile&#39;);
+//&nbsp;Generating&nbsp;Redirects...
+return&nbsp;redirect()-&gt;route(&#39;profile&#39;);</pre><h3>给命名路由传参</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\"><h3>Route::get(&#39;user/{id}/profile&#39;, [&#39;as&#39; =&gt; &#39;profile&#39;, function ($id) {<br/> &nbsp; &nbsp;//}<br/>]);<br/>$url = route(&#39;profile&#39;, [&#39;id&#39; =&gt; 1]);<br/></h3></pre><h2>四、集体路由</h2><p>集体路由主要用来分享一些属性，避免不必要的重复，比如：middleware,namespace。</p><h3>中间件</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\"><h3>Route::group([&#39;middleware&#39; =&gt; &#39;auth&#39;], function () {<br/> &nbsp; &nbsp;Route::get(&#39;/&#39;, function () &nbsp; &nbsp;{<br/> &nbsp; &nbsp; &nbsp; &nbsp;// Uses Auth Middleware &nbsp; &nbsp;<br/> &nbsp; &nbsp;});<br/><br/> &nbsp; &nbsp;Route::get(&#39;user/profile&#39;, function () {<br/> &nbsp; &nbsp; &nbsp; &nbsp;// Uses Auth Middleware &nbsp; &nbsp;<br/> &nbsp; &nbsp;});<br/>});<br/></h3></pre><h3>指定命名空间<br/></h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::group([&#39;namespace&#39;&nbsp;=&gt;&nbsp;&#39;Admin&#39;],&nbsp;function(){
+&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Controllers&nbsp;Within&nbsp;The&nbsp;&quot;App\\Http\\Controllers\\Admin&quot;&nbsp;Namespace
+&nbsp;&nbsp;&nbsp;&nbsp;Route::group([&#39;namespace&#39;&nbsp;=&gt;&nbsp;&#39;User&#39;],&nbsp;function()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Controllers&nbsp;Within&nbsp;The&nbsp;&quot;App\\Http\\Controllers\\Admin\\User&quot;&nbsp;Namespace&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;});
+});</pre><h3>指定前缀</h3><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\"><h3>Route::group([&#39;prefix&#39; =&gt; &#39;admin&#39;], function () {<br/> &nbsp; &nbsp;Route::get(&#39;users&#39;, function () &nbsp; &nbsp;{<br/> &nbsp; &nbsp; &nbsp; &nbsp;// Matches The &quot;/admin/users&quot; URL &nbsp; &nbsp;<br/> &nbsp; &nbsp;});<br/>});<br/></h3></pre><p>还可以在前缀上传入参数<br/></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">Route::group([&#39;prefix&#39;&nbsp;=&gt;&nbsp;&#39;accounts/{account_id}&#39;],&nbsp;function&nbsp;()&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;Route::get(&#39;detail&#39;,&nbsp;function&nbsp;($accountId)&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Matches&nbsp;The&nbsp;&quot;/accounts/{account_id}/detail&quot;&nbsp;URL&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;});
+});</pre><h2>五、CSRFtoken</h2><p>csrftoken用来防止外站提交请求。<br/></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">//&nbsp;Vanilla&nbsp;PHP&lt;?php&nbsp;echo&nbsp;csrf_field();&nbsp;?&gt;
+//&nbsp;Blade&nbsp;Template&nbsp;Syntax{{&nbsp;csrf_field()&nbsp;}}</pre><p>上面这段代码，用来在模板中生成一个html的input。</p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">&lt;input&nbsp;type=&quot;hidden&quot;&nbsp;name=&quot;_token&quot;&nbsp;value=&quot;&lt;?php&nbsp;echo&nbsp;csrf_token();&nbsp;?&gt;&quot;&gt;</pre><p>有时候，我们有一些请求不需要验证csrf，我们可以把这些Url排除：<br/></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">&lt;?phpnamespace&nbsp;App\\Http\\Middleware;
+use&nbsp;Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken&nbsp;as&nbsp;BaseVerifier;
+class&nbsp;VerifyCsrfToken&nbsp;extends&nbsp;BaseVerifier{
+&nbsp;&nbsp;&nbsp;&nbsp;/**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;The&nbsp;URIs&nbsp;that&nbsp;should&nbsp;be&nbsp;excluded&nbsp;from&nbsp;CSRF&nbsp;verification.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;@var&nbsp;array
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/
+&nbsp;&nbsp;&nbsp;&nbsp;protected&nbsp;$except&nbsp;=&nbsp;[
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;stripe/*&#39;,
+&nbsp;&nbsp;&nbsp;&nbsp;];</pre><p>x-csrf-token<br/></p><p>ajax请求中携带token。</p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">$.ajaxSetup({
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;headers:&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#39;X-CSRF-TOKEN&#39;:&nbsp;$(&#39;meta[name=&quot;csrf-token&quot;]&#39;).attr(&#39;content&#39;)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+});</pre><h2>六、表单method‘造假&#39;<br/></h2><p>一般form不支持put,delete,patch，那么我们可以通过这样的方式来实现这些请求。</p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">&lt;form&nbsp;action=&quot;/foo/bar&quot;&nbsp;method=&quot;POST&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;hidden&quot;&nbsp;name=&quot;_method&quot;&nbsp;value=&quot;PUT&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;hidden&quot;&nbsp;name=&quot;_token&quot;&nbsp;value=&quot;{{&nbsp;csrf_token()&nbsp;}}&quot;&gt;
+&lt;/form&gt;</pre><p>要生成这个’造假‘input,也可以这样：<br/></p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">&lt;?php&nbsp;echo&nbsp;method_field(&#39;PUT&#39;);&nbsp;?&gt;</pre><p>或者：</p><pre class=\" language-php\" style=\"box-sizing: border-box; overflow: auto; font-family: &quot;Operator Mono&quot;, &quot;Fira Code&quot;, Consolas, Monaco, &quot;Andale Mono&quot;, monospace; font-size: 11px; text-shadow: rgb(255, 255, 255) 0px 1px; direction: ltr; word-break: normal; line-height: 2; tab-size: 4; hyphens: none; padding: 10px; margin-top: 10px; margin-bottom: 20px; background-color: rgba(238, 238, 238, 0.35); border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.125) 0px 1px 1px; vertical-align: middle;\">{{&nbsp;method_field(&#39;PUT&#39;)&nbsp;}}</pre><h2>七、下节预告</h2><p>数据库查询的三种方法:raw,查询构造，eloquent。</p><p><br/></p><p><br/></p><p><br/></p><p>							</p>',`mtime`='1503220032' WHERE `id` = 162 [ RunTime:0.0125s ]
+NOTIC: [8] Undefined variable: id /data/wwwroot/blog/Application/Admin/Controller/AjaxController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_category` WHERE `name` = 'laravel5.2入' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag` WHERE `name` = 'laravel' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2017-08-20T17:07:14+08:00 ] 101.27.215.105 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000391s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013589s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013631s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000381s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000421s ]
+
+[ 2017-08-20T17:07:15+08:00 ] 101.27.215.105 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013153s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013192s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000316s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000354s ]
+
+[ 2017-08-20T19:52:42+08:00 ] 101.27.215.105 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015327s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015370s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000178s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000352s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000392s ]
+
+[ 2017-08-20T19:52:42+08:00 ] 101.27.215.105 /admin.php/Post/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_post` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `z_post` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `z_post` ORDER BY ctime desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/c171e2b85832ae9943251ee8295bfacb.php 第 361 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013504s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013546s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000141s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000175s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000397s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000438s ]
+
+[ 2017-08-20T19:52:58+08:00 ] 101.27.215.105 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000391s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 361 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 424 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 438 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014398s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014437s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000408s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000449s ]
+
+[ 2017-08-20T19:52:59+08:00 ] 101.27.215.105 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/blog/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `z_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `z_category`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `z_tag` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `z_tag`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+NOTIC: [8] Undefined variable: userInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 361 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 424 行.
+NOTIC: [8] Undefined variable: hospitalInfo /data/wwwroot/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 438 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013403s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013440s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000315s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000353s ]
+
