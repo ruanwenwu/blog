@@ -1,0 +1,26 @@
+﻿<!doctype html>
+<html>
+        <body>
+        <ul id="content">
+        </ul>
+        <input onclick="loadmore()" type="button" value="加载更多" id="loadmore" />
+        </body>
+        <script src="jquery-1.10.2.min.js"></script>
+        <script>
+                var page = 1;           //当前页
+                var loadSwitch = 1;     //加载开关
+                function loadmore(){
+                        if (loadSwitch){
+				page++;
+                                $.post("data.php",{page:page},function(response){
+                                        var str = "";
+                                        for (var x in response){
+                                                str += '<li><img src="'+response[x]['pic']+'"><br/><p>'+response[x]['title']+'</p></li>';
+                                        }
+                                        var oriHtml = $("#content").html();
+                                        $("#content").html(oriHtml+str);
+                                },"json");
+                        }
+                }
+        </script>
+</html> 
