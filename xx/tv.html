@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+            if (parseFloat(RegExp.$1) > 2.3) {
+                var phoneScale = parseInt(window.screen.width) / 750;
+                document.write('<meta name="viewport" content="width=750, minimum-scale=' + phoneScale + ', maximum-scale=' + phoneScale + ', target-densitydpi=device-dpi" />');
+            } else {
+                document.write('<meta name="viewport" content="width=750, target-densitydpi=device-dpi" />');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=750,user-scalable=no, target-densitydpi=device-dpi" />');
+        }
+    </script>
+    <script type="text/javascript" src="js/iscroll.js"></script>
+    <script type="text/javascript" src="js/demoUtils.js"></script>
+    <script type="text/javascript">
+        var myScroll;
+        function loaded () {
+            myScroll = new IScroll('#wrapper', { scrollX: true, scrollY: false, mouseWheel: true });
+        }
+
+        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, isPassive() ? {
+            capture: false,
+            passive: false
+        } : false);
+    </script>
+</head>
+<body onload="loaded()">
+    <div class="container">
+        <header>
+            <a href="javascript:;" class="return"></a>
+            <div class="nav-box">
+                <div id="wrapper">
+                    <div id="scroller" style="width:963px">
+                        <ul class="nav_content">
+                            <li><a href="index.html">电影</a></li>
+                            <li class="on"><a href="tv.html">电视剧</a></li>
+                            <li><a href="index.html">综艺</a></li>
+                            <li><a href="index.html">动漫</a></li>
+                            <li><a href="live-qf.html">千帆直播</a></li>
+                            <li><a href="index.html">搜狐出品</a></li>
+                            <li><a href="index.html">娱乐</a></li>
+                            <li><a href="index.html">体育</a></li>
+                            <li><a href="self-media.html">自媒体</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--<a href="javascript:;" class="menu"></a>-->
+            </div>
+
+            <div class="search">
+                <a class="scarch_ss" href="search.html">星座奇葩事</a>
+                <a class="scarch_pk" href="hot-film.html">片库</a>
+            </div>
+        </header>
+        <section style="margin-top:214px">
+            <div class="focus">
+                <a href="tv-series.html">
+                    <img src="img/tv-img-1.jpg">
+                    <p class="title">人间至味是清欢</p>
+                    <p class="js-film">丁人间林月办离婚手续 | 更新至<span>17</span>集</p>
+                </a>
+            </div>
+        </section>
+        <section class="film-module clearfix">
+            <ul class="film-list">
+                <li>
+                    <ul class="film-pic clearfix">
+                        <li><a href="javascript:;">
+                            <figure>
+                                <img src="img/tv-img-2.jpg">
+                                <figcaption>更新至<span>19</span>集</figcaption>
+                            </figure>
+                            <p class="js-film">盲约</p>
+                            <span class="dj-film">VIP</span>
+                        </a></li>
+                        <li><a href="javascript:;">
+                            <figure>
+                                <img src="img/tv-img-2.jpg">
+                                <figcaption>更新至<span>19</span>集</figcaption>
+                            </figure>
+                            <p class="js-film">盲约</p>
+                            <span class="dj-film">独家</span>
+                        </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="film-pic clearfix">
+                        <li><a href="javascript:;">
+                            <figure>
+                                <img src="img/tv-img-2.jpg">
+                                <figcaption>更新至<span>19</span>集</figcaption>
+                            </figure>
+                            <p class="js-film">盲约</p>
+                        </a></li>
+                        <li><a href="javascript:;">
+                            <figure>
+                                <img src="img/tv-img-2.jpg">
+                                <figcaption>更新至<span>19</span>集</figcaption>
+                            </figure>
+                            <p class="js-film">盲约</p>
+                        </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="film-pic clearfix">
+                        <li><a href="javascript:;">
+                            <figure>
+                                <img src="img/tv-img-2.jpg">
+                                <figcaption>更新至<span>19</span>集</figcaption>
+                            </figure>
+                            <p class="js-film">盲约</p>
+                        </a></li>
+                        <li><a href="javascript:;">
+                            <figure>
+                                <img src="img/tv-img-2.jpg">
+                                <figcaption>更新至<span>19</span>集</figcaption>
+                            </figure>
+                            <p class="js-film">盲约</p>
+                        </a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/common.js"></script>
+<script>
+    $('#scroller .nav_content li').click(function(){
+        $('#scroller .nav_content li').removeClass('on');
+        $(this).addClass('on');
+    })
+</script>
+</html>

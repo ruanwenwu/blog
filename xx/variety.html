@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+            if (parseFloat(RegExp.$1) > 2.3) {
+                var phoneScale = parseInt(window.screen.width) / 750;
+                document.write('<meta name="viewport" content="width=750, minimum-scale=' + phoneScale + ', maximum-scale=' + phoneScale + ', target-densitydpi=device-dpi" />');
+            } else {
+                document.write('<meta name="viewport" content="width=750, target-densitydpi=device-dpi" />');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=750,user-scalable=no, target-densitydpi=device-dpi" />');
+        }
+    </script>
+<script src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/iscroll.js"></script>
+    <script type="text/javascript" src="js/demoUtils.js"></script>
+    <script type="text/javascript">
+        var myScroll;
+        function loaded () {
+              myScroll = new IScroll('#wrapper', { scrollX: true, scrollY: false, mouseWheel: true,tap:true });
+	      
+var olis = document.getElementById("scroller").getElementsByTagName("li");
+              for (var i = 0; i < olis.length; i++){
+                        olis[i].addEventListener("tap",function(){
+        			$('#scroller li').removeClass('on');
+        			$(this).addClass('on');
+				
+                        },false);
+                }
+        }
+
+        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, isPassive() ? {
+            capture: false,
+            passive: false
+        } : false);
+    </script>
+    <style>
+        .my-video-dimensions{
+            width:100%;
+        }
+
+    </style>
+</head>
+<body onload="loaded()">
+    <div id="sohuplayer"></div> 
+
+    <section class="TV-title">
+        <h2>急速前进中国版第四季<span class="drop-down"></span></h2>
+        <p>14.0亿次播放 | 内地 | 游戏竞技 真人秀</p>
+        <div class="info">
+            <p>主持:<span>韩东君，金晨，陈瑶，王彦霖</span></p>
+            <div class="clearfix">
+                <p>评分：<span class="socre"><i>7</i>.4分</span></p>
+                <p>年份：<span>2015</span></p>
+            </div>
+            <p>类型：<span>游戏竞技;真人秀</span></p>
+            <p class="info-js">急速前进中国版第四季</p>
+        </div>
+    </section>
+    <section class="series variety">
+        <p>剧集<span class="qj">更新至3期></span></p>
+        <div id="wrapper">
+            <div id="scroller">
+                <ul class="">
+                    <li class="on"><a href="javascript:;">谢依霖示弱强子求放过 诡计被拆穿场面尴尬<span>2017-08-21</span></a></li>
+                    <li><a href="javascript:;">科爸爸挑儿媳门槛曝光：净身高168 谢依霖遭嫌矮<span>2017-08-21</span></a></li>
+                    <li><a href="javascript:;">科爸爸挑儿媳门槛曝光：净身高168 谢依霖遭嫌矮<span>2017-08-21</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="series2 variety2">
+        <p>剧集<span class="close"></span></p>
+        <ul>
+            <li class='on'><a href="javascript:;">
+                <div class="variety2-left">
+                    <img src="img/variety2-img-1.jpg">
+                    <span>2017-08-18</span>
+                </div>
+                <div class="variety2-right">
+                    <p>谢依霖曝范冰冰怀孕秘闻？许杨拼大胃干呕</p>
+                    <span>01:23:45</span>
+                </div>
+            </a></li>
+            <li><a href="javascript:;">
+                <div class="variety2-left">
+                    <img src="img/variety2-img-1.jpg">
+                    <span>2017-08-11</span>
+                </div>
+                <div class="variety2-right">
+                    <p>范冰冰高空渡桥吓白脸 张继科老爸跳天鹅舞萌爆</p>
+                    <span>01:23:45</span>
+                </div>
+            </a></li>
+            <li><a href="javascript:;">
+                <div class="variety2-left">
+                    <img src="img/variety2-img-1.jpg">
+                    <span>2017-08-04</span>
+                </div>
+                <div class="variety2-right">
+                    <p>范冰冰晨哥附体高能突进贾静雯拖后腿泪崩自责</p>
+                    <span>01:23:45</span>
+                </div>
+            </a></li>
+        </ul>
+    </section>
+</body>
+<script src="js/common.js"></script>
+<!--<script src="http://tv.sohu.com/upload/static/player/player.js"></script>-->
+<script>
+    $('.drop-down').click(function(){
+        $('.info').toggle('show');
+    })
+    /*$('#scroller li').click(function(){
+        $('#scroller li').removeClass('on');
+        $(this).addClass('on');
+    })*/
+    $('.series2 ul li').click(function(){
+        $('.series2 ul li').removeClass('on');
+        $(this).addClass('on');
+    })
+    $('.series .qj').click(function(){
+        $('.series2').animate({bottom:'0'});
+    })
+    $('.series2 .close').click(function(){
+        $(".series2").animate({bottom:'-900px'});
+
+    })
+
+    document.getElementById("sohuplayer").innerHTML = createSHPlayer({    bid: 91956766,    autoplay: false,    vars:{"enforceHTML5": true},    width: 750,    height: 480,    getHTML: true,    showCtrlBar: 0,    channelSrc: 11510001,    lqd :32458,    lcode:"AAAAGLIDHu70j7UP44UP5eSZO7fwvUUtbGRrK6..d4y"});
+
+</script>
+</html>

@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+            if (parseFloat(RegExp.$1) > 2.3) {
+                var phoneScale = parseInt(window.screen.width) / 750;
+                document.write('<meta name="viewport" content="width=750, minimum-scale=' + phoneScale + ', maximum-scale=' + phoneScale + ', target-densitydpi=device-dpi" />');
+            } else {
+                document.write('<meta name="viewport" content="width=750, target-densitydpi=device-dpi" />');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=750,user-scalable=no, target-densitydpi=device-dpi" />');
+        }
+    </script>
+    <script type="text/javascript" src="js/iscroll.js"></script>
+    <script type="text/javascript" src="js/demoUtils.js"></script>
+    <script type="text/javascript">
+        var myScroll;
+        function loaded () {
+            myScroll = new IScroll('#wrapper', { scrollX: true, scrollY: false, mouseWheel: true });
+        }
+
+        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, isPassive() ? {
+            capture: false,
+            passive: false
+        } : false);
+    </script>
+    <style>
+        .my-video-dimensions{
+            width:100%;
+        }
+    </style>
+</head>
+<body onload="loaded()">
+    <div id="sohuplayer"></div> 
+
+    <section class="TV-title">
+        <h2>无心法师1<span class="drop-down"></span></h2>
+        <p>14.0亿次播放 | 周六日20点各更2集，会员抢先看</p>
+        <div class="info">
+            <p>主演:<span>韩东君，金晨，陈瑶，王彦霖</span></p>
+            <div class="clearfix">
+                <p>评分：<span class="socre"><i>7</i>.4分</span></p>
+                <p>年份：<span>2015</span></p>
+            </div>
+            <p>导演：林玉芬，高林豹</p>
+            <p>类型：<span>年代剧；言情剧</span></p>
+            <p class="info-js">《无心法师》是搜狐视频和唐人影视联合出品，改编自作者尼罗同名作品的民国玄幻季播网络剧，由李国立任总监制，林玉芬、高林豹共同执导，韩东君、金晨、张若昀、陈瑶、王彦霖、Mike、隋咏良等联袂主演。讲述了由韩东君扮演的无心带领捉妖团队，一路与恶人奸邪斗智斗勇，吃吃喝喝，谈情说爱的故事。</p>
+        </div>
+    </section>
+    <section class="series">
+        <p>剧集<span class="qj">20集全></span></p>
+        <div id="wrapper">
+            <div id="scroller">
+                <ul class="">
+                    <li class="on"><a href="javascript:;">1</a></li>
+                    <li><a href="javascript:;">2</a></li>
+                    <li><a href="javascript:;">3</a></li>
+                    <li><a href="javascript:;">4</a></li>
+                    <li><a href="javascript:;">5</a></li>
+                    <li><a href="javascript:;">6</a></li>
+                    <li><a href="javascript:;">7</a></li>
+                    <li><a href="javascript:;">8</a></li>
+                    <li><a href="javascript:;">9</a></li>
+                    <li><a href="javascript:;">10</a></li>
+                    <li><a href="javascript:;">11</a></li>
+                    <li><a href="javascript:;">12</a></li>
+                    <li><a href="javascript:;">13</a></li>
+                    <li><a href="javascript:;">14</a></li>
+                    <li><a href="javascript:;">15</a></li>
+                    <li><a href="javascript:;">16</a></li>
+                    <li><a href="javascript:;">17</a></li>
+                    <li><a href="javascript:;">18</a></li>
+                    <li><a href="javascript:;">19</a></li>
+                    <li><a href="javascript:;">20</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="series2">
+        <p>剧集<span class="close"></span></p>
+        <ul>
+            <li class='on'><a href="javascript:;">1</a></li>
+            <li><a href="javascript:;">2</a></li>
+            <li><a href="javascript:;">3</a></li>
+            <li><a href="javascript:;">4</a></li>
+            <li><a href="javascript:;">5</a></li>
+            <li><a href="javascript:;">6</a></li>
+            <li><a href="javascript:;">7</a></li>
+            <li><a href="javascript:;">8</a></li>
+            <li><a href="javascript:;">9</a></li>
+            <li><a href="javascript:;">10</a></li>
+            <li><a href="javascript:;">11</a></li>
+            <li><a href="javascript:;">12</a></li>
+            <li><a href="javascript:;">13<span class="xin">预告</span></a></li>
+            <li><a href="javascript:;">14<span class="xin">预告</span></a></li>
+            <li><a href="javascript:;">15<span class="xin">预告</span></a></li>
+            <li><a href="javascript:;">16<span class="xin">预告</span></a></li>
+            <li><a href="javascript:;">17<span class="tips_vip">会员</span></a></li>
+            <li><a href="javascript:;">18<span class="tips_vip">会员</span></a></li>
+            <li><a href="javascript:;">19<span class="tips_vip">会员</span></a></li>
+            <li><a href="javascript:;">20<span class="tips_vip">会员</span></a></li>
+        </ul>
+    </section>
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/common.js"></script>
+<!--<script src="http://tv.sohu.com/upload/static/player/player.js"></script>-->
+<script>
+    $('.drop-down').click(function(){
+        $('.info').toggle('show');
+    })
+    $('#scroller li').click(function(){
+        $('#scroller li').removeClass('on');
+        $(this).addClass('on');
+    })
+    $('.series2 ul li').click(function(){
+        $('.series2 ul li').removeClass('on');
+        $(this).addClass('on');
+    })
+    $('.series .qj').click(function(){
+        $('.series2').animate({bottom:'0'});
+    })
+    $('.series2 .close').click(function(){
+        $(".series2").animate({bottom:'-900px'});
+
+    })
+
+    document.getElementById("sohuplayer").innerHTML = createSHPlayer({    bid: 91956766,    autoplay: false,    vars:{"enforceHTML5": true},    width: 750,    height: 480,    getHTML: true,    showCtrlBar: 0,    channelSrc: 11510001,    lqd :32458,    lcode:"AAAAGLIDHu70j7UP44UP5eSZO7fwvUUtbGRrK6..d4y"});
+
+</script>
+</html>

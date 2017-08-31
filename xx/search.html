@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+            if (parseFloat(RegExp.$1) > 2.3) {
+                var phoneScale = parseInt(window.screen.width) / 750;
+                document.write('<meta name="viewport" content="width=750, minimum-scale=' + phoneScale + ', maximum-scale=' + phoneScale + ', target-densitydpi=device-dpi" />');
+            } else {
+                document.write('<meta name="viewport" content="width=750, target-densitydpi=device-dpi" />');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=750,user-scalable=no, target-densitydpi=device-dpi" />');
+        }
+    </script>
+</head>
+<body>
+    <header class="search-head">
+        <input type="text" placeholder="请输入片名、主演或导演" >
+        <a href="javascript:history.go(-1);" class="return-ss">取消</a>
+    </header>
+    <section class="search-content clearfix">
+        <div class="search-content-left">
+            <h2>热门电视剧</h2>
+            <ul>
+                <li>
+                    <a href="javascript:;">
+                        <img src="img/search-content-1.jpg">
+                        <p class="title"><span>1</span>无心法师2</p>
+                    </a>
+                </li>
+                <li><a href="javascript:;"><span>2</span>无心法师1</a></li>
+                <li><a href="javascript:;"><span>3</span>我们的爱</a></li>
+                <li><a href="javascript:;"><span>4</span>盲约</a></li>
+                <li><a href="javascript:;"><span>5</span>人间至味是清欢</a></li>
+            </ul>
+        </div>
+        <div class="search-content-right">
+            <h2>热门电影</h2>
+            <ul>
+                <li>
+                    <a href="javascript:;">
+                        <img src="img/search-content-1.jpg">
+                        <p class="title"><span>1</span>无心法师2</p>
+                    </a>
+                </li>
+                <li><a href="javascript:;"><span>2</span>无心法师1</a></li>
+                <li><a href="javascript:;"><span>3</span>我们的爱</a></li>
+                <li><a href="javascript:;"><span>4</span>盲约</a></li>
+                <li><a href="javascript:;"><span>5</span>人间至味是清欢</a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="search-content clearfix">
+        <div class="search-content-left">
+            <h2>热门电视剧</h2>
+            <ul>
+                <li>
+                    <a href="javascript:;">
+                        <img src="img/search-content-1.jpg">
+                        <p class="title"><span>1</span>无心法师2</p>
+                    </a>
+                </li>
+                <li><a href="javascript:;"><span>2</span>无心法师1</a></li>
+                <li><a href="javascript:;"><span>3</span>我们的爱</a></li>
+                <li><a href="javascript:;"><span>4</span>盲约</a></li>
+                <li><a href="javascript:;"><span>5</span>人间至味是清欢</a></li>
+            </ul>
+        </div>
+        <div class="search-content-right">
+            <h2>热门电影</h2>
+            <ul>
+                <li>
+                    <a href="javascript:;">
+                        <img src="img/search-content-1.jpg">
+                        <p class="title"><span>1</span>无心法师2</p>
+                    </a>
+                </li>
+                <li><a href="javascript:;"><span>2</span>无心法师1</a></li>
+                <li><a href="javascript:;"><span>3</span>我们的爱</a></li>
+                <li><a href="javascript:;"><span>4</span>盲约</a></li>
+                <li><a href="javascript:;"><span>5</span>人间至味是清欢</a></li>
+            </ul>
+        </div>
+    </section>
+</body>
+<script src="js/common.js"></script>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+            if (parseFloat(RegExp.$1) > 2.3) {
+                var phoneScale = parseInt(window.screen.width) / 750;
+                document.write('<meta name="viewport" content="width=750, minimum-scale=' + phoneScale + ', maximum-scale=' + phoneScale + ', target-densitydpi=device-dpi" />');
+            } else {
+                document.write('<meta name="viewport" content="width=750, target-densitydpi=device-dpi" />');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=750,user-scalable=no, target-densitydpi=device-dpi" />');
+        }
+    </script>
+</head>
+<body>
+    <header class="hot-head">
+        <a href="javascript:history.go(-1);"><span class="return"></span></a>
+        <h4>新上架</h4>
+        <span class="filter" id="filter"></span>
+    </header>
+    
+    <section class="hot-module">
+        <form class="filter-floor">
+            <p>排序</p>
+            <ul>
+                <li class="on">新上架</li>
+                <li>最热门</li>
+                <li>好评榜</li>
+            </ul>
+            <p>类型</p>
+            <ul>
+                <li class="on">全部</li>
+                <li>爱情</li>
+                <li>动作</li>
+                <li>喜剧</li>
+                <li>科幻</li>
+                <li>恐怖</li>
+                <li>灾难</li>
+                <li>传记</li>
+                <li>伦理</li>
+                <li>历史</li>
+                <li>战争</li>
+                <li>武侠</li>
+                <li>文艺</li>
+                <li>歌舞</li>
+                <li>其他</li>
+            </ul>
+            <p>地区</p>
+            <ul>
+                <li class="on">全部</li>
+                <li>美国</li>
+                <li>欧洲</li>
+                <li>日本</li>
+                <li>韩国</li>
+                <li>内地</li>
+                <li>港台</li>
+                <li>印度</li>
+                <li>泰国</li>
+                <li>其他</li>
+            </ul>
+            <p>年份</p>
+            <ul>
+                <li class="on">全部</li>
+                <li>2017</li>
+                <li>2016</li>
+                <li>2015</li>
+                <li>2014</li>
+                <li>2013</li>
+                <li>2012</li>
+                <li>2011</li>
+                <li>2010</li>
+                <li>00年代</li>
+                <li>90年代</li>
+                <li>80年代</li>
+                <li>更早</li>
+            </ul>
+            <p>类别</p>
+            <ul>
+                <li class="on">全部</li>
+                <li>免费</li>
+                <li>会员</li>
+            </ul>
+            <input type="button" value="完成">
+        </form>
+        <ul class="hot-list">
+            <li>
+                <ul class="hot-pic clearfix">
+                    <li>
+                        <a href="javascript:;">
+                           <figure>
+                                <img src="img/hot-img-1.jpg">
+                                <figcaption>熊出没.奇幻之旅</figcaption>
+                            </figure>
+                            <p class="view-num"><span>451.2</span>万播放</p> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                           <figure>
+                                <img src="img/hot-img-1.jpg">
+                                <figcaption>熊出没.奇幻之旅</figcaption>
+                            </figure>
+                            <p class="view-num"><span>451.2</span>万播放</p> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                           <figure>
+                                <img src="img/hot-img-1.jpg">
+                                <figcaption>熊出没.奇幻之旅</figcaption>
+                            </figure>
+                            <p class="view-num"><span>451.2</span>万播放</p> 
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="hot-pic clearfix">
+                    <li>
+                        <a href="javascript:;">
+                           <figure>
+                                <img src="img/hot-img-1.jpg">
+                                <figcaption>熊出没.奇幻之旅</figcaption>
+                            </figure>
+                            <p class="view-num"><span>451.2</span>万播放</p> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                           <figure>
+                                <img src="img/hot-img-1.jpg">
+                                <figcaption>熊出没.奇幻之旅</figcaption>
+                            </figure>
+                            <p class="view-num"><span>451.2</span>万播放</p> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                           <figure>
+                                <img src="img/hot-img-1.jpg">
+                                <figcaption>熊出没.奇幻之旅</figcaption>
+                            </figure>
+                            <p class="view-num"><span>451.2</span>万播放</p> 
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="hot-pic clearfix">
+                    <li>
+                        <a href="javascript:;">
+                           <figure>
+                                <img src="img/hot-img-1.jpg">
+                                <figcaption>熊出没.奇幻之旅</figcaption>
+                            </figure>
+                            <p class="view-num"><span>451.2</span>万播放</p> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                           <figure>
+                                <img src="img/hot-img-1.jpg">
+                                <figcaption>熊出没.奇幻之旅</figcaption>
+                            </figure>
+                            <p class="view-num"><span>451.2</span>万播放</p> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                           <figure>
+                                <img src="img/hot-img-1.jpg">
+                                <figcaption>熊出没.奇幻之旅</figcaption>
+                            </figure>
+                            <p class="view-num"><span>451.2</span>万播放</p> 
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</body>
+<script src="js/jquery.js"></script>
+<script>
+    $('#filter').click(function(){
+        if($(".filter-floor").hasClass("am-top")){
+            $(".filter-floor").removeClass('am-top');
+        }else{
+           $(".filter-floor").addClass('am-top');
+        }
+    })
+
+    $('.filter-floor ul li').click(function(){
+        $(this).addClass('on').siblings().removeClass('on');
+    })
+
+    $(".filter-floor input").click(function(){
+        $(".filter-floor").removeClass('am-top');
+    })
+</script>
+</html>
